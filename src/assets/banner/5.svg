@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 1080" style="enable-background:new 0 0 1440 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_2_);}
+	.st2{filter:url(#Adobe_OpacityMaskFilter);}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st4{mask:url(#mask-4_1_);}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:url(#path-7_1_);}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_3_);}
+	.st7{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st8{mask:url(#mask-4_2_);fill-rule:evenodd;clip-rule:evenodd;fill:url(#矩形_1_);}
+</style>
+<title>编组 5备份</title>
+<desc>Created with Sketch.</desc>
+<g id="页面-1">
+	<g id="导航方案备份">
+		<g id="编组-5备份">
+			<g id="路径备份">
+				<g id="蒙版">
+					<g transform="translate(0.000000, 0.000000)">
+						<g>
+							<g>
+								
+									<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="435.5743" y1="681.2054" x2="436.5876" y2="681.1113" gradientTransform="matrix(1440 0 0 -448 -627404 305694.125)">
+									<stop  offset="0" style="stop-color:#FBFCFD"/>
+									<stop  offset="1" style="stop-color:#F8FCFF"/>
+								</linearGradient>
+								<rect y="0" class="st0" width="1440" height="1080"/>
+							</g>
+							<g>
+								
+									<radialGradient id="SVGID_2_" cx="435.6062" cy="679.9913" r="0.9483" gradientTransform="matrix(2.743208e-14 1080 447.9998 -6.613093e-14 -303923.875 -469914.6563)" gradientUnits="userSpaceOnUse">
+									<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.5"/>
+									<stop  offset="1" style="stop-color:#EDF6FF;stop-opacity:0.5782"/>
+								</radialGradient>
+								<rect y="0" class="st1" width="1440" height="1080"/>
+							</g>
+						</g>
+						<defs>
+							<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="259" width="1440" height="189">
+								<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+							</filter>
+						</defs>
+						<mask maskUnits="userSpaceOnUse" x="0" y="259" width="1440" height="189" id="mask-4_1_">
+							<g class="st2">
+								<rect id="path-3_1_" y="0" class="st3" width="1440" height="448"/>
+							</g>
+						</mask>
+						<g id="矩形备份-32" class="st4">
+							<g>
+								
+									<linearGradient id="path-7_1_" gradientUnits="userSpaceOnUse" x1="436.1972" y1="683.4449" x2="436.1972" y2="680.612" gradientTransform="matrix(1440 0 0 -189 -627404 129453.8047)">
+									<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+									<stop  offset="1" style="stop-color:#9FD7FF;stop-opacity:0.3831"/>
+								</linearGradient>
+								<rect id="path-7" y="259" class="st5" width="1440" height="189"/>
+							</g>
+							<g>
+								
+									<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="435.8731" y1="683.0185" x2="435.7654" y2="683.0013" gradientTransform="matrix(1440 0 0 -189 -627404 129453.8047)">
+									<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+									<stop  offset="1" style="stop-color:#F2F7FC"/>
+								</linearGradient>
+								<rect y="259" class="st6" width="1440" height="189"/>
+							</g>
+						</g>
+						<defs>
+							<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="0" y="0" width="1440" height="1080">
+								<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+							</filter>
+						</defs>
+						<mask maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="1080" id="mask-4_2_">
+							<g class="st7">
+								<rect id="path-3_2_" y="0" class="st3" width="1440" height="448"/>
+							</g>
+						</mask>
+						
+							<linearGradient id="矩形_1_" gradientUnits="userSpaceOnUse" x1="436.1972" y1="681.6666" x2="436.1972" y2="680.7098" gradientTransform="matrix(1440 0 0 -1080 -627404 736379.75)">
+							<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+							<stop  offset="1" style="stop-color:#D2ECFF;stop-opacity:0.2254"/>
+						</linearGradient>
+						<rect id="矩形" y="0" class="st8" width="1440" height="1080"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
