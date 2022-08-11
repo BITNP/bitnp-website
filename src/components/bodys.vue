@@ -82,11 +82,12 @@ import timeLine from './timeLine.vue'
             <div id="line"></div>
           </div>
         </div>
+        <div id="TimelineOut">
+          <time-line></time-line>
+        </div>
       </div>
     </div>
-    <div id="TimelineOut">
-      <time-line></time-line>
-    </div>
+
 <!--    <div id="bdOut2">-->
 <!--      <div id="bdWrap2">-->
 <!--        <n-tabs default-value="oasis" justify-content="space-evenly" type="line">-->
@@ -135,6 +136,7 @@ export default defineComponent({
 }
 #bdWrap1,#bdWrap2 {
   width: 75%;
+  height: 100%;
   background: #535bf2;
   background: transparent;
   z-index: 15;
@@ -148,7 +150,7 @@ export default defineComponent({
   background: transparent;
   z-index: 11;
   width: 65%;
-  transform: translateX(-5%);
+  transform: translateX(-10%);
 }
 #bgBg{
   /*position: absolute;*/
@@ -182,11 +184,12 @@ export default defineComponent({
   font-size: 15px;
 }
 #TimelineOut{
-  width: 40%;
-  height: 70vh;
+  width: 55%;
+  height: 50vh;
   margin-left: 60%;
-  margin-top: -55vh;
+  margin-top: -28vh;
   /*background: #535bf2;*/
-  transform: translateY(-28vh);
+  transform: translateY(-40vh);
+  z-index: 20;
 }
 </style>

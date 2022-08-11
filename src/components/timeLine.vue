@@ -9,30 +9,24 @@
           <figcaption>Lorem</figcaption>
           <h6>2011 - NOW</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Ut ut libero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.
+          ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.
           </p>
         </figure>
         <figure>
           <figcaption>ipsum</figcaption>
           <h6>2013</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+            ero in nibh convallis sollici blandit neque in, ornare libero.
           </p>
         </figure>
         <figure>
           <figcaption>consectetur</figcaption>
           <h6>2007 - 2010</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+            ero in nibh convallis sollici blandit neque in, ornare libero.
           </p>
         </figure>
-        <figure>
-          <figcaption>sit amet</figcaption>
-          <h6>2009</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
-          </p>
-        </figure>
+
       </article>
 
       <article>
@@ -69,9 +63,14 @@
 </template>
 
 <script>
-export default {
-  name: "timeLine"
-}
+import {defineComponent,onMounted} from "vue";
+
+export default defineComponent({
+  name: "timeLine",
+  mounted() {
+    new Timeline(document.querySelector('#cvs3')).toggle(true);
+  }
+});
 function Timeline(cvs) {
   // console.log('begin');
   let self = this,
@@ -80,7 +79,7 @@ function Timeline(cvs) {
       mouse = {x: 0, y: 0},
       canvas = cvs,
       ctx = null;
-
+  // console.log(canvas);
   self.lines = [];
 
   self.isOK = false;
@@ -108,13 +107,14 @@ function Timeline(cvs) {
 
     self.lines[0].dots = [];
     let y = top;
+
     document.getElementById('timeline').
     querySelector('article').
     querySelectorAll('figure').
     forEach(function (e) {
 
       self.lines[0].dots.push([e.offsetWidth + 20, y + 20]);
-      console.log(e);
+      // console.log(e);
       y += e.offsetHeight;
     });
 
@@ -135,7 +135,7 @@ function Timeline(cvs) {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    const wasPaused = paused;
+    var wasPaused = paused;
     self.toggle(false);
     // Init lines
     self.lines[0].reset(canvas.offsetWidth / 2 - 15);
@@ -147,30 +147,34 @@ function Timeline(cvs) {
   }
 
   function init() {
+    console.log('init');
     let result = false;
     try {
+      // console.log(document.querySelector('canvas'));
       result = !!(canvas.getContext && (ctx = canvas.getContext('2d')));
 
       self.lines[0] = new Line(0, canvas.offsetHeight - 100, '#4789a3', self.options, mouse);
       self.lines[1] = new Line(0, canvas.offsetHeight - 100, '#a0d59c', self.options, mouse);
 
     } catch (e) {
+      console.log(e);
       return false;
     }
 
     document.querySelector('canvas').addEventListener('mousemove',function (e) {
-      // console.log(e);
+
       if (e.offsetX) {
         mouse.x = e.offsetX;
         mouse.y = e.offsetY;
+        // console.log(e);
       } else
       if (e.layerX) {
         mouse.x = e.layerX;
         mouse.y = e.layerY;
       } else
       {
-        mouse.x = e.pageX - document.querySelector('canvas').offset().left;
-        mouse.y = e.pageY - document.querySelector('canvas').offset().top;
+        mouse.x = e.pageX - canvas.offsetLeft;
+        mouse.y = e.pageY - canvas.offsetTop;
       }
     });
 
@@ -196,6 +200,7 @@ function Timeline(cvs) {
     self.reset = function (x, f) {
       self.points = [];
       for (let y = self.y; y < self.height; y += self.options.density)
+          // console.log(`push x[${y-self.y}]:${x}`);
         self.points.push(new Point(x, y, self.color));
     };
 
@@ -243,7 +248,7 @@ function Timeline(cvs) {
 
     for (var i = 0; i < 2; i++) {
       var points = self.lines[i].points;
-
+      // console.log(self);
       ctx.beginPath();
       ctx.lineWidth = 2;
       ctx.strokeStyle = self.lines[i].color;
@@ -268,10 +273,13 @@ function Timeline(cvs) {
       for (var j = 0; j < self.lines[i].dots.length; j++) {
         var dot = self.lines[i].dots[j],
             id = self.targets[i][j];
+        if(id==undefined){
+          // console.log(self.targets,`i:${i},j:${j}`,`dotslength:${self.lines[i].dots.length}`);
+          return;
+        }
         var dot2 = [
           (self.lines[i].points[id].x + self.lines[i].points[id + 1].x) / 2,
           (self.lines[i].points[id].y + self.lines[i].points[id + 1].y) / 2];
-
 
         var p1 = { x: dot[0], y: dot[1] };
         var p2 = { x: dot2[0], y: dot2[1] };
@@ -315,7 +323,7 @@ function Timeline(cvs) {
 
   self.isOK = init();
 }
-new Timeline(document.querySelector('#cvs3')).toggle(true);
+
 </script>
 
 <style scoped>
@@ -336,15 +344,15 @@ new Timeline(document.querySelector('#cvs3')).toggle(true);
   padding: 0;
   box-sizing: border-box;
 }
-body,
-html {
-  color: #2C2C2C;
-  min-width: 600px;
-  height: 100%;
-  background: white;
-  font: 400 1em 'Lato';
-  -webkit-font-smoothing: antialiased;
-}
+/*body,*/
+/*html {*/
+/*  color: #2C2C2C;*/
+/*  min-width: 600px;*/
+/*  height: 100%;*/
+/*  background: white;*/
+/*  font: 400 1em 'Lato';*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*}*/
 #timeline {
   padding-top: 5%;
 }
