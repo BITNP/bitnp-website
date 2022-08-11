@@ -185,7 +185,7 @@ export default defineComponent({
 }
 #TimelineOut{
   width: 55%;
-  height: 50vh;
+  height: 70vh;
   margin-left: 60%;
   margin-top: -28vh;
   /*background: #535bf2;*/

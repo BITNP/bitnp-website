@@ -1,10 +1,10 @@
 <template>
   <section id="timeline">
-
+    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-bottom: 3rem;color: #b2cde9;">近期活动</span>
     <div class="timeline">
       <canvas id="cvs3" width="1691" height="765"></canvas>
       <article>
-        <h2>Education</h2>
+        <h2></h2>
         <figure>
           <figcaption>Lorem</figcaption>
           <h6>2011 - NOW</h6>
@@ -30,26 +30,26 @@
       </article>
 
       <article>
-        <h2>Work</h2>
+        <h2></h2>
         <figure>
           <figcaption>ornare</figcaption>
           <h6>2012 - 06.2013</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+            ipsum pulvinar, blandit neque in, ornare libero.
           </p></figure>
         <figure>
           <figcaption>libero</figcaption>
           <h6>2010 - 2011</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+             elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+            Nam et ipsum pulvinar, blandit neque in, ornare libero.
           </p>
         </figure>
         <figure>
           <figcaption>adipiscing</figcaption>
           <h6>2010</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
+            Nam et ipsum pulvinar, blandit neque in, ornare libero.
           </p>
         </figure>
       </article>
@@ -104,7 +104,9 @@ function Timeline(cvs) {
   function InitDots() {
     const tl = document.getElementsByClassName('timeline');
     const top =document.getElementById('timeline').querySelector('h2').offsetHeight;
-
+    // const top = document.getElementById('timeline').
+    // querySelector('article').querySelector('figure').
+    // querySelector('figcaption').offsetHeight;
     self.lines[0].dots = [];
     let y = top;
 
@@ -147,14 +149,14 @@ function Timeline(cvs) {
   }
 
   function init() {
-    console.log('init');
+    // console.log('init');
     let result = false;
     try {
       // console.log(document.querySelector('canvas'));
       result = !!(canvas.getContext && (ctx = canvas.getContext('2d')));
 
-      self.lines[0] = new Line(0, canvas.offsetHeight - 100, '#4789a3', self.options, mouse);
-      self.lines[1] = new Line(0, canvas.offsetHeight - 100, '#a0d59c', self.options, mouse);
+      self.lines[0] = new Line(-90, canvas.offsetHeight - 50, '#4789a3', self.options, mouse);
+      self.lines[1] = new Line(-90, canvas.offsetHeight - 50, '#a0d59c', self.options, mouse);
 
     } catch (e) {
       console.log(e);
@@ -215,8 +217,8 @@ function Timeline(cvs) {
       this.base = { x: x, y: y };
 
       this.update = function (mouse, options) {
-        var dx = this.x - mouse.x,
-            dy = this.y - mouse.y,
+        var dx = this.x - mouse.x / 1.4,
+            dy = this.y - mouse.y / 1.4,
             alpha = Math.atan2(dx, dy),
             alpha = alpha > 0 ? alpha : 2 * Math.PI + alpha,
             d = options.radius / Math.sqrt(dx * dx + dy * dy);
@@ -372,9 +374,9 @@ function Timeline(cvs) {
   text-transform: uppercase;
   -webkit-text-stroke: 0.25px;
 }
-.timeline h2 {
+.timeline h2,h3 {
   font: 400 400% 'Raleway';
-  padding-bottom: 100px;
+  padding-bottom: 3rem;
   color: #b2cde9;
 }
 .timeline h6 {
@@ -413,6 +415,7 @@ function Timeline(cvs) {
   float: right;
 }
 .timeline article:last-of-type {
+  text-align:left;
   float: right;
 }
 .timeline article:last-of-type h2 {
