@@ -8,4 +8,4 @@
 - vicons 此处建议添加网站给出的8种图标库 从[xicons](https://www.xicons.org/#/)获取。
 - axios 0.27.2
 
-## 对象存储采用oss形式（施工中）
+## 对象存储采用oss形式（施工中...）
