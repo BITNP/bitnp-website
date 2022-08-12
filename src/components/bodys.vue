@@ -187,7 +187,8 @@ export default defineComponent({
   width: 55%;
   height: 70vh;
   margin-left: 60%;
-  margin-top: -28vh;
+  /*margin-top: -28vh;*/
+  margin-top: -14vw;
   /*background: #535bf2;*/
   transform: translateY(-40vh);
   z-index: 20;
