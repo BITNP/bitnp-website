@@ -65,12 +65,47 @@
 <script>
 import {defineComponent,onMounted} from "vue";
 
+let e={
+  left:[
+    {
+      title:'LOREM',
+      time:'2011 - NOW',
+      context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
+    },{
+      title: 'IPSUM',
+      time:'2013',
+      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+    },{
+      title: 'CONSECTETUR',
+      time: '2007 - 2010',
+      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+    }
+  ],
+  right:[
+    {
+      title:'ORNARE',
+      time:'2012 - 06.2013',
+      context:'ipsum pulvinar, blandit neque in, ornare libero.'
+    },{
+      title: 'LIBERO',
+      time:'2010 - 2011',
+      context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+    },{
+      title: 'ADIPISCING',
+      time: '2010',
+      context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+    }
+  ]
+};
+
 export default defineComponent({
   name: "timeLine",
   mounted() {
+
     new Timeline(document.querySelector('#cvs3')).toggle(true);
   }
 });
+// timeline drawing handler
 function Timeline(cvs) {
   // console.log('begin');
   let self = this,
