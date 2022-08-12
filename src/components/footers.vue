@@ -123,86 +123,86 @@ import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
                   </div>
                 </n-space>
                 <!--              <n-divider></n-divider>-->
-                <n-space justify="space-between">
-                  <n-space justify="start">
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-                        <n-icon size="18">
-                          <AirplayFilled/>
-                        </n-icon>
-                        <span style="font-size: medium">
-                      &nbsp; NPlive
-                    </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                  <n-space justify="start" >
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-                        <n-icon size="18">
-                          <ReminderMedical/>
-                        </n-icon>
-                        <span style="font-size: medium">
-                      &nbsp; PC Clinic
-                    </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                </n-space>
-                <n-space justify="space-between">
-                  <n-space justify="start" >
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-                        <n-icon size="18">
-                          <Wikis/>
-                        </n-icon>
-                        <span style="font-size: medium;">
-                      &nbsp; NP Wiki
-                    </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                  <n-space justify="start" >
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-                        <n-icon size="18">
-                          <Github/>
-                        </n-icon>
-                        <span style="font-size: medium;">
-                &nbsp; zzxx.bitnp.net
-              </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                </n-space>
-                <n-space justify="start" >
-                  <div style="padding-bottom: 10px;">
-                    <n-button text>
-                      <n-icon size="18">
-                        <LeafThree20Regular/>
-                      </n-icon>
-                      <span style="font-size: medium;">
-                       &nbsp; BIThesis
-                    </span>
-                      <n-icon size="18">
-                        <IosLink/>
-                      </n-icon>
-                    </n-button>
-                  </div>
-                </n-space>
-                <n-divider></n-divider>
+<!--                <n-space justify="space-between">-->
+<!--                  <n-space justify="start">-->
+<!--                    <div style="padding-bottom: 10px;">-->
+<!--                      <n-button text>-->
+<!--                        <n-icon size="18">-->
+<!--                          <AirplayFilled/>-->
+<!--                        </n-icon>-->
+<!--                        <span style="font-size: medium">-->
+<!--                      &nbsp; NPlive-->
+<!--                    </span>-->
+<!--                        <n-icon size="18">-->
+<!--                          <IosLink/>-->
+<!--                        </n-icon>-->
+<!--                      </n-button>-->
+<!--                    </div>-->
+<!--                  </n-space>-->
+<!--                  <n-space justify="start" >-->
+<!--                    <div style="padding-bottom: 10px;">-->
+<!--                      <n-button text>-->
+<!--                        <n-icon size="18">-->
+<!--                          <ReminderMedical/>-->
+<!--                        </n-icon>-->
+<!--                        <span style="font-size: medium">-->
+<!--                      &nbsp; PC Clinic-->
+<!--                    </span>-->
+<!--                        <n-icon size="18">-->
+<!--                          <IosLink/>-->
+<!--                        </n-icon>-->
+<!--                      </n-button>-->
+<!--                    </div>-->
+<!--                  </n-space>-->
+<!--                </n-space>-->
+<!--                <n-space justify="space-between">-->
+<!--                  <n-space justify="start" >-->
+<!--                    <div style="padding-bottom: 10px;">-->
+<!--                      <n-button text>-->
+<!--                        <n-icon size="18">-->
+<!--                          <Wikis/>-->
+<!--                        </n-icon>-->
+<!--                        <span style="font-size: medium;">-->
+<!--                      &nbsp; NP Wiki-->
+<!--                    </span>-->
+<!--                        <n-icon size="18">-->
+<!--                          <IosLink/>-->
+<!--                        </n-icon>-->
+<!--                      </n-button>-->
+<!--                    </div>-->
+<!--                  </n-space>-->
+<!--                  <n-space justify="start" >-->
+<!--                    <div style="padding-bottom: 10px;">-->
+<!--                      <n-button text>-->
+<!--                        <n-icon size="18">-->
+<!--                          <Github/>-->
+<!--                        </n-icon>-->
+<!--                        <span style="font-size: medium;">-->
+<!--                &nbsp; zzxx.bitnp.net-->
+<!--              </span>-->
+<!--                        <n-icon size="18">-->
+<!--                          <IosLink/>-->
+<!--                        </n-icon>-->
+<!--                      </n-button>-->
+<!--                    </div>-->
+<!--                  </n-space>-->
+<!--                </n-space>-->
+<!--                <n-space justify="start" >-->
+<!--                  <div style="padding-bottom: 10px;">-->
+<!--                    <n-button text>-->
+<!--                      <n-icon size="18">-->
+<!--                        <LeafThree20Regular/>-->
+<!--                      </n-icon>-->
+<!--                      <span style="font-size: medium;">-->
+<!--                       &nbsp; BIThesis-->
+<!--                    </span>-->
+<!--                      <n-icon size="18">-->
+<!--                        <IosLink/>-->
+<!--                      </n-icon>-->
+<!--                    </n-button>-->
+<!--                  </div>-->
+<!--                </n-space>-->
+<!--                <n-divider></n-divider>-->
                 <n-space justify="space-between">
                   <n-space justify="start">
                     <div style="padding-bottom: 10px;">
