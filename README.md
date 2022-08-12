@@ -1,6 +1,10 @@
 # BITNP 新网站主页
 
-
+## Vue
+- vue: 3.2.37
+- vue-router: 4.0.13
+- vuex: 4.0.2
+- vite: 3.0.0
 ## 依赖库
 
 - naive ui 2.32.1
