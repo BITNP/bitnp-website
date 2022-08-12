@@ -11,7 +11,7 @@
 
 <template>
     <n-layout-header >
-      <n-grid cols="48" x-gap="5px">
+      <n-grid cols="48" x-gap="5px" item-responsive>
         <n-gi offset="6" span="3">
           <n-image width="54" src="./src/assets/ico.png"></n-image>
           <!--          BitNP-->
