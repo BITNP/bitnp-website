@@ -5,7 +5,7 @@ import ArticleOutlined from '@vicons/material/ArticleOutlined'
 import ObjectStorageAlt from '@vicons/carbon/ObjectStorageAlt'
 import DateRangeOutlined from '@vicons/material/DateRangeOutlined'
 
-import timeLine from './timeLine.vue'
+import timeLine from '../../components/timeLine.vue'
 </script>
 
 <template>
