@@ -7,7 +7,7 @@ import {NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NConfigProvide
 
 import headers from './components/headers.vue'
 import footers from './components/footers.vue'
-import bodys from './components/bodys.vue'
+import bodys from './views/home/home.vue'
 </script>
 
 <template>
