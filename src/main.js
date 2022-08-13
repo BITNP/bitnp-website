@@ -2,9 +2,9 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import {createStore} from "vuex"
+import router from '../router/main.js'
 import axios from 'axios'
-// Vue.use(VueRouter);
-// Vue.use(Vuex);
+
 const app= createApp(App);
 
 
@@ -22,5 +22,6 @@ const stores =createStore({
     }
 })
 
-app.use(stores)
+app.use(stores);
+app.use(router);
 app.mount('#app');
