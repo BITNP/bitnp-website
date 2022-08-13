@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
   <section id="timeline">
     <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-bottom: 3rem;color: #b2cde9;">近期活动</span>
@@ -5,27 +8,32 @@
       <canvas id="cvs3" width="1691" height="765"></canvas>
       <article>
         <h2></h2>
-        <figure>
-          <figcaption>Lorem</figcaption>
-          <h6>2011 - NOW</h6>
-          <p>
-          ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.
-          </p>
+        <figure v-for="items in e">
+          <figcaption>{{items.title}}</figcaption>
+          <h6>{{items.time}}</h6>
+          <p>{{items.context}}</p>
         </figure>
-        <figure>
-          <figcaption>ipsum</figcaption>
-          <h6>2013</h6>
-          <p>
-            ero in nibh convallis sollici blandit neque in, ornare libero.
-          </p>
-        </figure>
-        <figure>
-          <figcaption>consectetur</figcaption>
-          <h6>2007 - 2010</h6>
-          <p>
-            ero in nibh convallis sollici blandit neque in, ornare libero.
-          </p>
-        </figure>
+<!--        <figure>-->
+<!--          <figcaption>Lorem</figcaption>-->
+<!--          <h6>2011 - NOW</h6>-->
+<!--          <p>-->
+<!--          ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.-->
+<!--          </p>-->
+<!--        </figure>-->
+<!--        <figure>-->
+<!--          <figcaption>ipsum</figcaption>-->
+<!--          <h6>2013</h6>-->
+<!--          <p>-->
+<!--            ero in nibh convallis sollici blandit neque in, ornare libero.-->
+<!--          </p>-->
+<!--        </figure>-->
+<!--        <figure>-->
+<!--          <figcaption>consectetur</figcaption>-->
+<!--          <h6>2007 - 2010</h6>-->
+<!--          <p>-->
+<!--            ero in nibh convallis sollici blandit neque in, ornare libero.-->
+<!--          </p>-->
+<!--        </figure>-->
 
       </article>
 
@@ -63,7 +71,7 @@
 </template>
 
 <script>
-import {defineComponent,onMounted} from "vue";
+import {defineComponent} from "vue";
 
 let e={
   left:[
@@ -97,14 +105,19 @@ let e={
     }
   ]
 };
+e=e.left;
 
 export default defineComponent({
   name: "timeLine",
+  beforeCreate() {
+    // e
+  },
   mounted() {
-
+    console.log(e);
     new Timeline(document.querySelector('#cvs3')).toggle(true);
   }
 });
+
 // timeline drawing handler
 function Timeline(cvs) {
   // console.log('begin');
