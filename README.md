@@ -1,5 +1,5 @@
 # BITNP 新网站主页
-
+## 开发者文档见本仓库doc/docs.md
 ## Vue
 - vue: 3.2.37
 - vue-router: 4.0.13
