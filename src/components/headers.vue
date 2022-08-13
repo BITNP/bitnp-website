@@ -44,17 +44,17 @@
               <span style="font-size: 17px;">Meta</span>
             </n-button>
           </n-dropdown>
+<!--          about格-->
         </n-gi>
         <n-gi offset="0" span="3">
-          <n-dropdown trigger="hover" size="large" :options="options3">
-            <n-button text >
+            <n-button text @click="$router.push('about-us')">
               <n-icon size="30" >
                 <GitlabOutlined/>
               </n-icon>
               <span style="font-size: 17px;">About</span>
             </n-button>
-          </n-dropdown>
         </n-gi>
+<!--黑白模式-->
         <n-gi offset="15" span="3">
           <n-switch  size="large" @update:value="Changetheme">
             <template #checked-icon>
