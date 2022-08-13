@@ -4,7 +4,6 @@ import {NButton,NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NConfi
 import {useRouter,useRoute} from 'vue-router'
 import headers from './components/headers.vue'
 import footers from './components/footers.vue'
-import bodys from './views/home/home.vue'
 
 const router=useRouter();
 const route =useRoute();
@@ -19,7 +18,6 @@ const route =useRoute();
       <headers ></headers>
       <n-layout-content content-style="">
         <router-view></router-view>
-<!--        <bodys></bodys>-->
         <n-theme-editor>
         </n-theme-editor>
       </n-layout-content>
