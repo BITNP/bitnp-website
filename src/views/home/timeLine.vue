@@ -1,4 +1,8 @@
 <script setup>
+
+let e;
+
+// e=e.left;
 </script>
 
 <template>
@@ -8,7 +12,7 @@
       <canvas id="cvs3" width="1691" height="765"></canvas>
       <article>
         <h2></h2>
-        <figure v-for="items in e">
+        <figure v-for="items in e.left">
           <figcaption>{{items.title}}</figcaption>
           <h6>{{items.time}}</h6>
           <p>{{items.context}}</p>
@@ -39,27 +43,32 @@
 
       <article>
         <h2></h2>
-        <figure>
-          <figcaption>ornare</figcaption>
-          <h6>2012 - 06.2013</h6>
-          <p>
-            ipsum pulvinar, blandit neque in, ornare libero.
-          </p></figure>
-        <figure>
-          <figcaption>libero</figcaption>
-          <h6>2010 - 2011</h6>
-          <p>
-             elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.
-            Nam et ipsum pulvinar, blandit neque in, ornare libero.
-          </p>
+        <figure v-for="items in e.right">
+          <figcaption>{{items.title}}</figcaption>
+          <h6>{{items.time}}</h6>
+          <p>{{items.context}}</p>
         </figure>
-        <figure>
-          <figcaption>adipiscing</figcaption>
-          <h6>2010</h6>
-          <p>
-            Nam et ipsum pulvinar, blandit neque in, ornare libero.
-          </p>
-        </figure>
+<!--        <figure>-->
+<!--          <figcaption>ornare</figcaption>-->
+<!--          <h6>2012 - 06.2013</h6>-->
+<!--          <p>-->
+<!--            ipsum pulvinar, blandit neque in, ornare libero.-->
+<!--          </p></figure>-->
+<!--        <figure>-->
+<!--          <figcaption>libero</figcaption>-->
+<!--          <h6>2010 - 2011</h6>-->
+<!--          <p>-->
+<!--             elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
+<!--            Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
+<!--          </p>-->
+<!--        </figure>-->
+<!--        <figure>-->
+<!--          <figcaption>adipiscing</figcaption>-->
+<!--          <h6>2010</h6>-->
+<!--          <p>-->
+<!--            Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
+<!--          </p>-->
+<!--        </figure>-->
       </article>
       <br style="clear:both">
     </div>
@@ -73,47 +82,50 @@
 <script>
 import {defineComponent} from "vue";
 
-let e={
-  left:[
-    {
-      title:'LOREM',
-      time:'2011 - NOW',
-      context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
-    },{
-      title: 'IPSUM',
-      time:'2013',
-      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-    },{
-      title: 'CONSECTETUR',
-      time: '2007 - 2010',
-      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-    }
-  ],
-  right:[
-    {
-      title:'ORNARE',
-      time:'2012 - 06.2013',
-      context:'ipsum pulvinar, blandit neque in, ornare libero.'
-    },{
-      title: 'LIBERO',
-      time:'2010 - 2011',
-      context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-    },{
-      title: 'ADIPISCING',
-      time: '2010',
-      context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-    }
-  ]
-};
-e=e.left;
+
 
 export default defineComponent({
   name: "timeLine",
+  data(){
+    return{
+      e:e
+    }
+  },
   beforeCreate() {
-    // e
+    e={
+      left:[
+        {
+          title:'LOREM',
+          time:'2011 - NOW',
+          context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
+        },{
+          title: 'IPSUM',
+          time:'2013',
+          context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+        },{
+          title: 'CONSECTETUR',
+          time: '2007 - 2010',
+          context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+        }
+      ],
+      right:[
+        {
+          title:'ORNARE',
+          time:'2012 - 06.2013',
+          context:'ipsum pulvinar, blandit neque in, ornare libero.'
+        },{
+          title: 'LIBERO',
+          time:'2010 - 2011',
+          context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+        },{
+          title: 'ADIPISCING',
+          time: '2010',
+          context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+        }
+      ]
+    };
   },
   mounted() {
-    console.log(e);
     new Timeline(document.querySelector('#cvs3')).toggle(true);
   }
 });
