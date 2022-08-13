@@ -15,8 +15,8 @@
         <n-gi offset="6" span="3">
           <n-image width="54" src="./src/assets/ico.png"></n-image>
           <!--          BitNP-->
-          <!--        <div style="height: 54px;background: #535bf2"></div>-->
         </n-gi>
+<!--news-->
         <n-gi offset="0" span="3">
           <n-button text >
             <n-icon size="30" >
@@ -25,6 +25,7 @@
             <span style="font-size: 17px;">News</span>
           </n-button>
         </n-gi>
+<!--space-->
         <n-gi offset="0" span="3">
           <n-dropdown trigger="hover" size="large" :options="options1">
             <n-button text >
@@ -35,6 +36,7 @@
             </n-button>
           </n-dropdown>
         </n-gi>
+<!--meta-->
         <n-gi offset="0" span="3">
           <n-dropdown trigger="hover" size="large" :options="options2">
             <n-button text >
@@ -44,7 +46,7 @@
               <span style="font-size: 17px;">Meta</span>
             </n-button>
           </n-dropdown>
-<!--          about格-->
+<!--about格-->
         </n-gi>
         <n-gi offset="0" span="3">
             <n-button text @click="$router.push('about-us')">
@@ -86,7 +88,6 @@
               </n-avatar>
             </n-button>
           </n-dropdown>
-          <!--        <div style="height: 54px;background:silver"></div>-->
         </n-gi>
       </n-grid>
     </n-layout-header>

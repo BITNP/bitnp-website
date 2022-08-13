@@ -26,7 +26,6 @@ const route =useRoute();
       </n-layout-footer>
     </n-layout>
   </div>
-<!--  </n-scrollbar>-->
 </n-config-provider>
 </template>
 
