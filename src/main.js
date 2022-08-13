@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import {createStore} from "vuex"
-import router from '../router/main.js'
+import router from '@/router/main.js'
 import axios from 'axios'
 
 const app= createApp(App);
