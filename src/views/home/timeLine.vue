@@ -80,9 +80,9 @@
 </template>
 
 <script>
-import {defineComponent} from "vue";
-
-let e={
+import {defineComponent,reactive} from "vue";
+let es={};
+setInterval(()=>{es={
   left:[
     {
       title:'LOREM',
@@ -114,12 +114,12 @@ let e={
     }
   ]
 };
-
+  console.log(es);},5000);
 export default defineComponent({
   name: "timeLine",
   data(){
     return{
-      e:e
+      e:reactive(es)
     }
   },
   // beforeCreate() {
@@ -156,7 +156,7 @@ export default defineComponent({
   //     ]
   //   };
   // },
-  mounted() {
+  updated() {
     new Timeline(document.querySelector('#cvs3')).toggle(true);
   }
 });
