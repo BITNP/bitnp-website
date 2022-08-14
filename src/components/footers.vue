@@ -7,11 +7,11 @@ import DeviceTv from '@vicons/tabler/DeviceTv'
 import IosLink from '@vicons/ionicons4/IosLink'
 import Github from '@vicons/fa/Github'
 import Affiliate from '@vicons/tabler/Affiliate'
-import AirplayFilled from '@vicons/material/AirplayFilled'
-import ReminderMedical from '@vicons/carbon/ReminderMedical'
-import Wikis from '@vicons/carbon/Wikis'
-import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
-import GuiManagement from '@vicons/carbon/GuiManagement'
+// import AirplayFilled from '@vicons/material/AirplayFilled'
+// import ReminderMedical from '@vicons/carbon/ReminderMedical'
+// import Wikis from '@vicons/carbon/Wikis'
+// import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
+// import GuiManagement from '@vicons/carbon/GuiManagement'
 </script>
 
 <template>
@@ -148,38 +148,6 @@ import GuiManagement from '@vicons/carbon/GuiManagement'
                         <span style="font-size: medium">
                       &nbsp; 乐学
                     </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                </n-space>
-                <n-space justify="space-between">
-                  <n-space justify="start">
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-<!--                        <n-icon size="18">-->
-<!--                          <GuiManagement/>-->
-<!--                        </n-icon>-->
-                        <span style="font-size: medium">
-                          主站后台
-                        </span>
-                        <n-icon size="18">
-                          <IosLink/>
-                        </n-icon>
-                      </n-button>
-                    </div>
-                  </n-space>
-                  <n-space justify="start" >
-                    <div style="padding-bottom: 10px;">
-                      <n-button text>
-<!--                        <n-icon size="18">-->
-<!--                          <ReminderMedical/>-->
-<!--                        </n-icon>-->
-                        <span style="font-size: medium">
-                          诊所后台
-                        </span>
                         <n-icon size="18">
                           <IosLink/>
                         </n-icon>
