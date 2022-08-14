@@ -50,7 +50,7 @@ window.addEventListener("scroll", function () {
                 </div>
 
                 <div style="margin-bottom: 55px;">
-                    <n-grid cols="3" x-gap="45px" y-gap="55px">
+                    <n-grid cols="1" x-gap="45px" y-gap="55px">
                         <n-grid-item offset="0" span="1">
                             <n-space justify="start">
 
@@ -119,7 +119,7 @@ window.addEventListener("scroll", function () {
 
 
                     <div style="margin-bottom: 90px;">
-                        <n-grid cols="2" x-gap="150px" y-gap="55px">
+                        <n-grid cols="1" x-gap="150px" y-gap="55px">
 
                             <n-grid-item offset="0" span="1">
                                 <n-space justify="start">
@@ -154,7 +154,7 @@ window.addEventListener("scroll", function () {
                     </div>
 
                     <div style="margin-bottom: 55px;">
-                        <n-grid cols="3" x-gap="105px" y-gap="55px">
+                        <n-grid cols="1" x-gap="105px" y-gap="55px">
                             <n-grid-item offset="0" span="1">
                                 <n-space justify="start">
                                     <div class="introduction-container">
