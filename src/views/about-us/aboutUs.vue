@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 import { NSpace, NGridItem, NGrid, NButton, NImage, NIcon, NAnchor } from 'naive-ui';
 import Neos from '@vicons/fa/Neos'
 import Chess from '@vicons/fa/Chess'
@@ -11,17 +12,21 @@ import Video from '@vicons/carbon/Video'
 import HandshakeRegular from '@vicons/fa/HandshakeRegular'
 const glassColor = "rgba(255, 255, 255, 0.91)";
 const glassAnimationDurationSec = 0.67;
+const showRail = ref(false);
+
+
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 3) {
         document.getElementById("background-decorator")
             .className = "glass-appearing";
+        showRail.value = true;
         // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
-
     }
     else {
         document.getElementById("background-decorator")
             .className = "glass-disappearing";
+        showRail.value = false;
         // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
     }
 });
@@ -56,7 +61,7 @@ window.addEventListener("scroll", function () {
 
                                     <span class="introduction-title" style="display:block; margin-bottom: 15px;">
                                         服务</span>
-                                    <n-anchor show-rail>
+                                    <n-anchor :show-rail="showRail">
                                         <span class="introduction-content" style="display:block; margin-left: 20px;">
                                             作为北京理工大学校团委领导的唯一校级IT类学生组织，秉持“网络无限，开拓不懈”的宗旨，坚定“不仅是代码与技术，更有思考与情怀”的信念，不断摸索、引领校园网络建设。有专业服务器和独立机房，为在校师生提供专业的校园网络咨询资讯，网络开发和维护技术教学，计算机设备故障咨询等服务。
                                         </span>
@@ -75,7 +80,7 @@ window.addEventListener("scroll", function () {
 
                                     <span class="introduction-title" style="display:block; margin-bottom: 15px;">
                                         直播</span>
-                                    <n-anchor show-rail>
+                                    <n-anchor :show-rail="showRail">
                                         <span class="introduction-content" style="display:block; margin-left: 20px;">
                                             NPLive是网协自主开发和维护的一套校园网直播系统，运用网协搭建的高可用高拓展性的视频流分发系统，不仅可以向校园网用户提供免流量高清视频直播服务，同时也可以在自主开发的外网平台上提供直播服务。与学电合作负责直播深秋歌会，军理课，毕业晚会，火红的青春五四舞蹈展演，北湖音乐节等学校大型活动；也与足协等组织合作提供球赛直播等服务。
                                         </span>
@@ -94,7 +99,7 @@ window.addEventListener("scroll", function () {
 
                                     <span class="introduction-title" style="display:block; margin-bottom: 15px;">
                                         合作</span>
-                                    <n-anchor show-rail>
+                                    <n-anchor :show-rail="showRail">
                                         <span class="introduction-content" style="display:block; margin-left: 20px;">
                                             网协现有各类技术骨干43名，部员100余人，微信公众号关注量5000以上。涉猎广泛，可进行服务器开发，网页设计，安卓&IOS开发，可承接各类外场活动，微信软文推广，文化活动企划，欢迎合作咨询。
                                         </span>
