@@ -52,28 +52,6 @@ onMounted(()=>{
           <h6>{{items.time}}</h6>
           <p>{{items.context}}</p>
         </figure>
-<!--        <figure>-->
-<!--          <figcaption>Lorem</figcaption>-->
-<!--          <h6>2011 - NOW</h6>-->
-<!--          <p>-->
-<!--          ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.-->
-<!--          </p>-->
-<!--        </figure>-->
-<!--        <figure>-->
-<!--          <figcaption>ipsum</figcaption>-->
-<!--          <h6>2013</h6>-->
-<!--          <p>-->
-<!--            ero in nibh convallis sollici blandit neque in, ornare libero.-->
-<!--          </p>-->
-<!--        </figure>-->
-<!--        <figure>-->
-<!--          <figcaption>consectetur</figcaption>-->
-<!--          <h6>2007 - 2010</h6>-->
-<!--          <p>-->
-<!--            ero in nibh convallis sollici blandit neque in, ornare libero.-->
-<!--          </p>-->
-<!--        </figure>-->
-
       </article>
 
       <article>
@@ -83,35 +61,11 @@ onMounted(()=>{
           <h6>{{items.time}}</h6>
           <p>{{items.context}}</p>
         </figure>
-<!--        <figure>-->
-<!--          <figcaption>ornare</figcaption>-->
-<!--          <h6>2012 - 06.2013</h6>-->
-<!--          <p>-->
-<!--            ipsum pulvinar, blandit neque in, ornare libero.-->
-<!--          </p></figure>-->
-<!--        <figure>-->
-<!--          <figcaption>libero</figcaption>-->
-<!--          <h6>2010 - 2011</h6>-->
-<!--          <p>-->
-<!--             elit. Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
-<!--            Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
-<!--          </p>-->
-<!--        </figure>-->
-<!--        <figure>-->
-<!--          <figcaption>adipiscing</figcaption>-->
-<!--          <h6>2010</h6>-->
-<!--          <p>-->
-<!--            Nam et ipsum pulvinar, blandit neque in, ornare libero.-->
-<!--          </p>-->
-<!--        </figure>-->
       </article>
       <br style="clear:both">
     </div>
 
   </section>
-  <!-- <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> -->
-
-<!--  <script src="E:\DSTP\electron ui\RbtUi\src\jquery-3.4.1.min.js"></script>-->
 </template>
 
 <script>
