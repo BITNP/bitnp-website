@@ -4,7 +4,7 @@ import {reactive,onMounted} from "vue";
 let e=reactive({es:{}});
 
 onMounted(()=>{
-  setInterval(()=>{e.es={
+  setTimeout(()=>{e.es={
     left:[
       {
         title:'LOREM',
@@ -35,14 +35,14 @@ onMounted(()=>{
         context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
       }
     ]
-  };},5000);
+  };},500);
 });
 
 </script>
 
 <template>
   <section id="timeline">
-    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-bottom: 3rem;color: #b2cde9;">近期活动</span>
+<!--    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-left: 15px;padding-bottom: 3rem;color: #e9ceb2;">近期活动</span>-->
     <div class="timeline">
       <canvas id="cvs3" width="1691" height="765"></canvas>
       <article>
@@ -106,8 +106,8 @@ function Timeline(cvs) {
     [29, 33, 38]];
 
   self.dotColors = [
-    ['#13669b', 'rgba(19, 102, 155, 0.3)', 'rgba(19, 102, 155, 0.08)'],
-    ['#7dd317', 'rgba(113, 222, 15, 0.3)', 'rgba(91, 164, 22, 0.12)']];
+    ['#fb8c00', 'rgba(255,148,14,0.35)', 'rgba(232,138,17,0.11)'],
+    ['#c0d317', 'rgba(208,222,15,0.3)', 'rgba(159,164,22,0.12)']];
 
 
   self.isPaused = function () {
@@ -168,8 +168,8 @@ function Timeline(cvs) {
       // console.log(document.querySelector('canvas'));
       result = !!(canvas.getContext && (ctx = canvas.getContext('2d')));
 
-      self.lines[0] = new Line(-90, canvas.offsetHeight - 50, '#4789a3', self.options, mouse);
-      self.lines[1] = new Line(-90, canvas.offsetHeight - 50, '#a0d59c', self.options, mouse);
+      self.lines[0] = new Line(-90, canvas.offsetHeight - 65, '#ffc70f', self.options, mouse);
+      self.lines[1] = new Line(-90, canvas.offsetHeight - 65, '#e0e543', self.options, mouse);
 
     } catch (e) {
       console.log(e);
@@ -360,7 +360,7 @@ function Timeline(cvs) {
   box-sizing: border-box;
 }
 #timeline {
-  padding-top: 5%;
+  padding-top: 15%;
 }
 .timeline {
   height: 100%;
@@ -381,10 +381,10 @@ function Timeline(cvs) {
 .timeline h2,h3 {
   font: 400 400% 'Raleway';
   padding-bottom: 3rem;
-  color: #b2cde9;
+  color: #e9cbb2;
 }
 .timeline h6 {
-  color: #0090F5;
+  color: #f58300;
   font: 400 80% Tahoma;
 }
 .timeline p,
@@ -423,13 +423,13 @@ function Timeline(cvs) {
   float: right;
 }
 .timeline article:last-of-type h2 {
-  color: #c6e0aa;
+  color: #e0ddaa;
 }
 .timeline article:last-of-type h6,
 .timeline article:last-of-type a {
-  color: #40aa00;
+  color: #B3D600;
 }
 .timeline article:last-of-type a:hover {
-  color: #95D40D;
+  color: #cdd40d;
 }
 </style>

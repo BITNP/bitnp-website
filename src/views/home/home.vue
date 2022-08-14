@@ -144,7 +144,7 @@ export default defineComponent({
 #bdTitleOut{
   /*position: absolute;*/
   /*background: salmon;*/
-  margin-top: 20vh;
+  margin-top: 13vh;
   padding: 10px;
   text-align: left;
   background: transparent;
@@ -169,7 +169,7 @@ export default defineComponent({
   margin-top: 10px;
 }
 #bdStastics{
-  margin-top: 24vh;
+  margin-top: 22vh;
   /*width: 65%;*/
 }
 .StasticsTitle{
@@ -185,7 +185,7 @@ export default defineComponent({
 }
 #TimelineOut{
   width: 55%;
-  height: 70vh;
+  height: 75vh;
   margin-left: 60%;
   /*margin-top: -28vh;*/
   margin-top: -14vw;

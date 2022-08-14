@@ -13,7 +13,8 @@
     <n-layout-header >
       <n-grid cols="48" x-gap="5px" item-responsive>
         <n-gi offset="6" span="3">
-          <n-image width="54" src="./src/assets/ico.png"></n-image>
+<!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
+          <img src="src/assets/ico.png" width="54" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
 <!--news-->
@@ -257,5 +258,8 @@ export default defineComponent({
 }
 .n-switch{
   padding-top: 15px;
+}
+#headerIco:hover{
+  cursor: pointer;
 }
 </style>
