@@ -7,13 +7,13 @@ window.addEventListener("scroll", function () {
     if (window.scrollY > 3) {
         document.getElementById("background-decorator")
             .className = "glass-appearing";
-        console.log("background-wrapper class property: " + document.getElementById("background-wrapper").className);
+        // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
 
     }
     else {
         document.getElementById("background-decorator")
             .className = "glass-disappearing";
-        console.log("background-wrapper class property: " + document.getElementById("background-wrapper").className);
+        // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
     }
 });
 </script>
