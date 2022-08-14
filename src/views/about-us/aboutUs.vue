@@ -13,21 +13,26 @@ import HandshakeRegular from '@vicons/fa/HandshakeRegular'
 const glassColor = "rgba(255, 255, 255, 0.91)";
 const glassAnimationDurationSec = 0.67;
 const showRail = ref(false);
-
+const regex = /about-us(?!.)/g;
 
 
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 3) {
-        document.getElementById("background-decorator")
-            .className = "glass-appearing";
-        showRail.value = true;
-        // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
-    }
-    else {
-        document.getElementById("background-decorator")
-            .className = "glass-disappearing";
-        showRail.value = false;
-        // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
+    //http://127.0.0.1:5173/#/about-us
+    // if(window.location.href.match(regex))
+    // console.log(window.location.href.match(regex) !== null);
+    if (window.location.href.match(regex) !== null) {
+        if (window.scrollY > 3) {
+            document.getElementById("background-decorator")
+                .className = "glass-appearing";
+            showRail.value = true;
+            // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
+        }
+        else {
+            document.getElementById("background-decorator")
+                .className = "glass-disappearing";
+            showRail.value = false;
+            // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
+        }
     }
 });
 </script>
