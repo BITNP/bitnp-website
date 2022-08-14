@@ -27,7 +27,7 @@ window.addEventListener("scroll", function () {
 
                     <n-grid-item offset="0" span="1">
                         <n-button>
-                            <n-image src="./assets/chairman.png"></n-image>
+                            <n-image src="src/views/about-us/assets/chairman.png"></n-image>
                         </n-button>
                         <p style="text-align: left; font:1.3rem Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
                             网络开拓者协会（Net Pioneer Association of
