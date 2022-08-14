@@ -1,8 +1,43 @@
-<script setup>
+<script setup >
+import {reactive,onMounted} from "vue";
 
+let e=reactive({es:{}});
 
+onMounted(()=>{
+  setInterval(()=>{e.es={
+    left:[
+      {
+        title:'LOREM',
+        time:'2011 - NOW',
+        context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
+      },{
+        title: 'IPSUM',
+        time:'2013',
+        context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+      },{
+        title: 'CONSECTETUR',
+        time: '2007 - 2010',
+        context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
+      }
+    ],
+    right:[
+      {
+        title:'ORNARE',
+        time:'2012 - 06.2013',
+        context:'ipsum pulvinar, blandit neque in, ornare libero.'
+      },{
+        title: 'LIBERO',
+        time:'2010 - 2011',
+        context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+      },{
+        title: 'ADIPISCING',
+        time: '2010',
+        context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+      }
+    ]
+  };},5000);
+});
 
-// e=e.left;
 </script>
 
 <template>
@@ -12,7 +47,7 @@
       <canvas id="cvs3" width="1691" height="765"></canvas>
       <article>
         <h2></h2>
-        <figure v-for="items in e.left">
+        <figure v-for="items in e.es.left">
           <figcaption>{{items.title}}</figcaption>
           <h6>{{items.time}}</h6>
           <p>{{items.context}}</p>
@@ -43,7 +78,7 @@
 
       <article>
         <h2></h2>
-        <figure v-for="items in e.right">
+        <figure v-for="items in e.es.right">
           <figcaption>{{items.title}}</figcaption>
           <h6>{{items.time}}</h6>
           <p>{{items.context}}</p>
@@ -80,82 +115,15 @@
 </template>
 
 <script>
-import {defineComponent,reactive} from "vue";
-let es={};
-setInterval(()=>{es={
-  left:[
-    {
-      title:'LOREM',
-      time:'2011 - NOW',
-      context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
-    },{
-      title: 'IPSUM',
-      time:'2013',
-      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-    },{
-      title: 'CONSECTETUR',
-      time: '2007 - 2010',
-      context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-    }
-  ],
-  right:[
-    {
-      title:'ORNARE',
-      time:'2012 - 06.2013',
-      context:'ipsum pulvinar, blandit neque in, ornare libero.'
-    },{
-      title: 'LIBERO',
-      time:'2010 - 2011',
-      context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-    },{
-      title: 'ADIPISCING',
-      time: '2010',
-      context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-    }
-  ]
-};
-  console.log(es);},5000);
+import {defineComponent} from "vue";
+
 export default defineComponent({
   name: "timeLine",
   data(){
     return{
-      e:reactive(es)
+
     }
   },
-  // beforeCreate() {
-  //   e={
-  //     left:[
-  //       {
-  //         title:'LOREM',
-  //         time:'2011 - NOW',
-  //         context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
-  //       },{
-  //         title: 'IPSUM',
-  //         time:'2013',
-  //         context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-  //       },{
-  //         title: 'CONSECTETUR',
-  //         time: '2007 - 2010',
-  //         context: 'ero in nibh convallis sollici blandit neque in, ornare libero.'
-  //       }
-  //     ],
-  //     right:[
-  //       {
-  //         title:'ORNARE',
-  //         time:'2012 - 06.2013',
-  //         context:'ipsum pulvinar, blandit neque in, ornare libero.'
-  //       },{
-  //         title: 'LIBERO',
-  //         time:'2010 - 2011',
-  //         context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-  //       },{
-  //         title: 'ADIPISCING',
-  //         time: '2010',
-  //         context: 'Nam et ipsum pulvinar, blandit neque in, ornare libero.'
-  //       }
-  //     ]
-  //   };
-  // },
   updated() {
     new Timeline(document.querySelector('#cvs3')).toggle(true);
   }
@@ -437,15 +405,6 @@ function Timeline(cvs) {
   padding: 0;
   box-sizing: border-box;
 }
-/*body,*/
-/*html {*/
-/*  color: #2C2C2C;*/
-/*  min-width: 600px;*/
-/*  height: 100%;*/
-/*  background: white;*/
-/*  font: 400 1em 'Lato';*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*}*/
 #timeline {
   padding-top: 5%;
 }
