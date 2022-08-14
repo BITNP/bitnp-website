@@ -144,7 +144,7 @@ export default defineComponent({
 #bdTitleOut{
   /*position: absolute;*/
   /*background: salmon;*/
-  margin-top: 13vh;
+  margin-top: 10vh;
   padding: 10px;
   text-align: left;
   background: transparent;
