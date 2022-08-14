@@ -1,5 +1,6 @@
 <script setup>
-import { NSpace, NGridItem, NGrid, NButton, NImage } from 'naive-ui';
+import { NSpace, NGridItem, NGrid, NButton, NImage, NIcon } from 'naive-ui';
+import Neos from '@vicons/fa/Neos'
 const glassColor = "rgba(255, 255, 255, 0.91)";
 const glassAnimationDurationSec = 0.67;
 
@@ -21,19 +22,22 @@ window.addEventListener("scroll", function () {
 <template>
     <div id="background-container">
         <div class="glass" id="background-decorator">
-            <div
-                style="margin:0px 100px 0px 100px;">
-
+            <div style="margin:0px 100px 0px 100px; padding-top: 100px;">
                 <n-grid cols="2" x-gap="100px">
 
                     <n-grid-item offset="0" span="1">
-                        <n-button>
-                            <n-image src="src/views/about-us/assets/chairman.png"></n-image>
-                        </n-button>
-                        <p style="text-align: left; font:1.3rem Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                            网络开拓者协会（Net Pioneer Association of
-                            BIT，以下简称网协），成立于1997年，是北京理工大学校内规模最大的社团之一，本着“网络无限，开拓不懈”的精神，不断摸索、引领校园网络建设，后成为校团委领导的全校唯一IT类学生组织。经过20年的不断成长，各项规章制度和硬件设备基本完善，成长为北理最大的网络服务提供团体，拥有每日最高的访问量，从学校学生工作，到日常娱乐服务，协会的服务范围仍然在继续的扩大。同时，协会自身也在不断努力的增强实力，拓展业务。
-                        </p>
+                        <n-space justify="start">
+                            <n-icon size="50">
+                                <Neos />
+                            </n-icon>
+                            <div class="introduction-title" style="font:40px Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                网络开拓者协会</div>
+                            <p
+                                style="margin-top: 0; text-align: left; font:1.3rem Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                网络开拓者协会（Net Pioneer Association of
+                                BIT，以下简称网协），成立于1997年，是北京理工大学校内规模最大的社团之一，本着“网络无限，开拓不懈”的精神，不断摸索、引领校园网络建设，后成为校团委领导的全校唯一IT类学生组织。经过20年的不断成长，各项规章制度和硬件设备基本完善，成长为北理最大的网络服务提供团体，拥有每日最高的访问量，从学校学生工作，到日常娱乐服务，协会的服务范围仍然在继续的扩大。同时，协会自身也在不断努力的增强实力，拓展业务。
+                            </p>
+                        </n-space>
                     </n-grid-item>
 
                     <n-grid-item offset="0" span="1">
