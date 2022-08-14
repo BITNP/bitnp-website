@@ -22,7 +22,7 @@ window.addEventListener("scroll", function () {
     <div id="background-container">
         <div class="glass" id="background-decorator">
             <div
-                style="margin:0px 100px 0px 100px; background-image: url(src/views/about-us/assets/about-us-background-image.jpg); ">
+                style="margin:0px 100px 0px 100px;">
 
                 <n-grid cols="2" x-gap="100px">
 
