@@ -10,10 +10,7 @@
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
 
-  import Clipboard from 'clipboard'
-  function CopyHref(){
 
-  }
 </script>
 
 <template>
@@ -82,13 +79,13 @@
         </n-gi>
 <!--share-->
         <n-gi offset="0" span="1">
-          <n-button text @click="CopyHref()">
+          <n-button class="clipbtn" :data-clipboard-text="propstyle.urls" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
           </n-button>
         </n-gi>
-        <span id="clipbundle" style="visibility: hidden;">1</span>
+        <input id="clipbundle" class="clptar" style="visibility: hidden;">
       </n-grid>
     </n-layout-header>
 
@@ -99,6 +96,7 @@ import {h} from "vue"
 import {defineComponent} from "vue";
 
 import {NAvatar,NText} from 'naive-ui'
+import Clipboard from 'clipboard'
 
 import DnsServices from '@vicons/carbon/DnsServices'
 import BrandGithub from '@vicons/tabler/BrandGithub'
@@ -147,6 +145,7 @@ export default defineComponent({
     return{
       propstyle:{
         icons:25,
+        urls:window.location.href
       },
       options1:[
         {
@@ -193,7 +192,7 @@ export default defineComponent({
     }
   },
   components:{
-    clipboard
+    Clipboard
   },
   methods:{
       // Changetheme(value){
@@ -201,7 +200,11 @@ export default defineComponent({
       // },
   },
   mounted() {
-    var clipboard=new clipboard()
+    var clipboard=new Clipboard('.clipbtn');
+    clipboard.on('success',()=>{
+      console.log('copy text successfully.')});
+  },
+  updated() {
   }
 })
 </script>
