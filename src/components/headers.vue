@@ -1,5 +1,19 @@
 <script setup>
-  import {NLayoutHeader,NImage,NGrid,NGi,NButton,NSpace,NIcon,NH3,NText,NSwitch,NAvatar,NDropdown} from 'naive-ui'
+import {
+  NLayoutHeader,
+  NImage,
+  NGrid,
+  NGi,
+  NButton,
+  NSpace,
+  NIcon,
+  NH3,
+  NText,
+  NSwitch,
+  NAvatar,
+  NDropdown,
+  useMessage
+} from 'naive-ui'
   import News16Regular from '@vicons/fluent/News16Regular'
   import Flashlight24Regular from '@vicons/fluent/Flashlight24Regular'
   import FlashlightOff24Filled from '@vicons/fluent/FlashlightOff24Filled'
@@ -10,7 +24,7 @@
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
 
-
+window.$message=useMessage();
 </script>
 
 <template>
@@ -95,7 +109,7 @@
 import {h} from "vue"
 import {defineComponent} from "vue";
 
-import {NAvatar,NText} from 'naive-ui'
+import {NAvatar, NText} from 'naive-ui'
 import Clipboard from 'clipboard'
 
 import DnsServices from '@vicons/carbon/DnsServices'
@@ -141,6 +155,9 @@ const renderIcon = (icon) => {
 
 export default defineComponent({
   name: "headers",
+  setup(){
+
+  },
   data(){
     return{
       propstyle:{
@@ -202,7 +219,9 @@ export default defineComponent({
   mounted() {
     var clipboard=new Clipboard('.clipbtn');
     clipboard.on('success',()=>{
-      console.log('copy text successfully.')});
+      window.$message.success('已粘贴到剪贴板，快去分享吧~');
+      console.log('copy text successfully.')
+    });
   },
   updated() {
   }

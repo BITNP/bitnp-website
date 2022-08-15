@@ -1,6 +1,6 @@
 <script setup>
 
-import {NButton,NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NConfigProvider,NScrollbar,NBackTop,NAffix} from 'naive-ui';
+import {NButton,NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NConfigProvider,NMessageProvider,NScrollbar,NBackTop,NAffix} from 'naive-ui';
 import {useRouter,useRoute} from 'vue-router'
 import headers from './components/headers.vue'
 import footers from './components/footers.vue'
@@ -12,28 +12,31 @@ const route =useRoute();
 <template>
 
 <n-config-provider :theme="themecheck" >
-  <div style="">
-    <n-back-top :right="100" :visibility-height="100"></n-back-top>
-    <n-layout >
-      <headers ></headers>
-      <n-layout-content content-style="">
-        <router-view></router-view>
-        <n-theme-editor>
-        </n-theme-editor>
-      </n-layout-content>
-      <n-layout-footer >
-        <footers></footers>
-      </n-layout-footer>
-    </n-layout>
-  </div>
+  <n-message-provider>
+    <div style="">
+      <n-back-top :right="100" :visibility-height="100"></n-back-top>
+      <n-layout >
+        <headers ></headers>
+        <n-layout-content content-style="">
+          <router-view></router-view>
+          <n-theme-editor>
+          </n-theme-editor>
+        </n-layout-content>
+        <n-layout-footer >
+          <footers></footers>
+        </n-layout-footer>
+      </n-layout>
+    </div>
+  </n-message-provider>
 </n-config-provider>
 </template>
 
 <script>
 import {defineComponent} from "vue";
-import {darkTheme, NThemeEditor} from 'naive-ui'
+import {darkTheme, NThemeEditor,useMessage} from 'naive-ui'
 export default defineComponent({
   setup(){
+
     return{
       darkTheme
     }
