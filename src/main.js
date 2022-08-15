@@ -11,14 +11,14 @@ const app= createApp(App);
 const stores =createStore({
     state(){
         return{
-            theme:false
+            // theme:false
         }
     },
     mutations:{
-        ChangeTheme(state){
-            state.theme=!state.theme
-            // console.log(state.theme)
-        }
+        // ChangeTheme(state){
+        //     state.theme=!state.theme
+        //     // console.log(state.theme)
+        // }
     }
 })
 

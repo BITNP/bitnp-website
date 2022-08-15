@@ -83,13 +83,12 @@
 <!--share-->
         <n-gi offset="0" span="1">
           <n-button text @click="CopyHref()">
-            <span id="clipbundle" style="visibility: hidden;">1</span>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
           </n-button>
         </n-gi>
-
+        <span id="clipbundle" style="visibility: hidden;">1</span>
       </n-grid>
     </n-layout-header>
 
@@ -193,10 +192,16 @@ export default defineComponent({
       ]
     }
   },
+  components:{
+    clipboard
+  },
   methods:{
-      Changetheme(value){
-        this.$store.commit('ChangeTheme')
-      },
+      // Changetheme(value){
+      //   this.$store.commit('ChangeTheme')
+      // },
+  },
+  mounted() {
+    var clipboard=new clipboard()
   }
 })
 </script>

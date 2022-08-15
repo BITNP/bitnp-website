@@ -39,10 +39,10 @@ export default defineComponent({
     }
   },
   computed:{
-    themecheck(){
-      // console.log('themecheck')
-      return (this.$store.state.theme)?darkTheme:null
-    }
+    // themecheck(){
+    //   // console.log('themecheck')
+    //   return (this.$store.state.theme)?darkTheme:null
+    // }
   },
   components:{
     NThemeEditor
