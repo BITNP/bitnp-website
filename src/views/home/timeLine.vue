@@ -92,6 +92,7 @@ function Timeline(cvs) {
       mouse = {x: 0, y: 0},
       canvas = cvs,
       ctx = null;
+  if(document.querySelector('#cvs3')==null)return;
   // console.log(canvas);
   self.lines = [];
 
@@ -147,6 +148,7 @@ function Timeline(cvs) {
   }
 
   function OnResize() {
+    if(document.querySelector('#cvs3')==null)return;
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
@@ -177,7 +179,7 @@ function Timeline(cvs) {
     }
 
     document.querySelector('canvas').addEventListener('mousemove',function (e) {
-
+      if(document.querySelector('#cvs3')==null)document.querySelector('canvas').removeEventListener('mousemove',()=>{});
       if (e.offsetX) {
         mouse.x = e.offsetX;
         mouse.y = e.offsetY;
@@ -319,6 +321,7 @@ function Timeline(cvs) {
   }
 
   self.toggle = function (run) {
+    if(document.querySelector('#cvs3')==null)return;
     if (!self.isOK) return false;
 
     if (run === undefined)
