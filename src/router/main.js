@@ -16,6 +16,11 @@ const routes = [
         name: 'about-us',
         component: () => import('@/views/about-us/aboutUs.vue')
     },
+    {
+        path: '/common-links',
+        name: 'common-links',
+        component: () => import('@/views/common-links/Common-Links.vue')    
+    },
 ];
 
 const router = createRouter({
