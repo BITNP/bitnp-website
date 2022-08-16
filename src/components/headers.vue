@@ -94,7 +94,7 @@ const $router=useRouter();
         </n-gi>
 <!--share-->
         <n-gi offset="0" span="1">
-          <n-button class="clipbtn" :data-clipboard-text="clipUrl" text>
+          <n-button class="clipbtn" :data-clipboard-text="Urlhandle" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
@@ -238,6 +238,11 @@ export default defineComponent({
     });
   },
   computed:{
+    Urlhandle(){
+      // return window.location.href;
+      // console.log(this.$route.path);
+      return document.location.host+'/#'+this.$route.path;
+    }
   }
 })
 </script>
