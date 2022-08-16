@@ -363,7 +363,7 @@ function Timeline(cvs) {
   box-sizing: border-box;
 }
 #timeline {
-  padding-top: 15%;
+  padding-top: 5%;
 }
 .timeline {
   height: 100%;

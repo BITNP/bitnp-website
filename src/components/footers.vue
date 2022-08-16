@@ -19,9 +19,11 @@ import Affiliate from '@vicons/tabler/Affiliate'
     <n-layout>
       <n-layout-header></n-layout-header>
       <n-layout-content content-style="padding-bottom:20px;">
-        <n-grid cols="24" x-gap="5px">
-          <n-gi offset="3" span="6">
-            <n-image width="54" src="./src/assets/cover3.png"></n-image>
+        <n-grid cols="24" x-gap="5px" item-responsive responsive="screen">
+          <n-gi offset="0 m:3 h:3" span="24 m:6 h:6">
+            <n-space justify="center">
+              <n-image width="54" src="./src/assets/cover3.png"></n-image>
+            </n-space>
             <n-space justify="center" >
               <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
             </n-space>
@@ -32,7 +34,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
               <span id="footName3">网络无限 · 开拓不懈</span>
             </n-space>
           </n-gi>
-          <n-gi offset="0" span="6" >
+          <n-gi offset="0" span="24 m:6 h:6" >
             <n-space justify="center">
               <n-space vertical>
                 <n-space justify="center">
@@ -110,7 +112,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
             </n-space>
 
           </n-gi>
-          <n-gi offset="0" span="6">
+          <n-gi offset="0" span="24 m:6 h:6">
             <n-space justify="center">
               <n-space vertical>
                 <n-space justify="center">
@@ -189,15 +191,18 @@ export default {
   background: transparent;
 }
 #ffoot{
+  /*width: 100vw;*/
   /*padding: 10px;*/
+  padding-left: 0;
+  padding-right: 0;
   padding-top: 15px;
   padding-bottom: 18px;
-  font-size: 16px;
-}
-#footerColMid{
-  border: 0.125rem solid #00BFFFFF;
-  border-top: 0px;
-  border-bottom: 0px;
+  font-size: 1vw;
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #footName1{
   font-size:large;

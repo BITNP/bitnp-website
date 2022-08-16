@@ -75,7 +75,7 @@ button:focus-visible {
   /*padding: 2rem;*/
   text-align: center;
   margin: 0 0!important;
-  /*width: 100vw;*/
+  width: 100vw;
   max-width:none;
   /*min-width: 1200px;*/
   padding: 0.1rem;
