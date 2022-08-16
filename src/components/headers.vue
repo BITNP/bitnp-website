@@ -15,16 +15,17 @@ import {
   useMessage
 } from 'naive-ui'
   import News16Regular from '@vicons/fluent/News16Regular'
-  import Flashlight24Regular from '@vicons/fluent/Flashlight24Regular'
-  import FlashlightOff24Filled from '@vicons/fluent/FlashlightOff24Filled'
   import GitlabOutlined from '@vicons/antd/GitlabOutlined'
   import CodepenOutlined from '@vicons/antd/CodepenOutlined'
   import Atom from '@vicons/tabler/Atom'
   import Github from '@vicons/fa/Github'
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
+import {useRoute, useRouter} from "vue-router";
 
 window.$message=useMessage();
+const $route=useRoute();
+const $router=useRouter();
 </script>
 
 <template>
@@ -57,7 +58,7 @@ window.$message=useMessage();
         </n-gi>
 <!--meta-->
         <n-gi offset="0" span="3">
-          <n-dropdown trigger="hover" size="large" :options="options2">
+          <n-dropdown trigger="hover" size="large" :options="options2" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
                 <Atom/>
@@ -93,7 +94,7 @@ window.$message=useMessage();
         </n-gi>
 <!--share-->
         <n-gi offset="0" span="1">
-          <n-button class="clipbtn" :data-clipboard-text="propstyle.urls" text>
+          <n-button class="clipbtn" :data-clipboard-text="clipUrl" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
@@ -107,7 +108,8 @@ window.$message=useMessage();
 
 <script>
 import {h} from "vue"
-import {defineComponent} from "vue";
+import {defineComponent,reactive} from "vue";
+// import {useRouter as $router} from 'vue-router'
 
 import {NAvatar, NText} from 'naive-ui'
 import Clipboard from 'clipboard'
@@ -153,16 +155,21 @@ const renderIcon = (icon) => {
   };
 };
 
+
+
 export default defineComponent({
   name: "headers",
   setup(){
 
+    let clipUrl=reactive({e:window.location.href});
+    return{
+      clipUrl,
+    }
   },
   data(){
     return{
       propstyle:{
         icons:25,
-        urls:window.location.href
       },
       options1:[
         {
@@ -205,7 +212,8 @@ export default defineComponent({
           key: "joinus",
           icon:renderIcon(MdContacts)
         }
-      ]
+      ],
+
     }
   },
   components:{
@@ -215,15 +223,21 @@ export default defineComponent({
       // Changetheme(value){
       //   this.$store.commit('ChangeTheme')
       // },
+    handleSelect(key){
+      const map ={
+        address:'common-links'
+      }
+      this.$router.push(map["address"]);
+    }
   },
   mounted() {
     var clipboard=new Clipboard('.clipbtn');
     clipboard.on('success',()=>{
       window.$message.success('已粘贴到剪贴板，快去分享吧~');
-      console.log('copy text successfully.')
+      // console.log('copy text successfully.')
     });
   },
-  updated() {
+  computed:{
   }
 })
 </script>
