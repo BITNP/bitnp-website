@@ -30,14 +30,14 @@ const $router=useRouter();
 
 <template>
     <n-layout-header >
-      <n-grid cols="48" x-gap="5px" item-responsive>
+      <n-grid cols="48" x-gap="5px" item-responsive responsive="screen">
         <n-gi offset="6" span="3">
 <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="src/assets/ico.png" width="20" id="headerIco" @click="$router.push('/')">
+          <img src="src/assets/ico.png"  style="width:  1.1rem;" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
 <!--news-->
-        <n-gi offset="0" span="3">
+        <n-gi offset="0" span="0 m:3 l:3">
           <n-button text >
             <n-icon :size="propstyle.icons" >
               <News16Regular/>
@@ -46,7 +46,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
 <!--space-->
-        <n-gi offset="0" span="3">
+        <n-gi offset="0" span="0 m:3 l:3">
           <n-dropdown trigger="hover" size="large" :options="options1">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -57,7 +57,7 @@ const $router=useRouter();
           </n-dropdown>
         </n-gi>
 <!--meta-->
-        <n-gi offset="0" span="3">
+        <n-gi offset="0" span="0 m:3 l:3">
           <n-dropdown trigger="hover" size="large" :options="options2" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -68,7 +68,7 @@ const $router=useRouter();
           </n-dropdown>
 <!--about格-->
         </n-gi>
-        <n-gi offset="0" span="3">
+        <n-gi offset="0" span="0 m:3 l:3">
             <n-button text @click="$router.push('about-us')">
               <n-icon :size="propstyle.icons">
                 <GitlabOutlined/>
@@ -77,7 +77,7 @@ const $router=useRouter();
             </n-button>
         </n-gi>
 <!--admin-->
-        <n-gi offset="22" span="1">
+        <n-gi offset="22" span="0 m:1 l:1">
           <n-button text @click="$router.push('')">
             <n-icon :size="propstyle.icons">
               <ManageAccountsOutlined/>
@@ -85,7 +85,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
 <!--github-->
-        <n-gi offset="0" span="1">
+        <n-gi offset="0" span="0 m:1 l:1">
             <n-button text @click="" >
               <n-icon :size="propstyle.icons">
                 <Github/>
@@ -93,7 +93,7 @@ const $router=useRouter();
             </n-button>
         </n-gi>
 <!--share-->
-        <n-gi offset="0" span="1">
+        <n-gi offset="0" span="0 m:1 l:1">
           <n-button class="clipbtn" :data-clipboard-text="Urlhandle" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
@@ -263,7 +263,7 @@ export default defineComponent({
   padding-top: 15px;
 }
 #headerIco{
-  padding-top: 7px;
+  padding-top: 0.7rem;
 }
 #headerIco:hover{
   cursor: pointer;
