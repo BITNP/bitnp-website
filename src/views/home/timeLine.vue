@@ -44,7 +44,7 @@ onMounted(()=>{
   <section id="timeline">
 <!--    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-left: 15px;padding-bottom: 3rem;color: #e9ceb2;">近期活动</span>-->
     <div class="timeline">
-      <canvas id="cvs3" width="1691" height="765"></canvas>
+      <canvas id="cvs3" width="100%" height="80%"></canvas>
       <article>
         <h2></h2>
         <figure v-for="items in e.es.left">
@@ -170,8 +170,8 @@ function Timeline(cvs) {
       // console.log(document.querySelector('canvas'));
       result = !!(canvas.getContext && (ctx = canvas.getContext('2d')));
 
-      self.lines[0] = new Line(-90, canvas.offsetHeight - 65, '#ffc70f', self.options, mouse);
-      self.lines[1] = new Line(-90, canvas.offsetHeight - 65, '#e0e543', self.options, mouse);
+      self.lines[0] = new Line(-90, canvas.offsetHeight - 90, '#ffc70f', self.options, mouse);
+      self.lines[1] = new Line(-90, canvas.offsetHeight - 90, '#e0e543', self.options, mouse);
 
     } catch (e) {
       console.log(e);
@@ -364,9 +364,10 @@ function Timeline(cvs) {
 }
 #timeline {
   padding-top: 5%;
+  /*height: 100%;*/
 }
 .timeline {
-  height: 100%;
+  /*height: 78%;*/
   position: relative;
 }
 .timeline canvas {

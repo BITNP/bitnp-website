@@ -1,5 +1,5 @@
 <script setup>
-import {NGrid,NGi,NDivider,NRow,NCol,NStatistic,NIcon,NSpace,NTabs,NTabPane} from 'naive-ui'
+import {NGrid,NGi,NDivider,NRow,NCol,NStatistic,NIcon,NSpace,NTabs,NTabPane,NCard} from 'naive-ui'
 import DataLine20Regular from '@vicons/fluent/DataLine24Regular'
 import ArticleOutlined from '@vicons/material/ArticleOutlined'
 import ObjectStorageAlt from '@vicons/carbon/ObjectStorageAlt'
@@ -97,6 +97,35 @@ import timeLine from './timeLine.vue'
                 </n-grid>
               </div>
             </div>
+            <div id="outer3">
+              <n-grid cols="5" x-gap="26" item-responsive responsive="screen">
+                <n-gi offset="0" span="1">
+                    <div class="card-ele">
+
+                    </div>
+                </n-gi>
+                <n-gi offset="0" span="1">
+                  <div class="card-ele">
+
+                  </div>
+                </n-gi>
+                <n-gi offset="0" span="1">
+                  <div class="card-ele">
+
+                  </div>
+                </n-gi>
+                <n-gi offset="0" span="1">
+                  <div class="card-ele">
+
+                  </div>
+                </n-gi>
+                <n-gi offset="0" span="1">
+                  <div class="card-ele">
+
+                  </div>
+                </n-gi>
+              </n-grid>
+            </div>
         </n-space>
 <!--            <div id="bdWr2">-->
 <!--            </div>-->
@@ -146,6 +175,29 @@ export default defineComponent({
     width: 87vw;
     height: 33vw;
   }
+}
+.card-ele{
+  padding: 10px;
+  width: 90%;
+  height: 14vw;
+  border: 1.3px solid rgba(70, 54, 54, 0.17);
+  border-radius: 10px;
+  transition: all .3s;
+  box-sizing: border-box;
+  /*background: rgba(83, 91, 242, 0.51);*/
+  text-align: center;
+  bottom: 0;
+}
+.card-ele:hover{
+  bottom: 6px;
+  box-shadow: 0 12px 32px 4px rgba(237, 239, 245, 0.3),
+              0 8px 20px rgba(237, 239, 245, 0.54);
+  background-color: white;
+}
+#outer3{
+  width: 87vw;
+  height: 22vw;
+  /*background: #535bf2;*/
 }
 #bdOut1{
   /*width: 100vh;*/
