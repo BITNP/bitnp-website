@@ -33,7 +33,7 @@ const $router=useRouter();
       <n-grid cols="48" x-gap="5px" item-responsive responsive="screen">
         <n-gi offset="6" span="3">
 <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="src/assets/ico.png"  style="width:  1.1rem;" id="headerIco" @click="$router.push('/')">
+          <img src="src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
 <!--news-->
@@ -263,7 +263,8 @@ export default defineComponent({
   padding-top: 15px;
 }
 #headerIco{
-  padding-top: 0.7rem;
+  padding-top: 0.6rem;
+  width:  1.1rem;
 }
 #headerIco:hover{
   cursor: pointer;
