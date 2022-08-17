@@ -1,6 +1,10 @@
 <script setup>
   import { NButton,NDivider,NSpace,NLayout,NLayoutSider,NLayoutContent,NCard,NEllipsis,NH1,NH2,NH3,NH4,NH5,NH6} from 'naive-ui'
+
+
+
 </script>
+
 <template>
 
     <!-- 右边折叠的侧边栏README -->
@@ -8,9 +12,9 @@
     <n-layout has-sider sider-placement="right">
       <n-layout-content content-style="padding: 24px;">
         <n-h3>本网站的作用是提供一些学校常用的网址和简单的功能介绍，
-          更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，一个示例：<a href="">合理打广告</a>
+          更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，一个示例：<a href="/#/about-us" target="_blank">合理打广告</a>
         <br> 
-        另外，一些网址可能需要使用校内网，但不用担心我们有<a href="webvpn.bit.edu.cn">资源控制访问系统</a>，
+        另外，一些网址可能需要使用校内网，但不用担心我们有<a href="https://webvpn.bit.edu.cn">资源控制访问系统</a>，
         即使是校外也仍然可以访问你所需要的网址
         <br>
 
@@ -103,13 +107,13 @@
               </n-ellipsis>
           </n-card>
           <n-card title="计划财务部" hoverable class="thumbnail">
-            <a href="fad.bit.edu.cn/">会计核算</a>           
+            <a href="https://fad.bit.edu.cn/">会计核算</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                中心的业务包括工资查询税务中心以及网上缴费平台等等
               </n-ellipsis>
           </n-card>     
           <n-card title="党委办公室" hoverable class="thumbnail">
-            <a href="dzb.bit.edu.cn/">党政办网</a>           
+            <a href="https://dzb.bit.edu.cn/">党政办网</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                 会发布一些红头文件，学校工作的基本
               </n-ellipsis>
@@ -386,41 +390,51 @@
               </n-ellipsis>
           </n-card>
           <n-card title="学生事务中心" hoverable class="thumbnail">
-            <a href="student.bit.edu.cn/">学生事务</a>           
+            <a href="https://student.bit.edu.cn/">学生事务</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                学生资助，办事指南以及校园服务
               </n-ellipsis>
           </n-card>     
           <n-card title="教学运行与考务中心" hoverable class="thumbnail">
-            <a href="jxzx.bit.edu.cn/">提供教学辅助</a>           
+            <a href="https://jxzx.bit.edu.cn/">提供教学辅助</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                 课表编排，选退课，教师调停课，考试安排及保障工作
               </n-ellipsis>
           </n-card>        
           <n-card title="留学生中心" hoverable class="thumbnail">
-            <a href="isc.bit.edu.cn/">外国留学生的招生与培养管理</a>           
+            <a href="https://isc.bit.edu.cn/">外国留学生的招生与培养管理</a>           
           </n-card>   
           <n-card title="技术转移中心" hoverable class="thumbnail">
-            <a href="jxzx.bit.edu.cn/">提供教学辅助</a>           
+            <a href="https://jxzx.bit.edu.cn/">???</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
-                课表编排，选退课，教师调停课，考试安排及保障工作
+                ???
               </n-ellipsis>
           </n-card>                       
       </n-layout-content>
     </n-layout>
 </template>
 <style scoped>
-.n-card {
+  .n-card {
   /* 卡片的大小 */
   max-width: 300px;
   max-height: 200px;
-}
-.thumbnail 
-{
+  }
+  .thumbnail 
+  {
   /* 控制卡片横向排列 */
 	float:left;
 	width:160px;
 	height:90px;
 	margin:5px;
-}
+  }
+  a:link {text-decoration:none;}    /* unvisited link */
+  a:visited {text-decoration:none;} /*visited link */
+  a:hover {text-decoration:underline;
+  color:rgb(10, 119, 83)}   /* mouse over link*/
+  a:active {text-decoration:underline;
+    color: rgb(76, 9, 40);
+  }  /* selected link*/
+  a{
+    color:rgb(201, 177, 20)
+  }
 </style>
