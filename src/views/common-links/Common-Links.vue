@@ -6,15 +6,16 @@
 </script>
 
 <template>
+    <base target="_blank">
+    <!-- 在新标签页中打开链接 -->
 
     <!-- 右边折叠的侧边栏README -->
-
     <n-layout has-sider sider-placement="right">
       <n-layout-content content-style="padding: 24px;">
         <n-h3>本网站的作用是提供一些学校常用的网址和简单的功能介绍，
           更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，一个示例：<a href="/#/about-us" target="_blank">合理打广告</a>
         <br> 
-        另外，一些网址可能需要使用校内网，但不用担心我们有<a href="https://webvpn.bit.edu.cn">资源控制访问系统</a>，
+        另外，一些网址可能需要使用校内网，但不用担心我们有<a href="https://webvpn.bit.edu.cn" target="_blank">资源控制访问系统</a>，
         即使是校外也仍然可以访问你所需要的网址
         <br>
 
@@ -70,7 +71,61 @@
       </n-layout-content>
     </n-layout>
 
-    <!-- 第二部分侧边栏 教学教研机构 -->   
+    <!-- 第二部分侧边栏 教学-->
+    <n-layout has-sider>
+      <n-layout-sider
+        collapse-mode="transform"
+        :collapsed-width="160"
+        :width="180"
+        show-trigger="bar"
+        content-style="padding: 60px;"
+        bordered
+        font="60px"
+      >
+      <h2>教学</h2>
+      </n-layout-sider>
+      <n-layout-content content-style="padding: 24px;">
+          <n-card title="教务处" hoverable class="thumbnail">
+            <!-- 悬浮卡片中的内容 -->
+            <a href="https://jwc.bit.edu.cn/">本科生培养</a>       
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+               专业设置规划，可以在此查询到各个专业的培养方案及教学通知
+              </n-ellipsis>
+          </n-card>
+          <n-card title="选课" hoverable class="thumbnail">
+            <a href="https://xk.bit.edu.cn/">选课系统</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+              选课通知会发布在教务处里，推荐课程可以通过一些其他渠道进行咨询
+              </n-ellipsis>
+          </n-card>
+          <n-card title="乐学" hoverable class="thumbnail">
+            <a href="http://lexue.bit.edu.cn/">在线教学服务</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+               课程作业的发布提交都会发布在这里，请大家及时按照老师要求加入课程。（乐学的评测系统向来是值得讨论的
+              </n-ellipsis>
+          </n-card>
+          <n-card title="延河课堂" hoverable class="thumbnail">
+            <a href="https://www.yanhekt.cn/liveCourse">直播及录播</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+              上网课及复习必备帮手，近日延河进行了升级给同学们带来了更好的体验
+              </n-ellipsis>
+          </n-card>
+          <n-card title="学科竞赛" hoverable class="thumbnail">
+            <a href="https://xkjs.bit.edu.cn">查看竞赛信息</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+            
+              </n-ellipsis>
+          </n-card>
+          <n-card title="本硕博一体化教学系统" hoverable class="thumbnail">
+            <a href="http://jxzxehall.bit.edu.cn">课表安排培养方案</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+            
+              </n-ellipsis>
+          </n-card>
+      </n-layout-content>
+    </n-layout>
+
+    <!-- 第三部分侧边栏 教学教研机构 -->   
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
@@ -121,7 +176,7 @@
       </n-layout-content>
     </n-layout>
 
-    <!-- 第三部分侧边栏 学院-->   
+    <!-- 第四部分侧边栏 学院-->   
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
@@ -246,7 +301,7 @@
       </n-layout-content>
     </n-layout>    
 
-    <!-- 第四部分侧边栏 管理机构-->   
+    <!-- 第五部分侧边栏 管理机构-->   
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
@@ -357,8 +412,8 @@
       </n-layout-content>
     </n-layout>   
 
-    <!-- 第五部分侧边栏 教学教研辅助机构-->
-      <n-layout has-sider>
+    <!-- 第六部分侧边栏 教学教研辅助机构-->
+    <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
         :collapsed-width="60"
@@ -405,9 +460,61 @@
             <a href="https://isc.bit.edu.cn/">外国留学生的招生与培养管理</a>           
           </n-card>   
           <n-card title="技术转移中心" hoverable class="thumbnail">
-            <a href="https://jxzx.bit.edu.cn/">???</a>           
+            <a href="https://ttc.bit.edu.cn/">负责科技成果的转移转化</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
-                ???
+              </n-ellipsis>
+          </n-card>                       
+      </n-layout-content>
+    </n-layout>
+    <!-- 第七部分侧边栏 实验？？？-->
+    <n-layout has-sider>
+      <n-layout-sider
+        collapse-mode="transform"
+        :collapsed-width="60"
+        :width="180"
+        show-trigger="bar"
+        content-style="padding: 60px;"
+        bordered
+        font="60px"
+      >
+      <h2>实验？？？</h2>
+      </n-layout-sider>
+      <n-layout-content content-style="padding: 24px;">
+          <n-card title="档案馆" hoverable class="thumbnail">
+            <a href="https://arc.bit.edu.cn/" >档案馆</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+              </n-ellipsis>
+          </n-card>
+          <n-card title="网信中心" hoverable class="thumbnail">
+            <a href="https://itc.bit.edu.cn/">为学校信息建设工作</a>
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+               提供技术支持与保障
+              </n-ellipsis>
+          </n-card>
+          <n-card title="教师发展中心" hoverable class="thumbnail">
+            <a href="http://cfd.bit.edu.cn/">教学科研辅助机构</a>           
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+               教师素质能力提升平台和教师公共事务服务平台
+              </n-ellipsis>
+          </n-card>
+          <n-card title="学生事务中心" hoverable class="thumbnail">
+            <a href="https://student.bit.edu.cn/">学生事务</a>           
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+               学生资助，办事指南以及校园服务
+              </n-ellipsis>
+          </n-card>     
+          <n-card title="教学运行与考务中心" hoverable class="thumbnail">
+            <a href="https://jxzx.bit.edu.cn/">提供教学辅助</a>           
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
+                课表编排，选退课，教师调停课，考试安排及保障工作
+              </n-ellipsis>
+          </n-card>        
+          <n-card title="留学生中心" hoverable class="thumbnail">
+            <a href="https://isc.bit.edu.cn/">外国留学生的招生与培养管理</a>           
+          </n-card>   
+          <n-card title="技术转移中心" hoverable class="thumbnail">
+            <a href="https://j.bit.edu.cn/">负责科技成果的转移转化</a>           
+              <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
               </n-ellipsis>
           </n-card>                       
       </n-layout-content>
@@ -435,6 +542,8 @@
     color: rgb(76, 9, 40);
   }  /* selected link*/
   a{
-    color:rgb(201, 177, 20)
+    color:rgb(249, 131, 45)
+
   }
+
 </style>
