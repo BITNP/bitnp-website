@@ -104,29 +104,40 @@ import timeLine from './timeLine.vue'
                     <div class="card-ele">
                       <n-space vertical align="center">
                         <div>
-                          <n-icon size="50">
-                            <Airplay/>
+                          <n-icon size="140" >
+<!--                            <img src="src/views/home/assets/live.svg" alt="">-->
+                            <img src="src/views/home/assets/live2.svg">
                           </n-icon>
                         </div>
-
+                        <span style="font-size: 22px;">NPlive</span>
+                        <span>我们的校内直播平台</span>
                       </n-space>
                     </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
-                    <n-space vertical align="center">
+                    <n-space vertical align="center" >
                       <div>
-                        <n-icon size="150" >
-                          <img src="src/views/home/assets/clinic.svg" alt="">
+                        <n-icon size="140" >
+                          <img src="src/views/home/assets/clinic2.svg" alt="">
                         </n-icon>
                       </div>
-                      <span style="font-size: 23px;">电脑诊所</span>
+                      <span style="font-size: 22px;">电脑诊所</span>
+                      <span>一个专业维修电子设备的部门</span>
                     </n-space>
                   </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
-
+                    <n-space vertical align="center" >
+                      <div>
+                        <n-icon size="140" >
+                          <img src="src/views/home/assets/mirror.svg" alt="">
+                        </n-icon>
+                      </div>
+                      <span style="font-size: 22px;">软件镜像站</span>
+                      <span>各种软件哦</span>
+                    </n-space>
                   </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
@@ -202,7 +213,8 @@ export default defineComponent({
 .card-ele{
   padding: 10px;
   width: 90%;
-  height: 14vw;/* ? */
+  height: 14vw;
+  /*height: 14vw;!* ? *!*/
   border: 1.3px solid rgba(70, 54, 54, 0.17);
   border-radius: 10px;
   transition: all .3s;
