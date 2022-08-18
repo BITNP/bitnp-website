@@ -4,6 +4,7 @@ import DataLine20Regular from '@vicons/fluent/DataLine24Regular'
 import ArticleOutlined from '@vicons/material/ArticleOutlined'
 import ObjectStorageAlt from '@vicons/carbon/ObjectStorageAlt'
 import DateRangeOutlined from '@vicons/material/DateRangeOutlined'
+import Airplay from '@vicons/carbon/Airplay'
 
 import timeLine from './timeLine.vue'
 </script>
@@ -35,7 +36,7 @@ import timeLine from './timeLine.vue'
                     </span>
                       <br>
                       <div id="bdStastics">
-                        <n-grid cols="4" x-gap="8">
+                        <n-grid cols="2 m:4 h:4" x-gap="8" responsive="screen">
                           <n-gi>
                             <n-space justify="center">
                               <div style="max-width: 100%">
@@ -98,15 +99,29 @@ import timeLine from './timeLine.vue'
               </div>
             </div>
             <div id="outer3">
-              <n-grid cols="5" x-gap="26" item-responsive responsive="screen">
+              <n-grid cols="2 m:5 h:5" x-gap="26" y-gap="26" item-responsive responsive="screen">
                 <n-gi offset="0" span="1">
                     <div class="card-ele">
+                      <n-space vertical align="center">
+                        <div>
+                          <n-icon size="50">
+                            <Airplay/>
+                          </n-icon>
+                        </div>
 
+                      </n-space>
                     </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
-
+                    <n-space vertical align="center">
+                      <div>
+                        <n-icon size="150" >
+                          <img src="src/views/home/assets/clinic.svg" alt="">
+                        </n-icon>
+                      </div>
+                      <span style="font-size: 23px;">电脑诊所</span>
+                    </n-space>
                   </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
@@ -153,12 +168,16 @@ export default defineComponent({
     word-wrap: break-word;
   }
   .StasticsTitle{
-    font-size: 0.1vw;
+    font-size: 4vw;
     color: #4b4b4b;
   }
   #outer2{
     width: 87vw;
-    height: 33vw;
+    height: 55vh;
+  }
+  .StasticsNumber{
+    font-size: 8vw;
+    margin-top: 1vw;
   }
 }
 @media not screen and (max-width:600px) {
@@ -173,13 +192,17 @@ export default defineComponent({
   }
   #outer2{
     width: 87vw;
-    height: 33vw;
+    height: 62vh;
+  }
+  .StasticsNumber{
+    font-size: 2vw;
+    margin-top: 1vw;
   }
 }
 .card-ele{
   padding: 10px;
   width: 90%;
-  height: 14vw;
+  height: 14vw;/* ? */
   border: 1.3px solid rgba(70, 54, 54, 0.17);
   border-radius: 10px;
   transition: all .3s;
@@ -236,10 +259,7 @@ export default defineComponent({
   /*width: 65%;*/
 }
 
-.StasticsNumber{
-  font-size: 2vw;
-  margin-top: 1vw;
-}
+
 .StasticsUnits{
   font-size: 1vw;
 }
