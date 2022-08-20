@@ -136,13 +136,21 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">软件镜像站</span>
-                      <span>各种软件哦</span>
+                      <span>各种软件哦~</span>
                     </n-space>
                   </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
-
+                    <n-space vertical align="center" >
+                      <div>
+                        <n-icon size="140" >
+                          <img src="src/views/home/assets/thesis.svg" alt="">
+                        </n-icon>
+                      </div>
+                      <span style="font-size: 22px;">BIThesis</span>
+                      <span>校内论文写作互助平台</span>
+                    </n-space>
                   </div>
                 </n-gi>
                 <n-gi offset="0" span="1">
