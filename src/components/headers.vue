@@ -259,6 +259,9 @@ export default defineComponent({
   padding-top: 12px;
   padding-bottom: 14px;
 }
+.n-button:focus{
+  border: transparent;
+}
 .n-switch{
   padding-top: 15px;
 }

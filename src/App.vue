@@ -13,20 +13,21 @@ const route =useRoute();
 
 <n-config-provider :theme="themecheck" >
   <n-message-provider>
-    <div style="">
       <n-back-top :right="100" :visibility-height="100"></n-back-top>
       <n-layout >
-        <headers ></headers>
-        <n-layout-content content-style="">
+        <n-config-provider :theme-overrides="GlobTheme">
+          <headers ></headers>
+        </n-config-provider>
+        <n-layout-content>
           <router-view></router-view>
-          <n-theme-editor>
-          </n-theme-editor>
+          <n-theme-editor></n-theme-editor>
         </n-layout-content>
         <n-layout-footer >
+          <n-config-provider :theme-overrides="GlobTheme">
           <footers></footers>
+          </n-config-provider>
         </n-layout-footer>
       </n-layout>
-    </div>
   </n-message-provider>
 </n-config-provider>
 </template>
@@ -34,6 +35,18 @@ const route =useRoute();
 <script>
 import {defineComponent} from "vue";
 import {darkTheme, NThemeEditor,useMessage} from 'naive-ui'
+
+const GlobTheme={
+  "Button": {
+    "textColorHover": "#4680FFFF",
+    "textColorPressed": "#1C81CFFF",
+    "textColorTextHover": "#4680FFFF",
+    "textColorFocus": "#4680FFFF",
+    "textColorTextFocus": "#4680FFFF",
+    "textColorTextPressed": "#1C81CFFF"
+  }
+};
+
 export default defineComponent({
   setup(){
 
