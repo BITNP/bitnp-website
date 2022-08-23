@@ -227,6 +227,7 @@ export default defineComponent({
   }
   .card-ele{
     height: 100%;
+    width: 40vw;
   }
 }
 @media not screen and (max-width:600px) {
@@ -248,13 +249,14 @@ export default defineComponent({
     margin-top: 1vw;
   }
   .card-ele{
+    width: 13vw;
     /*height: 14vw;*/
     height: 100%;
   }
 }
 .card-ele{
   padding: 10px;
-  /*width: 90%;*/
+  /*width: 13vw;*/
   /*height: 14vw;*/
   /*height: 14vw;!* ? *!*/
   border: 1.3px solid rgba(70, 54, 54, 0.17);
@@ -273,8 +275,9 @@ export default defineComponent({
 }
 #outer3{
   width: 87vw;
-  height: 22vw;
+  height: 28vh;
   /*background: #535bf2;*/
+  overflow-y: auto;
 }
 #bdOut1{
   /*width: 100vh;*/
