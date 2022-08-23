@@ -99,7 +99,8 @@ import timeLine from './timeLine.vue'
               </div>
             </div>
             <div id="outer3">
-              <n-grid cols="2 m:5 h:5" x-gap="26" y-gap="26" item-responsive responsive="screen">
+              <n-grid cols="2 m:6 h:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
+<!--                Nplive-->
                 <n-gi offset="0" span="1">
                     <div class="card-ele">
                       <n-space vertical align="center">
@@ -114,6 +115,7 @@ import timeLine from './timeLine.vue'
                       </n-space>
                     </div>
                 </n-gi>
+<!--                Clinic-->
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
                     <n-space vertical align="center" >
@@ -127,6 +129,7 @@ import timeLine from './timeLine.vue'
                     </n-space>
                   </div>
                 </n-gi>
+<!--                Mirror-->
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
                     <n-space vertical align="center" >
@@ -140,6 +143,7 @@ import timeLine from './timeLine.vue'
                     </n-space>
                   </div>
                 </n-gi>
+<!--                Thesis-->
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
                     <n-space vertical align="center" >
@@ -153,9 +157,32 @@ import timeLine from './timeLine.vue'
                     </n-space>
                   </div>
                 </n-gi>
+<!--                Wiki-->
                 <n-gi offset="0" span="1">
                   <div class="card-ele">
-
+                    <n-space vertical align="center" >
+                      <div>
+                        <n-icon size="140" >
+                          <img src="src/views/home/assets/wiki.svg" alt="">
+                        </n-icon>
+                      </div>
+                      <span style="font-size: 22px;">Wiki</span>
+                      <span>多人协作的写作系统</span>
+                    </n-space>
+                  </div>
+                </n-gi>
+<!--                Md-->
+                <n-gi offset="0" span="1">
+                  <div class="card-ele">
+                    <n-space vertical align="center" >
+                      <div>
+                        <n-icon size="140" >
+                          <img src="src/views/home/assets/md.svg" alt="">
+                        </n-icon>
+                      </div>
+                      <span style="font-size: 22px;">Codimd</span>
+                      <span>Markdown在线编辑与共享平台</span>
+                    </n-space>
                   </div>
                 </n-gi>
               </n-grid>
@@ -198,6 +225,9 @@ export default defineComponent({
     font-size: 8vw;
     margin-top: 1vw;
   }
+  .card-ele{
+    height: 100%;
+  }
 }
 @media not screen and (max-width:600px) {
   #titles{
@@ -217,11 +247,15 @@ export default defineComponent({
     font-size: 2vw;
     margin-top: 1vw;
   }
+  .card-ele{
+    /*height: 14vw;*/
+    height: 100%;
+  }
 }
 .card-ele{
   padding: 10px;
-  width: 90%;
-  height: 14vw;
+  /*width: 90%;*/
+  /*height: 14vw;*/
   /*height: 14vw;!* ? *!*/
   border: 1.3px solid rgba(70, 54, 54, 0.17);
   border-radius: 10px;
@@ -252,7 +286,7 @@ export default defineComponent({
   /*justify-content: center;*/
   /*display: flex;*/
   /*flex-direction: column;*/
-  background: url("src/assets/banner/5.svg");
+  /*background: url("src/assets/banner/5.svg");*/
   overflow: hidden;
 }
 #bdTitleOut{
@@ -278,13 +312,12 @@ export default defineComponent({
   margin-top: 12vw;
   /*width: 65%;*/
 }
-
-
 .StasticsUnits{
   font-size: 1vw;
 }
 #TimelineOut{
-  padding-top: 2.5vw;
+  padding-top: 4vh;
+  overflow: hidden;
   height: 88%;
   z-index: 20;
 }
