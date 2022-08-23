@@ -167,7 +167,7 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">Wiki</span>
-                      <span>多人协作的写作系统</span>
+                      <span>多人协作的创作系统</span>
                     </n-space>
                   </div>
                 </n-gi>
