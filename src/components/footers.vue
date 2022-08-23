@@ -20,6 +20,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
       <n-layout-header></n-layout-header>
       <n-layout-content content-style="padding-bottom:20px;">
         <n-grid cols="24" x-gap="5px" item-responsive responsive="screen">
+<!--          Left-->
           <n-gi offset="0 m:3 h:3" span="24 m:6 h:6">
             <n-space justify="center">
               <n-image width="54" src="./src/assets/cover3.png"></n-image>
@@ -34,6 +35,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
               <span id="footName3">网络无限 · 开拓不懈</span>
             </n-space>
           </n-gi>
+<!--          Mid-->
           <n-gi offset="0" span="24 m:6 h:6" >
             <n-space justify="center">
               <n-space vertical>
@@ -112,9 +114,11 @@ import Affiliate from '@vicons/tabler/Affiliate'
             </n-space>
 
           </n-gi>
+<!--          Right-->
           <n-gi offset="0" span="24 m:6 h:6">
             <n-space justify="center">
               <n-space vertical>
+<!--                Title-->
                 <n-space justify="center">
                   <div style="padding-bottom: 10px;">
                     <n-icon size="20">
@@ -125,7 +129,9 @@ import Affiliate from '@vicons/tabler/Affiliate'
                   </span>
                   </div>
                 </n-space>
+<!--                Col1-->
                 <n-space justify="space-between">
+
                   <n-space justify="center">
                     <div style="padding-bottom: 10px;">
                       <n-button text>
@@ -155,6 +161,39 @@ import Affiliate from '@vicons/tabler/Affiliate'
                         </n-icon>
                       </n-button>
                     </div>
+                  </n-space>
+                </n-space>
+<!--                Col2-->
+                <n-space justify="space-between">
+                  <n-space justify="center">
+                    <div style="padding-bottom: 10px;">
+                      <n-button text>
+                        <!--                      <n-icon size="18">-->
+                        <!--                        <AirplayFilled/>-->
+                        <!--                      </n-icon>-->
+                        <span style="font-size: medium">
+                      &nbsp; BIT101
+                    </span>
+                        <n-icon size="18">
+                          <IosLink/>
+                        </n-icon>
+                      </n-button>
+                    </div>
+                  </n-space>
+                  <n-space justify="start" >
+<!--                    <div style="padding-bottom: 10px;">-->
+<!--                      <n-button text>-->
+<!--                        &lt;!&ndash;                      <n-icon size="18">&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <ReminderMedical/>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                      </n-icon>&ndash;&gt;-->
+<!--                        <span style="font-size: medium">-->
+<!--                      &nbsp; 乐学-->
+<!--                    </span>-->
+<!--                        <n-icon size="18">-->
+<!--                          <IosLink/>-->
+<!--                        </n-icon>-->
+<!--                      </n-button>-->
+<!--                    </div>-->
                   </n-space>
                 </n-space>
               </n-space>
