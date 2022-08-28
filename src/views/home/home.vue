@@ -11,20 +11,13 @@ import timeLine from './timeLine.vue'
 
 <template>
     <div id="bdOut1">
-<!--      <div id="bgBg">-->
-<!--        <img src="src/assets/banner/1.svg" width="700px" height="700px" style=" transform: translate(-0px,-100px);" alt="">-->
-<!--        <img src="src/assets/banner/2.svg" width="700px" height="700px" style="transform: translate(-150px,-0px);" alt="">-->
-<!--        <img src="src/assets/banner/3.svg" width="700px" style="transform: translate(-120px,-300px);" height="700px" alt="">-->
-<!--        &lt;!&ndash;      <img src="src/assets/banner/3.svg" width="700px" style="transform: translate(0px,-20px);" height="700px" alt="">&ndash;&gt;-->
-<!--        <img src="src/assets/banner/4.svg" width="500px" style="transform: translate(10px,-400px);position: absolute;" height="500px" alt="">-->
-<!--      </div>-->
       <n-space vertical>
-
         <n-space justify="center">
             <div style="" id="outer2">
               <div>
                 <n-grid cols="8" item-responsive x-gap="8px" responsive="screen">
                   <n-gi span="8 m:5 h:5">
+<!--                    main title-->
                     <div id="bdTitleOut">
                     <span id="titles">
                       <b>
@@ -37,8 +30,6 @@ import timeLine from './timeLine.vue'
 <!--                          background-image: linear-gradient(119deg, #662df4 0%, #0a59d7 24%, #c85087 63%, #f6ac2c 100%);-->
                         Let's wander and immerse <br> &nbsp; &nbsp; &nbsp; in the sea of technologies.
                         </span>
-
-
                       </b>
                     </span>
                       <br>
@@ -47,11 +38,15 @@ import timeLine from './timeLine.vue'
                           <n-gi>
                             <n-space justify="center">
                               <div style="max-width: 100%">
-                                <n-icon size="25">
-                                  <DataLine20Regular/>
+                                <n-icon size="25" color="#096FE0FF">
+                                  <DataLine20Regular />
                                 </n-icon>
-                                <span class="StasticsTitle">累计访问：</span><br>
-                                <span class="StasticsNumber"> 10045</span>
+                                <span class="StasticsTitle" style="color: ">累计访问：</span><br>
+                                <span class="StasticsNumber fontIngerdient"
+                                      style="background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );"
+                                >
+                                  10045
+                                </span>
                                 <span class="StasticsUnits">人</span>
                               </div>
                             </n-space>
@@ -59,11 +54,15 @@ import timeLine from './timeLine.vue'
                           <n-gi>
                             <n-space justify="center">
                               <div style="max-width: 100%">
-                                <n-icon size="25">
+                                <n-icon size="25" color="	#1E90FF">
                                   <ArticleOutlined/>
                                 </n-icon>
                                 <span class="StasticsTitle">文章总数：</span><br>
-                                <span class="StasticsNumber"> 105</span>
+                                <span class="StasticsNumber fontIngerdient"
+                                      style="background-image: linear-gradient(90deg, #21D4FD 0%, #B721FF 100%);"
+                                >
+                                  105
+                                </span>
                                 <span class="StasticsUnits">篇</span>
                               </div>
                             </n-space>
@@ -71,11 +70,15 @@ import timeLine from './timeLine.vue'
                           <n-gi>
                             <n-space justify="center">
                               <div style="max-width: 100%">
-                                <n-icon size="25">
+                                <n-icon size="25" color="#8D4FFE">
                                   <ObjectStorageAlt/>
                                 </n-icon>
                                 <span class="StasticsTitle">资源总量：</span><br>
-                                <span class="StasticsNumber"> 105</span>
+                                <span class="StasticsNumber fontIngerdient"
+                                      style="background-image: linear-gradient(90deg, rgba(96,65,208,0.94) 0%, #C850C0 46%, #FFCC70 100%);"
+                                >
+                                  105
+                                </span>
                                 <span class="StasticsUnits">GB</span>
                               </div>
                             </n-space>
@@ -83,11 +86,15 @@ import timeLine from './timeLine.vue'
                           <n-gi>
                             <n-space justify="center">
                               <div style="max-width: 100%">
-                                <n-icon size="25">
+                                <n-icon size="25" color="#DB4D00">
                                   <DateRangeOutlined/>
                                 </n-icon>
                                 <span class="StasticsTitle">诊所预约：</span><br>
-                                <span class="StasticsNumber"> 15</span>
+                                <span class="StasticsNumber fontIngerdient"
+                                      style="background-image: linear-gradient( 69.7deg,  rgba(244,37,243,1) 1.4%, rgba(244,87,1,1) 36.2%, rgba(255,204,37,1) 72.2%, rgba(20,196,6,1) 113% );"
+                                >
+                                  15
+                                </span>
                                 <span class="StasticsUnits">人</span>
                               </div>
                             </n-space>
@@ -97,6 +104,7 @@ import timeLine from './timeLine.vue'
                       </div>
                     </div>
                   </n-gi>
+<!--                    timeline-->
                   <n-gi span="0 m:3 h:3">
                     <div id="TimelineOut">
                       <time-line></time-line>
@@ -105,11 +113,12 @@ import timeLine from './timeLine.vue'
                 </n-grid>
               </div>
             </div>
+<!--          guides-->
             <div id="outer3">
               <n-grid cols="2 m:6 h:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
 <!--                Nplive-->
                 <n-gi offset="0" span="1">
-                    <div class="card-ele">
+                    <div class="card-ele guideHover">
                       <n-space vertical align="center">
                         <div>
                           <n-icon size="140" >
@@ -117,14 +126,14 @@ import timeLine from './timeLine.vue'
                             <img src="src/views/home/assets/live2.svg">
                           </n-icon>
                         </div>
-                        <span style="font-size: 22px;">NPlive</span>
-                        <span>我们的校内直播平台</span>
+                        <span style="font-size: 22px;" >NPlive</span>
+                        <span style="color: #1a1a1a">我们的校内直播平台</span>
                       </n-space>
                     </div>
                 </n-gi>
 <!--                Clinic-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele">
+                  <div class="card-ele guideHover">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -132,13 +141,13 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">电脑诊所</span>
-                      <span>一个专业维修电子设备的部门</span>
+                      <span style="color: #1a1a1a">一个专业维修电子设备的部门</span>
                     </n-space>
                   </div>
                 </n-gi>
 <!--                Mirror-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele">
+                  <div class="card-ele guideHover">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -146,13 +155,13 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">软件镜像站</span>
-                      <span>各种软件哦~</span>
+                      <span style="color: #1a1a1a">各种软件哦~</span>
                     </n-space>
                   </div>
                 </n-gi>
 <!--                Thesis-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele">
+                  <div class="card-ele guideHover">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -160,13 +169,13 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">BIThesis</span>
-                      <span>校内论文写作互助平台</span>
+                      <span style="color: #1a1a1a">校内论文写作互助平台</span>
                     </n-space>
                   </div>
                 </n-gi>
 <!--                Wiki-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele">
+                  <div class="card-ele guideHover">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -174,13 +183,13 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">Wiki</span>
-                      <span>多人协作的创作系统</span>
+                      <span style="color: #1a1a1a">多人协作的创作系统</span>
                     </n-space>
                   </div>
                 </n-gi>
 <!--                Md-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele">
+                  <div class="card-ele guideHover">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -188,19 +197,15 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">Codimd</span>
-                      <span>Markdown在线编辑与共享平台</span>
+                      <span style="color: #1a1a1a">Markdown在线编辑与共享平台</span>
                     </n-space>
                   </div>
                 </n-gi>
               </n-grid>
             </div>
         </n-space>
-<!--            <div id="bdWr2">-->
-<!--            </div>-->
       </n-space>
     </div>
-<!--    <div id="bdOut2">-->
-<!--    </div>-->
 </template>
 
 <script>
@@ -334,6 +339,13 @@ export default defineComponent({
   overflow: hidden;
   height: 88%;
   z-index: 20;
+}
+.guideHover:hover{
+  color: #4680FFFF;
+
+}
+.guidePress:active{
+  color: #1C81CFFF;
 }
 .n-gradient-text{
   font-size: inherit;

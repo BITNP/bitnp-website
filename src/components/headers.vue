@@ -29,7 +29,7 @@ const $router=useRouter();
 </script>
 
 <template>
-    <n-layout-header >
+    <n-layout-header bordered >
       <n-grid cols="48" x-gap="5px" item-responsive responsive="screen">
         <n-gi offset="6" span="3">
 <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
@@ -185,21 +185,21 @@ export default defineComponent({
 
       ],
       options2:[
+        // {
+        //   label: '网协GitHub',
+        //   key:'github',
+        //   icon:renderIcon(BrandGithub)
+        // },
         {
-          label: '网协GitHub',
-          key:'github',
-          icon:renderIcon(BrandGithub)
+          label: '学校常用网址',
+          key: 'address',
+          icon:renderIcon(LinkSquare12Regular)
         },
         {
           label: '电脑推荐表',
           key: 'PCcommands',
           icon:renderIcon(DevicesPc)
         },
-        {
-          label: '学校常用网址',
-          key: 'address',
-          icon:renderIcon(LinkSquare12Regular)
-        }
       ],
       options3:[
         {
