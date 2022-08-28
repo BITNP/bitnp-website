@@ -33,7 +33,7 @@ const $router=useRouter();
       <n-grid cols="48" x-gap="5px" item-responsive responsive="screen">
         <n-gi offset="6" span="3">
 <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
+          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
 <!--news-->

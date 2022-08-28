@@ -136,7 +136,7 @@ function GuideClick(num){
                         <div>
                           <n-icon size="140" >
 <!--                            <img src="src/views/home/assets/live.svg" alt="">-->
-                            <img src="src/views/home/assets/live2.svg">
+                            <img src="/src/views/home/assets/live2.svg">
                           </n-icon>
                         </div>
                         <span style="font-size: 22px;" >NPlive</span>
@@ -150,7 +150,7 @@ function GuideClick(num){
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
-                          <img src="src/views/home/assets/clinic2.svg" alt="">
+                          <img src="/src/views/home/assets/clinic2.svg" alt="">
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">电脑诊所</span>
@@ -167,7 +167,7 @@ function GuideClick(num){
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
-                          <img src="src/views/home/assets/mirror.svg" alt="">
+                          <img src="/src/views/home/assets/mirror.svg" alt="">
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">软件镜像站</span>
@@ -181,7 +181,7 @@ function GuideClick(num){
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
-                          <img src="src/views/home/assets/thesis.svg" alt="">
+                          <img src="/src/views/home/assets/thesis.svg" alt="">
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">BIThesis</span>
@@ -195,7 +195,7 @@ function GuideClick(num){
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
-                          <img src="src/views/home/assets/wiki.svg" alt="">
+                          <img src="/src/views/home/assets/wiki.svg" alt="">
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">Wiki</span>
@@ -209,7 +209,7 @@ function GuideClick(num){
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
-                          <img src="src/views/home/assets/md.svg" alt="">
+                          <img src="/src/views/home/assets/md.svg" alt="">
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">Codimd</span>
