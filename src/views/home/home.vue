@@ -7,6 +7,19 @@ import DateRangeOutlined from '@vicons/material/DateRangeOutlined'
 import Airplay from '@vicons/carbon/Airplay'
 
 import timeLine from './timeLine.vue'
+
+function GuideClick(num){
+  const tar=[
+      'https://live.bitnp.net/',
+      'https://clinic-bitnp-info-bit-edu-cn-6wehcsemw54w.ztna.dingtalk.com/lightapp/?corpId=ding5afe027889e9ac43acaaa37764f94726#',
+      'https://mirror.bit.edu.cn/',
+      'https://bithesis.bitnp.net/',
+      'https://wiki.bitnp.net/',
+      'https://codimd.bitnp.net'
+  ];
+  window.location.href=tar[num-1];
+}
+
 </script>
 
 <template>
@@ -118,7 +131,7 @@ import timeLine from './timeLine.vue'
               <n-grid cols="2 m:6 h:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
 <!--                Nplive-->
                 <n-gi offset="0" span="1">
-                    <div class="card-ele guideHover">
+                    <div class="card-ele guideHover" @click="$emit('click',GuideClick(1))">
                       <n-space vertical align="center">
                         <div>
                           <n-icon size="140" >
@@ -133,7 +146,7 @@ import timeLine from './timeLine.vue'
                 </n-gi>
 <!--                Clinic-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover">
+                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(2))">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -141,13 +154,16 @@ import timeLine from './timeLine.vue'
                         </n-icon>
                       </div>
                       <span style="font-size: 22px;">电脑诊所</span>
-                      <span style="color: #1a1a1a">一个专业维修电子设备的部门</span>
+                      <span style="color: #1a1a1a">
+                        一个专业维修电子设备的部门
+<!--                        or:i北理-电脑义诊-->
+                      </span>
                     </n-space>
                   </div>
                 </n-gi>
 <!--                Mirror-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover">
+                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(3))">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -161,7 +177,7 @@ import timeLine from './timeLine.vue'
                 </n-gi>
 <!--                Thesis-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover">
+                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(4))">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -175,7 +191,7 @@ import timeLine from './timeLine.vue'
                 </n-gi>
 <!--                Wiki-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover">
+                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(5))">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -189,7 +205,7 @@ import timeLine from './timeLine.vue'
                 </n-gi>
 <!--                Md-->
                 <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover">
+                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(6))">
                     <n-space vertical align="center" >
                       <div>
                         <n-icon size="140" >
@@ -342,6 +358,7 @@ export default defineComponent({
 }
 .guideHover:hover{
   color: #4680FFFF;
+  cursor: pointer;
 
 }
 .guidePress:active{

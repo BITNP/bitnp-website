@@ -41,11 +41,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
               <n-space vertical>
                 <n-space justify="center">
                   <div style="padding-bottom: 10px;">
-                    <n-icon size="20">
+                    <n-icon size="20" color="#3366FFFF">
                       <ConnectWithoutContactRound/>
                     </n-icon>
                     <span style="font-size: large">
-                <b>Contact us</b>
+                <b>
+                  Contact us
+                </b>
               </span>
                   </div>
                 </n-space>
@@ -53,12 +55,12 @@ import Affiliate from '@vicons/tabler/Affiliate'
                 <n-space justify="start">
                   <div style="padding-bottom: 10px;">
                     <n-button text>
-                      <n-icon size="18">
+                      <n-icon size="18" color="#EB6969">
                         <AlternateEmailFilled/>
                       </n-icon>
                       <span style="font-size: medium">
-                Mail: xxxxx@bit.edu.cn
-              </span>
+                        Mail: xxxxx@bit.edu.cn
+                      </span>
                       <n-icon size="18">
                         <IosLink/>
                       </n-icon>
@@ -68,7 +70,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
                 <n-space justify="start" >
                   <div style="padding-bottom: 10px;">
                     <n-button text>
-                      <n-icon size="18">
+                      <n-icon size="18" color="#00D98D">
                         <LogoWechat/>
                       </n-icon>
                       <span style="font-size: medium">
@@ -83,7 +85,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
                 <n-space justify="start" >
                   <div style="padding-bottom: 10px;">
                     <n-button text>
-                      <n-icon size="18">
+                      <n-icon size="18" color="#23ADE5">
                         <DeviceTv/>
                       </n-icon>
                       <span style="font-size: medium;">
@@ -121,11 +123,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
 <!--                Title-->
                 <n-space justify="center">
                   <div style="padding-bottom: 10px;">
-                    <n-icon size="20">
+                    <n-icon size="20" color="#5D95E8">
                       <Affiliate/>
                     </n-icon>
                     <span style="font-size: large">
-                    <b>Related Links</b>
+                    <b>
+                      Related Links
+                    </b>
                   </span>
                   </div>
                 </n-space>
@@ -226,6 +230,10 @@ export default {
 </script>
 
 <style scoped>
+.fontIngerdient{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .n-layout-footer{
   background: transparent;
 }
@@ -245,12 +253,27 @@ export default {
 }
 #footName1{
   font-size:large;
+
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*background-color: #FFE53B;*/
+  /*background-image: linear-gradient(270deg, #FFE53B 0%, #ff6225 74%);*/
+
 }
 #footName2{
   font-family:Calibri;
   font-size:medium;
+
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*background-color: #FFE53B;*/
+  /*background-image: linear-gradient(90deg, #ffdd3f 0%, #ff6225 74%);*/
 }
 #footName3{
   font-size:medium;
+
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*background-image: radial-gradient( circle 597px at 93% 9.8%,  rgba(255,61,89,1) 1.7%, rgba(252,251,44,1) 97% );*/
 }
 </style>
