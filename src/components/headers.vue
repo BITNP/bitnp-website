@@ -21,6 +21,7 @@ import {
   import Github from '@vicons/fa/Github'
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
+  import BarsOutlined from '@vicons/antd/BarsOutlined'
 import {useRoute, useRouter} from "vue-router";
 
 window.$message=useMessage();
@@ -30,8 +31,9 @@ const $router=useRouter();
 
 <template>
     <n-layout-header bordered >
-      <n-grid cols="48" x-gap="5px" item-responsive responsive="screen">
-        <n-gi offset="6" span="3">
+      <n-grid cols="48 m:48 l:48" x-gap="5px" item-responsive responsive="screen">
+<!--icon-->
+        <n-gi offset="4" span="4 m:3 l:3">
 <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
           <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
@@ -68,6 +70,7 @@ const $router=useRouter();
           </n-dropdown>
 <!--about格-->
         </n-gi>
+<!--about-->
         <n-gi offset="0" span="0 m:3 l:3">
             <n-button text @click="$router.push('about-us')">
               <n-icon :size="propstyle.icons">
@@ -100,6 +103,22 @@ const $router=useRouter();
             </n-icon>
           </n-button>
         </n-gi>
+<!--Title for mobile-->
+        <n-gi offset="0" span="15 m:0 l:0">
+            <span style="font-size: 18px; display: inline-block; padding-top: 10px;">
+              Net Pioneer
+            </span>
+        </n-gi>
+<!--dropdown for mobile-->
+        <n-gi offset="18" span="4 m:0 l:0">
+          <n-dropdown :options="optionsM" size="huge" style="width: 50vw;">
+            <n-button text>
+              <n-icon :size="propstyle.icons-2">
+                <BarsOutlined></BarsOutlined>
+              </n-icon>
+            </n-button>
+          </n-dropdown>
+        </n-gi>
         <input id="clipbundle" class="clptar" style="visibility: hidden;">
       </n-grid>
     </n-layout-header>
@@ -109,7 +128,6 @@ const $router=useRouter();
 <script>
 import {h} from "vue"
 import {defineComponent,reactive} from "vue";
-// import {useRouter as $router} from 'vue-router'
 
 import {NAvatar, NText} from 'naive-ui'
 import Clipboard from 'clipboard'
@@ -121,32 +139,8 @@ import DevicesPc from '@vicons/tabler/DevicesPc'
 import PlanetOutline from '@vicons/ionicons5/PlanetOutline'
 import MdContacts from '@vicons/ionicons4/MdContacts'
 import LinkSquare12Regular from '@vicons/fluent/LinkSquare12Regular'
+// import News16Regular from '@vicons/fluent/News16Regular'
 
-function renderCustomHeader () {
-  return h(
-      'div',
-      {
-        style: 'display: flex; align-items: center; padding: 8px 12px;'
-      },
-      [
-        h(NAvatar, {
-          round: true,
-          style: 'margin-right: 12px;',
-          src: 'https://07akioni.oss-cn-beijing.aliyuncs.com/demo1.JPG'
-        }),
-        h('div', null, [
-          h('div', null, [h(NText, { depth: 2 }, { default: () => '未知用户' })]),
-          h('div', { style: 'font-size: 12px;' }, [
-            h(
-                NText,
-                { depth: 3 },
-                { default: () => '这个用户没有留下痕迹' }
-            )
-          ])
-        ])
-      ]
-  )
-}
 const renderIcon = (icon) => {
   return () => {
     return h(NIcon, null, {
@@ -155,12 +149,9 @@ const renderIcon = (icon) => {
   };
 };
 
-
-
 export default defineComponent({
   name: "headers",
   setup(){
-
     let clipUrl=reactive({e:window.location.href});
     return{
       clipUrl,
@@ -213,7 +204,57 @@ export default defineComponent({
           icon:renderIcon(MdContacts)
         }
       ],
-
+      optionsM:[
+        {
+          label:'News',
+          key:'news',
+          icon:renderIcon(News16Regular)
+        },
+        {
+          label: 'Space',
+          key: 'space',
+          icon:renderIcon(CodepenOutlined),
+          children:[
+            {
+              label: '近期活动',
+              key: 'activities',
+              icon:renderIcon(CalendarLtr16Regular)
+            },
+            {
+              label: "NP知识库",
+              key: 'blogs',
+              icon:renderIcon(DnsServices)
+            },
+          ]
+        },
+        {
+          label: 'Meta',
+          key: 'meta',
+          icon:renderIcon(Atom),
+          children: [
+            // {
+            //   label: '网协GitHub',
+            //   key:'github',
+            //   icon:renderIcon(BrandGithub)
+            // },
+            {
+              label: '学校常用网址',
+              key: 'address',
+              icon:renderIcon(LinkSquare12Regular)
+            },
+            {
+              label: '电脑推荐表',
+              key: 'PCcommands',
+              icon:renderIcon(DevicesPc)
+            },
+          ]
+        },
+        {
+          label: 'About',
+          key: 'about',
+          icon:renderIcon(GitlabOutlined)
+        }
+      ]
     }
   },
   components:{
