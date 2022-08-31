@@ -44,7 +44,7 @@ onMounted(()=>{
   <section id="timeline">
 <!--    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-left: 15px;padding-bottom: 3rem;color: #e9ceb2;">近期活动</span>-->
     <div class="timeline">
-      <canvas id="cvs3" width="100%" height="80%"></canvas>
+      <canvas id="cvs3" ></canvas>
       <article>
         <h2></h2>
         <figure v-for="items in e.es.left">
@@ -64,7 +64,6 @@ onMounted(()=>{
       </article>
       <br style="clear:both">
     </div>
-
   </section>
 </template>
 
@@ -79,7 +78,12 @@ export default defineComponent({
     }
   },
   updated() {
-    new Timeline(document.querySelector('#cvs3')).toggle(true);
+    try {
+      new Timeline(document.querySelector('#cvs3')).toggle(true);
+    }
+    catch (err){
+      console.log(err)
+    }
   }
 });
 
@@ -294,9 +298,14 @@ function Timeline(cvs) {
           // console.log(self.targets,`i:${i},j:${j}`,`dotslength:${self.lines[i].dots.length}`);
           return;
         }
-        var dot2 = [
-          (self.lines[i].points[id].x + self.lines[i].points[id + 1].x) / 2,
-          (self.lines[i].points[id].y + self.lines[i].points[id + 1].y) / 2];
+        try {
+          var dot2 = [
+            (self.lines[i].points[id].x + self.lines[i].points[id + 1].x) / 2,
+            (self.lines[i].points[id].y + self.lines[i].points[id + 1].y) / 2];
+        }catch (err){
+          // console.log(err)
+        }
+
 
         var p1 = { x: dot[0], y: dot[1] };
         var p2 = { x: dot2[0], y: dot2[1] };

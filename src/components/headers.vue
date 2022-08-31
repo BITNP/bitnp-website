@@ -111,7 +111,7 @@ const $router=useRouter();
         </n-gi>
 <!--dropdown for mobile-->
         <n-gi offset="18" span="4 m:0 l:0">
-          <n-dropdown :options="optionsM" size="huge" style="width: 50vw;">
+          <n-dropdown :options="optionsM" @select="handleSelect" size="huge" style="width: 50vw;">
             <n-button text>
               <n-icon :size="propstyle.icons-2">
                 <BarsOutlined></BarsOutlined>
@@ -122,7 +122,6 @@ const $router=useRouter();
         <input id="clipbundle" class="clptar" style="visibility: hidden;">
       </n-grid>
     </n-layout-header>
-
 </template>
 
 <script>

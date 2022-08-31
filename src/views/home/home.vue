@@ -1,5 +1,6 @@
 <script setup>
-import {NGrid,NGi,NDivider,NRow,NCol,NStatistic,NIcon,NSpace,NTabs,NTabPane,NCard,NGradientText} from 'naive-ui'
+import {reactive,onMounted} from "vue";
+import {NGrid,NGi,NDivider,NRow,NCol,NStatistic,NIcon,NSpace,NTabs,NTabPane,NCard,NGradientText,NConfigProvider} from 'naive-ui'
 import DataLine20Regular from '@vicons/fluent/DataLine24Regular'
 import ArticleOutlined from '@vicons/material/ArticleOutlined'
 import ObjectStorageAlt from '@vicons/carbon/ObjectStorageAlt'
@@ -23,13 +24,14 @@ function GuideClick(num){
 </script>
 
 <template>
+  <n-config-provider :theme-overrides="responseTheme">
     <div id="bdOut1">
       <n-space vertical>
         <n-space justify="center">
             <div style="" id="outer2">
               <div>
                 <n-grid cols="8" item-responsive x-gap="8px" responsive="screen">
-                  <n-gi span="8 m:5 h:5">
+                  <n-gi span="8 s:8 l:5">
 <!--                    main title-->
                     <div id="bdTitleOut">
                     <span id="titles">
@@ -47,8 +49,8 @@ function GuideClick(num){
                     </span>
                       <br>
                       <div id="bdStastics">
-                        <n-grid cols="2 m:4 h:4" x-gap="8" responsive="screen">
-                          <n-gi>
+                        <n-grid cols="2 s:4 l:4" item-responsive x-gap="8" responsive="screen">
+                          <n-gi span="1">
                             <n-space justify="center">
                               <div style="max-width: 100%">
                                 <n-icon size="25" color="#096FE0FF">
@@ -64,7 +66,7 @@ function GuideClick(num){
                               </div>
                             </n-space>
                           </n-gi>
-                          <n-gi>
+                          <n-gi span="1">
                             <n-space justify="center">
                               <div style="max-width: 100%">
                                 <n-icon size="25" color="	#1E90FF">
@@ -80,7 +82,7 @@ function GuideClick(num){
                               </div>
                             </n-space>
                           </n-gi>
-                          <n-gi>
+                          <n-gi span="1">
                             <n-space justify="center">
                               <div style="max-width: 100%">
                                 <n-icon size="25" color="#8D4FFE">
@@ -96,7 +98,7 @@ function GuideClick(num){
                               </div>
                             </n-space>
                           </n-gi>
-                          <n-gi>
+                          <n-gi span="1">
                             <n-space justify="center">
                               <div style="max-width: 100%">
                                 <n-icon size="25" color="#DB4D00">
@@ -118,127 +120,131 @@ function GuideClick(num){
                     </div>
                   </n-gi>
 <!--                    timeline-->
-                  <n-gi span="0 m:3 h:3">
-                    <div id="TimelineOut">
+                  <n-gi span="0 s:0 l:3">
+                    <div id="TimelineOut" style="" >
                       <time-line></time-line>
                     </div>
                   </n-gi>
                 </n-grid>
               </div>
             </div>
-<!--          guides-->
-            <div id="outer3">
-              <n-grid cols="2 m:6 h:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
-<!--                Nplive-->
-                <n-gi offset="0" span="1">
-                    <div class="card-ele guideHover" @click="$emit('click',GuideClick(1))">
-                      <n-space vertical align="center">
-                        <div>
-                          <n-icon size="140" >
-<!--                            <img src="src/views/home/assets/live.svg" alt="">-->
-                            <img src="/src/views/home/assets/live2.svg">
-                          </n-icon>
-                        </div>
-                        <span style="font-size: 22px;" >NPlive</span>
-                        <span style="color: #1a1a1a">我们的校内直播平台</span>
-                      </n-space>
+        </n-space>
+        <n-space justify="center">
+          <!--          guides-->
+          <div id="outer3">
+            <n-grid cols="2 m:6 l:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
+              <!--                Nplive-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(1))">
+                  <n-space vertical align="center">
+                    <div>
+                      <n-icon size="140" >
+                        <!--                            <img src="src/views/home/assets/live.svg" alt="">-->
+                        <img src="/src/views/home/assets/live2.svg">
+                      </n-icon>
                     </div>
-                </n-gi>
-<!--                Clinic-->
-                <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(2))">
-                    <n-space vertical align="center" >
-                      <div>
-                        <n-icon size="140" >
-                          <img src="/src/views/home/assets/clinic2.svg" alt="">
-                        </n-icon>
-                      </div>
-                      <span style="font-size: 22px;">电脑诊所</span>
-                      <span style="color: #1a1a1a">
+                    <span style="font-size: 22px;" >NPlive</span>
+                    <span style="color: #1a1a1a">我们的校内直播平台</span>
+                  </n-space>
+                </div>
+              </n-gi>
+              <!--                Clinic-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(2))">
+                  <n-space vertical align="center" >
+                    <div>
+                      <n-icon size="140" >
+                        <img src="/src/views/home/assets/clinic2.svg" alt="">
+                      </n-icon>
+                    </div>
+                    <span style="font-size: 22px;">电脑诊所</span>
+                    <span style="color: #1a1a1a">
                         一个专业维修电子设备的部门
-<!--                        or:i北理-电脑义诊-->
+                      <!--                        or:i北理-电脑义诊-->
                       </span>
-                    </n-space>
-                  </div>
-                </n-gi>
-<!--                Mirror-->
-                <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(3))">
-                    <n-space vertical align="center" >
-                      <div>
-                        <n-icon size="140" >
-                          <img src="/src/views/home/assets/mirror.svg" alt="">
-                        </n-icon>
-                      </div>
-                      <span style="font-size: 22px;">软件镜像站</span>
-                      <span style="color: #1a1a1a">各种软件哦~</span>
-                    </n-space>
-                  </div>
-                </n-gi>
-<!--                Thesis-->
-                <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(4))">
-                    <n-space vertical align="center" >
-                      <div>
-                        <n-icon size="140" >
-                          <img src="/src/views/home/assets/thesis.svg" alt="">
-                        </n-icon>
-                      </div>
-                      <span style="font-size: 22px;">BIThesis</span>
-                      <span style="color: #1a1a1a">校内论文写作互助平台</span>
-                    </n-space>
-                  </div>
-                </n-gi>
-<!--                Wiki-->
-                <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(5))">
-                    <n-space vertical align="center" >
-                      <div>
-                        <n-icon size="140" >
-                          <img src="/src/views/home/assets/wiki.svg" alt="">
-                        </n-icon>
-                      </div>
-                      <span style="font-size: 22px;">Wiki</span>
-                      <span style="color: #1a1a1a">多人协作的创作系统</span>
-                    </n-space>
-                  </div>
-                </n-gi>
-<!--                Md-->
-                <n-gi offset="0" span="1">
-                  <div class="card-ele guideHover" @click="$emit('click',GuideClick(6))">
-                    <n-space vertical align="center" >
-                      <div>
-                        <n-icon size="140" >
-                          <img src="/src/views/home/assets/md.svg" alt="">
-                        </n-icon>
-                      </div>
-                      <span style="font-size: 22px;">Codimd</span>
-                      <span style="color: #1a1a1a">Markdown在线编辑与共享平台</span>
-                    </n-space>
-                  </div>
-                </n-gi>
-              </n-grid>
-            </div>
+                  </n-space>
+                </div>
+              </n-gi>
+              <!--                Mirror-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(3))">
+                  <n-space vertical align="center" >
+                    <div>
+                      <n-icon size="140" >
+                        <img src="/src/views/home/assets/mirror.svg" alt="">
+                      </n-icon>
+                    </div>
+                    <span style="font-size: 22px;">软件镜像站</span>
+                    <span style="color: #1a1a1a">各种软件哦~</span>
+                  </n-space>
+                </div>
+              </n-gi>
+              <!--                Thesis-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(4))">
+                  <n-space vertical align="center" >
+                    <div>
+                      <n-icon size="140" >
+                        <img src="/src/views/home/assets/thesis.svg" alt="">
+                      </n-icon>
+                    </div>
+                    <span style="font-size: 22px;">BIThesis</span>
+                    <span style="color: #1a1a1a">校内论文写作互助平台</span>
+                  </n-space>
+                </div>
+              </n-gi>
+              <!--                Wiki-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(5))">
+                  <n-space vertical align="center" >
+                    <div>
+                      <n-icon size="140" >
+                        <img src="/src/views/home/assets/wiki.svg" alt="">
+                      </n-icon>
+                    </div>
+                    <span style="font-size: 22px;">Wiki</span>
+                    <span style="color: #1a1a1a">多人协作的创作系统</span>
+                  </n-space>
+                </div>
+              </n-gi>
+              <!--                Md-->
+              <n-gi offset="0" span="1">
+                <div class="card-ele guideHover" @click="$emit('click',GuideClick(6))">
+                  <n-space vertical align="center" >
+                    <div>
+                      <n-icon size="140" >
+                        <img src="/src/views/home/assets/md.svg" alt="">
+                      </n-icon>
+                    </div>
+                    <span style="font-size: 22px;">Codimd</span>
+                    <span style="color: #1a1a1a">Markdown在线编辑与共享平台</span>
+                  </n-space>
+                </div>
+              </n-gi>
+            </n-grid>
+          </div>
         </n-space>
       </n-space>
     </div>
+  </n-config-provider>
 </template>
 
 <script>
 import {defineComponent} from "vue";
 
+const responseTheme={
+  breakpoints:{s:767}
+}
+
 export default defineComponent({
   name: "bodys",
-  components:{
-  }
 })
 </script>
 
 <style scoped>
-@media only screen and (max-width:600px){
+@media only screen and (max-width:728px){
   #titles{
     font-size: 35px;
-    transform: translateX(0px);
     word-wrap: break-word;
   }
   .StasticsTitle{
@@ -249,19 +255,55 @@ export default defineComponent({
     width: 87vw;
     height: 55vh;
   }
+  #bdStastics{
+    margin-top: 12vw;
+    /*width: 65%;*/
+  }
   .StasticsNumber{
     font-size: 8vw;
     margin-top: 1vw;
   }
+  .StasticsUnits{
+    font-size: 1vw;
+  }
   .card-ele{
     height: 100%;
-    width: 40vw;
+    width: 100%;
   }
 }
-@media not screen and (max-width:600px) {
+@media only screen  and (min-width: 768px) and (max-width: 1280px){
   #titles{
     font-size: 55px;
-    transform: translateX(0px);
+    word-wrap: break-word;
+  }
+  .StasticsTitle{
+    font-size: 3vw;
+    color: #4b4b4b;
+  }
+  #outer2{
+    width: 87vw;
+    height: 58vh;
+  }
+  #bdStastics{
+    margin-top:8vw;
+    /*width: 65%;*/
+  }
+  .StasticsNumber{
+    font-size: 5vw;
+    margin-top: 1vw;
+  }
+  .StasticsUnits{
+    font-size: 3vw;
+  }
+  .card-ele{
+    width: 100%;
+    /*height: 14vw;*/
+    height: 28vh;
+  }
+}
+@media only screen and (min-width:1280px) {
+  #titles{
+    font-size: 55px;
     word-wrap: break-word;
   }
   .StasticsTitle{
@@ -272,14 +314,21 @@ export default defineComponent({
     width: 87vw;
     height: 62vh;
   }
+  #bdStastics{
+    margin-top: 12vw;
+    /*width: 65%;*/
+  }
   .StasticsNumber{
     font-size: 2vw;
     margin-top: 1vw;
   }
+  .StasticsUnits{
+    font-size: 1vw;
+  }
   .card-ele{
-    width: 13vw;
+    width: 100%;
     /*height: 14vw;*/
-    height: 100%;
+    height: 28vh;
   }
 }
 .fontIngerdient{
@@ -307,7 +356,7 @@ export default defineComponent({
 }
 #outer3{
   width: 87vw;
-  height: 28vh;
+  height: 30vh;
   /*background: #535bf2;*/
   overflow-y: auto;
 }
@@ -343,17 +392,10 @@ export default defineComponent({
   background: rgba(36, 36, 36, 0.55);
   margin-top: 0.85vw;
 }
-#bdStastics{
-  margin-top: 12vw;
-  /*width: 65%;*/
-}
-.StasticsUnits{
-  font-size: 1vw;
-}
 #TimelineOut{
   padding-top: 4vh;
   overflow: hidden;
-  height: 88%;
+  height: 80%;
   z-index: 20;
 }
 .guideHover:hover{
