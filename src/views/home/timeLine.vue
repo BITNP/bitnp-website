@@ -9,7 +9,7 @@ onMounted(()=>{
       {
         title:'LOREM',
         time:'2011 - NOW',
-        context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
+        context:', ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
       },{
         title: 'IPSUM',
         time:'2013',
@@ -28,7 +28,7 @@ onMounted(()=>{
       },{
         title: 'LIBERO',
         time:'2010 - 2011',
-        context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+        context: 'elit. Nam et ipsum pulvina rnare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
       },{
         title: 'ADIPISCING',
         time: '2010',
