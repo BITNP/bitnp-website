@@ -22,7 +22,7 @@ const route =useRoute();
           <router-view></router-view>
           <n-theme-editor></n-theme-editor>
         </n-layout-content>
-        <n-layout-footer >
+        <n-layout-footer>
           <n-config-provider :theme-overrides="GlobTheme">
           <footers></footers>
           </n-config-provider>

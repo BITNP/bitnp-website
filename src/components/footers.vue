@@ -17,8 +17,8 @@ import Affiliate from '@vicons/tabler/Affiliate'
 <template>
   <n-config-provider :theme-overrides="responseTheme">
     <div style="margin-top: 30px;">
-      <n-layout>
-        <n-layout-header></n-layout-header>
+      <n-layout style="overflow: hidden!important;">
+<!--        <n-layout-header></n-layout-header>-->
         <n-layout-content content-style="padding-bottom:20px;">
             <n-grid cols="2 s:6 l:8" x-gap="5px" item-responsive responsive="screen">
               <!--          Left-->
@@ -208,15 +208,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
             </n-grid>
         </n-layout-content>
         <n-layout-footer bordered>
-          <n-space justify='center'>
             <div id="ffoot">
-          <span>
-            <n-gradient-text gradient="linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)">
-              Copyright © 1997-2022 Net Pioneer Association of BIT All Rights Reserved. Designed by FJ
-            </n-gradient-text>
-          </span>
+            <span>
+              <n-gradient-text gradient="linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)">
+                Copyright © 1997-2022 Net Pioneer Association of BIT All Rights Reserved. Designed by FJ
+              </n-gradient-text>
+            </span>
             </div>
-          </n-space>
         </n-layout-footer>
       </n-layout>
     </div>
