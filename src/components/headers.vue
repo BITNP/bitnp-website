@@ -36,7 +36,7 @@ const $router=useRouter();
         <!--icon-->
         <n-gi offset="4" span="4 m:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
+          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/home2')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->
