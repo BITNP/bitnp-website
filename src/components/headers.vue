@@ -30,16 +30,17 @@ const $router=useRouter();
 </script>
 
 <template>
+  <n-config-provider :theme-overrides="responseTheme">
     <n-layout-header bordered >
       <n-grid cols="48 m:48 l:48" x-gap="5px" item-responsive responsive="screen">
-<!--icon-->
+        <!--icon-->
         <n-gi offset="4" span="4 m:3 l:3">
-<!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
+          <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
           <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
-<!--news-->
-        <n-gi offset="0" span="0 m:3 l:3">
+        <!--news-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-button text >
             <n-icon :size="propstyle.icons" >
               <News16Regular/>
@@ -47,8 +48,8 @@ const $router=useRouter();
             <span style="font-size: 17px;">News</span>
           </n-button>
         </n-gi>
-<!--space-->
-        <n-gi offset="0" span="0 m:3 l:3">
+        <!--space-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-dropdown trigger="hover" size="large" :options="options1">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -58,8 +59,8 @@ const $router=useRouter();
             </n-button>
           </n-dropdown>
         </n-gi>
-<!--meta-->
-        <n-gi offset="0" span="0 m:3 l:3">
+        <!--meta-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-dropdown trigger="hover" size="large" :options="options2" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -68,49 +69,49 @@ const $router=useRouter();
               <span style="font-size: 17px;">Meta</span>
             </n-button>
           </n-dropdown>
-<!--about格-->
+          <!--about格-->
         </n-gi>
-<!--about-->
-        <n-gi offset="0" span="0 m:3 l:3">
-            <n-button text @click="$router.push('about-us')">
-              <n-icon :size="propstyle.icons">
-                <GitlabOutlined/>
-              </n-icon>
-              <span style="font-size: 17px;">About</span>
-            </n-button>
+        <!--about-->
+        <n-gi offset="0" span="0 m:4 l:3">
+          <n-button text @click="$router.push('about-us')">
+            <n-icon :size="propstyle.icons">
+              <GitlabOutlined/>
+            </n-icon>
+            <span style="font-size: 17px;">About</span>
+          </n-button>
         </n-gi>
-<!--admin-->
-        <n-gi offset="22" span="0 m:1 l:1">
+        <!--admin-->
+        <n-gi offset="22" span="0 m:2 l:1">
           <n-button text @click="$router.push('')">
             <n-icon :size="propstyle.icons">
               <ManageAccountsOutlined/>
             </n-icon>
           </n-button>
         </n-gi>
-<!--github-->
-        <n-gi offset="0" span="0 m:1 l:1">
-            <n-button text @click="" >
-              <n-icon :size="propstyle.icons">
-                <Github/>
-              </n-icon>
-            </n-button>
+        <!--github-->
+        <n-gi offset="0" span="0 m:2 l:1">
+          <n-button text @click="" >
+            <n-icon :size="propstyle.icons">
+              <Github/>
+            </n-icon>
+          </n-button>
         </n-gi>
-<!--share-->
-        <n-gi offset="0" span="0 m:1 l:1">
+        <!--share-->
+        <n-gi offset="0" span="0 m:2 l:1">
           <n-button class="clipbtn" :data-clipboard-text="Urlhandle" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
           </n-button>
         </n-gi>
-<!--Title for mobile-->
-        <n-gi offset="0" span="15 m:0 l:0">
-            <span style="font-size: 18px; display: inline-block; padding-top: 10px;">
+        <!--Title for mobile-->
+        <n-gi offset="0" span="15 m:8 l:0">
+            <span style="font-size: 20px; display: inline-block; padding-top: 8px;">
               Net Pioneer
             </span>
         </n-gi>
-<!--dropdown for mobile-->
-        <n-gi offset="18" span="4 m:0 l:0">
+        <!--dropdown for mobile-->
+        <n-gi offset="18 m:25" span="4 m:0 l:0">
           <n-dropdown :options="optionsM" @select="handleSelect" size="huge" style="width: 50vw;">
             <n-button text>
               <n-icon :size="propstyle.icons-2">
@@ -122,6 +123,7 @@ const $router=useRouter();
         <input id="clipbundle" class="clptar" style="visibility: hidden;">
       </n-grid>
     </n-layout-header>
+  </n-config-provider>
 </template>
 
 <script>
@@ -139,6 +141,10 @@ import PlanetOutline from '@vicons/ionicons5/PlanetOutline'
 import MdContacts from '@vicons/ionicons4/MdContacts'
 import LinkSquare12Regular from '@vicons/fluent/LinkSquare12Regular'
 // import News16Regular from '@vicons/fluent/News16Regular'
+
+const responseTheme={
+  breakpoints:{s:767}
+}
 
 const renderIcon = (icon) => {
   return () => {

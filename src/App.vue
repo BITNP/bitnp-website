@@ -11,7 +11,7 @@ const route =useRoute();
 
 <template>
 
-<n-config-provider :theme="themecheck" >
+<!--<n-config-provider :theme="themecheck" >-->
   <n-message-provider>
       <n-back-top :right="100" :visibility-height="100"></n-back-top>
       <n-layout >
@@ -29,7 +29,7 @@ const route =useRoute();
         </n-layout-footer>
       </n-layout>
   </n-message-provider>
-</n-config-provider>
+<!--</n-config-provider>-->
 </template>
 
 <script>
