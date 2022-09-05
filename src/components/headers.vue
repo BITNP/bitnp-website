@@ -21,6 +21,7 @@ import {
   import Github from '@vicons/fa/Github'
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
+  import BarsOutlined from '@vicons/antd/BarsOutlined'
 import {useRoute, useRouter} from "vue-router";
 
 window.$message=useMessage();
@@ -29,15 +30,17 @@ const $router=useRouter();
 </script>
 
 <template>
-    <n-layout-header >
-      <n-grid cols="48" x-gap="5px" item-responsive>
-        <n-gi offset="6" span="3">
-<!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="src/assets/ico.png" width="20" id="headerIco" @click="$router.push('/')">
+  <n-config-provider :theme-overrides="responseTheme">
+    <n-layout-header bordered >
+      <n-grid cols="48 m:48 l:48" x-gap="5px" item-responsive responsive="screen">
+        <!--icon-->
+        <n-gi offset="4" span="4 m:3 l:3">
+          <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
+          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/home2')">
           <!--          BitNP-->
         </n-gi>
-<!--news-->
-        <n-gi offset="0" span="3">
+        <!--news-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-button text >
             <n-icon :size="propstyle.icons" >
               <News16Regular/>
@@ -45,8 +48,8 @@ const $router=useRouter();
             <span style="font-size: 17px;">News</span>
           </n-button>
         </n-gi>
-<!--space-->
-        <n-gi offset="0" span="3">
+        <!--space-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-dropdown trigger="hover" size="large" :options="options1">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -56,8 +59,8 @@ const $router=useRouter();
             </n-button>
           </n-dropdown>
         </n-gi>
-<!--meta-->
-        <n-gi offset="0" span="3">
+        <!--meta-->
+        <n-gi offset="0" span="0 m:4 l:3">
           <n-dropdown trigger="hover" size="large" :options="options2" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -66,50 +69,66 @@ const $router=useRouter();
               <span style="font-size: 17px;">Meta</span>
             </n-button>
           </n-dropdown>
-<!--about格-->
+          <!--about格-->
         </n-gi>
-        <n-gi offset="0" span="3">
-            <n-button text @click="$router.push('about-us')">
-              <n-icon :size="propstyle.icons">
-                <GitlabOutlined/>
-              </n-icon>
-              <span style="font-size: 17px;">About</span>
-            </n-button>
+        <!--about-->
+        <n-gi offset="0" span="0 m:4 l:3">
+          <n-button text @click="$router.push('about-us')">
+            <n-icon :size="propstyle.icons">
+              <GitlabOutlined/>
+            </n-icon>
+            <span style="font-size: 17px;">About</span>
+          </n-button>
         </n-gi>
-<!--admin-->
-        <n-gi offset="22" span="1">
+        <!--admin-->
+        <n-gi offset="22" span="0 m:2 l:1">
           <n-button text @click="$router.push('')">
             <n-icon :size="propstyle.icons">
               <ManageAccountsOutlined/>
             </n-icon>
           </n-button>
         </n-gi>
-<!--github-->
-        <n-gi offset="0" span="1">
-            <n-button text @click="" >
-              <n-icon :size="propstyle.icons">
-                <Github/>
-              </n-icon>
-            </n-button>
+        <!--github-->
+        <n-gi offset="0" span="0 m:2 l:1">
+          <n-button text @click="" >
+            <n-icon :size="propstyle.icons">
+              <Github/>
+            </n-icon>
+          </n-button>
         </n-gi>
-<!--share-->
-        <n-gi offset="0" span="1">
+        <!--share-->
+        <n-gi offset="0" span="0 m:2 l:1">
           <n-button class="clipbtn" :data-clipboard-text="Urlhandle" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
             </n-icon>
           </n-button>
         </n-gi>
+        <!--Title for mobile-->
+        <n-gi offset="0" span="15 m:8 l:0">
+            <span style="font-size: 20px; display: inline-block; padding-top: 8px;">
+              Net Pioneer
+            </span>
+        </n-gi>
+        <!--dropdown for mobile-->
+        <n-gi offset="18 m:25" span="4 m:0 l:0">
+          <n-dropdown :options="optionsM" @select="handleSelect" size="huge" style="width: 50vw;">
+            <n-button text>
+              <n-icon :size="propstyle.icons-2">
+                <BarsOutlined></BarsOutlined>
+              </n-icon>
+            </n-button>
+          </n-dropdown>
+        </n-gi>
         <input id="clipbundle" class="clptar" style="visibility: hidden;">
       </n-grid>
     </n-layout-header>
-
+  </n-config-provider>
 </template>
 
 <script>
 import {h} from "vue"
 import {defineComponent,reactive} from "vue";
-// import {useRouter as $router} from 'vue-router'
 
 import {NAvatar, NText} from 'naive-ui'
 import Clipboard from 'clipboard'
@@ -121,32 +140,12 @@ import DevicesPc from '@vicons/tabler/DevicesPc'
 import PlanetOutline from '@vicons/ionicons5/PlanetOutline'
 import MdContacts from '@vicons/ionicons4/MdContacts'
 import LinkSquare12Regular from '@vicons/fluent/LinkSquare12Regular'
+// import News16Regular from '@vicons/fluent/News16Regular'
 
-function renderCustomHeader () {
-  return h(
-      'div',
-      {
-        style: 'display: flex; align-items: center; padding: 8px 12px;'
-      },
-      [
-        h(NAvatar, {
-          round: true,
-          style: 'margin-right: 12px;',
-          src: 'https://07akioni.oss-cn-beijing.aliyuncs.com/demo1.JPG'
-        }),
-        h('div', null, [
-          h('div', null, [h(NText, { depth: 2 }, { default: () => '未知用户' })]),
-          h('div', { style: 'font-size: 12px;' }, [
-            h(
-                NText,
-                { depth: 3 },
-                { default: () => '这个用户没有留下痕迹' }
-            )
-          ])
-        ])
-      ]
-  )
+const responseTheme={
+  breakpoints:{s:767}
 }
+
 const renderIcon = (icon) => {
   return () => {
     return h(NIcon, null, {
@@ -155,12 +154,9 @@ const renderIcon = (icon) => {
   };
 };
 
-
-
 export default defineComponent({
   name: "headers",
   setup(){
-
     let clipUrl=reactive({e:window.location.href});
     return{
       clipUrl,
@@ -185,21 +181,21 @@ export default defineComponent({
 
       ],
       options2:[
+        // {
+        //   label: '网协GitHub',
+        //   key:'github',
+        //   icon:renderIcon(BrandGithub)
+        // },
         {
-          label: '网协GitHub',
-          key:'github',
-          icon:renderIcon(BrandGithub)
+          label: '学校常用网址',
+          key: 'address',
+          icon:renderIcon(LinkSquare12Regular)
         },
         {
           label: '电脑推荐表',
           key: 'PCcommands',
           icon:renderIcon(DevicesPc)
         },
-        {
-          label: '学校常用网址',
-          key: 'address',
-          icon:renderIcon(LinkSquare12Regular)
-        }
       ],
       options3:[
         {
@@ -213,7 +209,57 @@ export default defineComponent({
           icon:renderIcon(MdContacts)
         }
       ],
-
+      optionsM:[
+        {
+          label:'News',
+          key:'news',
+          icon:renderIcon(News16Regular)
+        },
+        {
+          label: 'Space',
+          key: 'space',
+          icon:renderIcon(CodepenOutlined),
+          children:[
+            {
+              label: '近期活动',
+              key: 'activities',
+              icon:renderIcon(CalendarLtr16Regular)
+            },
+            {
+              label: "NP知识库",
+              key: 'blogs',
+              icon:renderIcon(DnsServices)
+            },
+          ]
+        },
+        {
+          label: 'Meta',
+          key: 'meta',
+          icon:renderIcon(Atom),
+          children: [
+            // {
+            //   label: '网协GitHub',
+            //   key:'github',
+            //   icon:renderIcon(BrandGithub)
+            // },
+            {
+              label: '学校常用网址',
+              key: 'address',
+              icon:renderIcon(LinkSquare12Regular)
+            },
+            {
+              label: '电脑推荐表',
+              key: 'PCcommands',
+              icon:renderIcon(DevicesPc)
+            },
+          ]
+        },
+        {
+          label: 'About',
+          key: 'about',
+          icon:renderIcon(GitlabOutlined)
+        }
+      ]
     }
   },
   components:{
@@ -259,11 +305,15 @@ export default defineComponent({
   padding-top: 12px;
   padding-bottom: 14px;
 }
+.n-button:focus{
+  border: transparent;
+}
 .n-switch{
   padding-top: 15px;
 }
 #headerIco{
-  padding-top: 7px;
+  padding-top: 0.6rem;
+  width:  1.1rem;
 }
 #headerIco:hover{
   cursor: pointer;

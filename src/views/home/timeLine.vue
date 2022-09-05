@@ -9,7 +9,7 @@ onMounted(()=>{
       {
         title:'LOREM',
         time:'2011 - NOW',
-        context:'ero in nibh convallis sollicitudin. Maecenas ante erat, lacinia commodo pretium vel, ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
+        context:', ultricies eget nibh. Duis et felis lectus. Donec orci libero, auctor eget sodales at, euismod venenatis nibh.'
       },{
         title: 'IPSUM',
         time:'2013',
@@ -28,7 +28,7 @@ onMounted(()=>{
       },{
         title: 'LIBERO',
         time:'2010 - 2011',
-        context: 'elit. Nam et ipsum pulvinar, blandit neque in, ornare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
+        context: 'elit. Nam et ipsum pulvina rnare libero. Nam et ipsum pulvinar, blandit neque in, ornare libero.'
       },{
         title: 'ADIPISCING',
         time: '2010',
@@ -44,7 +44,7 @@ onMounted(()=>{
   <section id="timeline">
 <!--    <span style="float: contour;font-size: 2rem;  font-family:'Raleway';padding-left: 15px;padding-bottom: 3rem;color: #e9ceb2;">近期活动</span>-->
     <div class="timeline">
-      <canvas id="cvs3" width="1691" height="765"></canvas>
+      <canvas id="cvs3" ></canvas>
       <article>
         <h2></h2>
         <figure v-for="items in e.es.left">
@@ -64,7 +64,6 @@ onMounted(()=>{
       </article>
       <br style="clear:both">
     </div>
-
   </section>
 </template>
 
@@ -79,7 +78,12 @@ export default defineComponent({
     }
   },
   updated() {
-    new Timeline(document.querySelector('#cvs3')).toggle(true);
+    try {
+      new Timeline(document.querySelector('#cvs3')).toggle(true);
+    }
+    catch (err){
+      console.log(err)
+    }
   }
 });
 
@@ -170,8 +174,8 @@ function Timeline(cvs) {
       // console.log(document.querySelector('canvas'));
       result = !!(canvas.getContext && (ctx = canvas.getContext('2d')));
 
-      self.lines[0] = new Line(-90, canvas.offsetHeight - 65, '#ffc70f', self.options, mouse);
-      self.lines[1] = new Line(-90, canvas.offsetHeight - 65, '#e0e543', self.options, mouse);
+      self.lines[0] = new Line(-90, canvas.offsetHeight - 90, '#ffc70f', self.options, mouse);
+      self.lines[1] = new Line(-90, canvas.offsetHeight - 90, '#e0e543', self.options, mouse);
 
     } catch (e) {
       console.log(e);
@@ -294,9 +298,14 @@ function Timeline(cvs) {
           // console.log(self.targets,`i:${i},j:${j}`,`dotslength:${self.lines[i].dots.length}`);
           return;
         }
-        var dot2 = [
-          (self.lines[i].points[id].x + self.lines[i].points[id + 1].x) / 2,
-          (self.lines[i].points[id].y + self.lines[i].points[id + 1].y) / 2];
+        try {
+          var dot2 = [
+            (self.lines[i].points[id].x + self.lines[i].points[id + 1].x) / 2,
+            (self.lines[i].points[id].y + self.lines[i].points[id + 1].y) / 2];
+        }catch (err){
+          // console.log(err)
+        }
+
 
         var p1 = { x: dot[0], y: dot[1] };
         var p2 = { x: dot2[0], y: dot2[1] };
@@ -363,10 +372,11 @@ function Timeline(cvs) {
   box-sizing: border-box;
 }
 #timeline {
-  padding-top: 15%;
+  padding-top: 5%;
+  /*height: 100%;*/
 }
 .timeline {
-  height: 100%;
+  /*height: 78%;*/
   position: relative;
 }
 .timeline canvas {

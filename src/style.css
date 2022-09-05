@@ -36,7 +36,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /*place-items: center;*/
+  /*align-items: center;*/
+  /*justify-items: center;*/
   /* min-width: 320px; */
   min-height: 100vh;
 }
@@ -62,7 +64,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /*outline: 4px auto -webkit-focus-ring-color;*/
 }
 
 .card {
@@ -75,7 +77,7 @@ button:focus-visible {
   /*padding: 2rem;*/
   text-align: center;
   margin: 0 0!important;
-  /*width: 100vw;*/
+  width: 100vw;
   max-width:none;
   /*min-width: 1200px;*/
   padding: 0.1rem;

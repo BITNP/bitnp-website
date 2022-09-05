@@ -7,7 +7,7 @@
 
   - 少用`git add -A`，多用`git add [the-file-to-add]`
   - 多commit，避免一次commit包含过多修改
-  - 多fetch、pull，除了每次开工写代码前pull一次，写代码过程中也可以隔一段时间fetch或pull一次（vscode有自动fetch插件）
+  - 多fetch、pull、push，除了每次开工写代码前pull一次，写代码过程中也可以隔一段时间fetch或pull、push一次（vscode有自动fetch插件）
   - commit尽量以  home页面: 或者 VIEW home: 开头
 
 ## API
