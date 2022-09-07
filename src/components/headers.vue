@@ -106,7 +106,7 @@ const $router=useRouter();
         </n-gi>
         <!--Title for mobile-->
         <n-gi offset="0" span="15 s:0 l:0">
-            <span style="font-size: 1rem; display: inline-block; padding-top: 0.6rem;">
+            <span style="font-size: 1rem; display: inline-block; padding-top: 0.6rem; ">
               Net Pioneer
             </span>
         </n-gi>

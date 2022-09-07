@@ -1,15 +1,27 @@
 <script setup>
-import {NGrid,NGi,NImage} from 'naive-ui'
+import {NGrid,NGi,NImage,NSpace} from 'naive-ui'
 </script>
 
 <template>
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
+        <div class="circle" id="circl1"></div>
+        <div class="circle" id="circl2"></div>
+        <div class="circle" id="circl3"></div>
       </div>
     </div>
     <div id="sec1_bd">
-      111
+        <n-grid style="height:100%;width: 90%;margin: 0 auto;" cols="1 s:1 l:2" x-gap="2" item-responsive responsive="screen">
+          <n-gi span="1">
+            <n-space justify="center">
+              <span style="font-size: 55px;font-weight: 400;">
+                Net Pioneer
+              </span>
+            </n-space>
+          </n-gi>
+          <n-gi span="1"></n-gi>
+        </n-grid>
     </div>
   </div>
 </template>
@@ -61,6 +73,23 @@ export default {
   /*background: salmon;*/
 
   clip-path: polygon(0 0,100% 0,100% 86%,0 100%);
+}
+.circle{
+  width: 20px;
+  height: 20px;
+  clip-path: circle(40%);
+}
+#circl1{
+  background: #ff8c40;
+  transform: translate(30vw,40vh);
+}
+#circl2{
+  background: #ffc65a;
+  transform: translate(40vw,28vh);
+}
+#circl3{
+  background: #fff657;
+  transform: translate(12vw,23vh);
 }
 #sec1_bd{
   /*background: saddlebrown;*/
