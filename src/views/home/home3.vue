@@ -113,7 +113,7 @@ const timelineInfo=[
               >
                 <div class="box_inner">
                   <div class="box_img">
-                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
                   </div>
                   <div class="box_text">
                   <span class="box_tTitle">
@@ -137,7 +137,7 @@ const timelineInfo=[
                 </div>
                 <div class="box_inner">
                   <div class="box_img">
-                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
                   </div>
                   <div class="box_text">
                   <span class="box_tTitle">
@@ -161,7 +161,7 @@ const timelineInfo=[
                 </div>
                 <div class="box_inner">
                   <div class="box_img">
-                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
                   </div>
                   <div class="box_text">
                   <span class="box_tTitle">
