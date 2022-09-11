@@ -1,6 +1,50 @@
 <script setup>
-import {NGrid,NGi,NImage,NSpace,NButton,NIcon} from 'naive-ui'
+import {NGrid,NGi,NImage,NSpace,NButton,NIcon,NCarousel,NTimeline,NTimelineItem} from 'naive-ui'
 import CategoryOutlined from '@vicons/material/CategoryOutlined'
+import IosLink from '@vicons/ionicons4/IosLink'
+
+const timelineInfo=[
+  {
+    header:'2022/9/11 22:49',
+    body:{
+      func:()=>{
+        window.location.href='#/'
+      },
+      Mtitle:"我是你滴标题",
+      Stitle:"发生甚么事了"
+    }
+  },
+  {
+    header:'2022/9/11 22:50',
+    body:{
+      func:()=>{
+        window.location.href='#/'
+      },
+      Mtitle:"发生甚么事了",
+      Stitle:"我是梁志超的奶奶"
+    }
+  },
+  {
+    header:'2022/9/11 22:51',
+    body:{
+      func:()=>{
+        window.location.href='#/'
+      },
+      Mtitle:"我是梁志超的奶奶",
+      Stitle:"你们怎么教育的梁志超"
+    }
+  },
+  {
+    header:'2022/9/11 22:49',
+    body:{
+      func:()=>{
+        window.location.href='#/'
+      },
+      Mtitle:"你们怎么教育的梁志超",
+      Stitle:"他&^&骂我￥%&#"
+    }
+  },
+];
 </script>
 
 <template>
@@ -60,30 +104,111 @@ import CategoryOutlined from '@vicons/material/CategoryOutlined'
           </n-gi>
           <n-gi span="1">
             <div class="box" id="box_ele1">
-              <div class="box_inner">
-                <div class="box_img">
-                  <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
-                </div>
-                <div class="box_text">
+              <n-carousel
+                  direction="horizontal"
+                  dot-type="line"
+                  dot-placement="bottom"
+                  show-arrow="show-arrow"
+                  autoplay
+              >
+                <div class="box_inner">
+                  <div class="box_img">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                  </div>
+                  <div class="box_text">
                   <span class="box_tTitle">
                     活动新闻标标标题
                   </span>
-                  <br>
-                  <div class="box_tGap">
-                    <div class="box_tG_left">
+                    <br>
+                    <div class="box_tGap">
+                      <div class="box_tG_left">
                         2022/10/1
+                      </div>
+                      <div class="box_tG_right">
+                        <a>
+                          Learn more>>>
+                        </a>
+                      </div>
                     </div>
-                    <div class="box_tG_right">
-                        Learn more>>>
+                    <div class="box_tSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
-                  </div>
-                  <div class="box_tSub">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </div>
                 </div>
+                <div class="box_inner">
+                  <div class="box_img">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                  </div>
+                  <div class="box_text">
+                  <span class="box_tTitle">
+                    活动新闻标标标题
+                  </span>
+                    <br>
+                    <div class="box_tGap">
+                      <div class="box_tG_left">
+                        2022/10/1
+                      </div>
+                      <div class="box_tG_right">
+                        <a>
+                          Learn more>>>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box_tSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                </div>
+                <div class="box_inner">
+                  <div class="box_img">
+                    <img src="src/assets/example1.gif" style="width: 100%; height: 100%; border-radius: ">
+                  </div>
+                  <div class="box_text">
+                  <span class="box_tTitle">
+                    活动新闻标标标题
+                  </span>
+                    <br>
+                    <div class="box_tGap">
+                      <div class="box_tG_left">
+                        2022/10/1
+                      </div>
+                      <div class="box_tG_right">
+                        <a>
+                          Learn more>>>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box_tSub">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                </div>
+              </n-carousel>
+
+            </div>
+            <div class="box" id="box_ele2">
+              <div class="box_inner ADJ_center" style="width: 85%!important;">
+                  <n-timeline>
+                    <n-timeline-item type="success" v-for="ele in timelineInfo">
+                      <template #header>
+                        {{ele.header}}
+                      </template>
+                      <template #default>
+                        <span style="font-size: 18px;" class="TOa" @click="ele.body.func">
+                          {{ ele.body.Mtitle }}
+                          <n-icon>
+                            <IosLink></IosLink>
+                          </n-icon>
+                        </span>
+                        <br>
+                        <span style="font-size: 11px; color: rgba(26,26,26,0.6)">
+                          {{ele.body.Stitle}}
+                        </span>
+                      </template>
+                    </n-timeline-item>
+                  </n-timeline>
               </div>
             </div>
-            <div class="box" id="box_ele2"></div>
             <div class="box" id="box_ele3"></div>
           </n-gi>
         </n-grid>
@@ -123,10 +248,23 @@ export default {
 }
 @media only screen and (min-width:1280px){
   #sec1_bg_in1{
-    width: 90%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
+    /*width: 90%;*/
+    /*height: 95%;*/
     border-radius: 10px;
   }
+}
+.TOa{
+  cursor: pointer;
+}
+.TOa:hover{
+  color: #4680FFFF;
+}
+.ADJ_center{
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 #sec1_outer{
   width: 100%;
@@ -137,16 +275,17 @@ export default {
 #sec1_bg{
   width: 100%;
   height: 100%;
-
+  /*background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));*/
+  background-image: url("src/views/home/assets/bbburst.svg");
+  background-size:100% ;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #sec1_bg_in1{
-
+  backdrop-filter: blur(2px);
   margin: 0 auto;
-  background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));
-  /*background: rgba(228, 252, 255, 0.47);*/
-  /*background: salmon;*/
-
-  clip-path: polygon(0 0,100% 0,100% 86%,0 100%);
+  /*background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));*/
+  /*clip-path: polygon(0 0,100% 0,100% 86%,0 100%);*/
 }
 .circle{
   width: 20px;
@@ -200,6 +339,8 @@ export default {
 
   /*background: white;*/
   transition:0.4s cubic-bezier(.17,.67,.83,.67);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 .box:hover{
   z-index: 4!important;
@@ -210,6 +351,8 @@ export default {
       12.2px 14px 11.8px -25px rgba(0, 0, 0, 0.024),
       25.2px 28.8px 25px -25px rgba(0, 0, 0, 0.033),
       69px 79px 98px -25px rgba(0, 0, 0, 0.07)!important;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 #box_ele1{
@@ -218,7 +361,11 @@ export default {
   z-index: 3;
 }
 #box_ele1:hover{
+
   transform: translate(0px,calc(28vh - 10px)) scale(1.05,1.05)!important;
+  -webkit-filter: blur(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 #box_ele2{
   position: fixed;
@@ -240,6 +387,10 @@ export default {
   /*background: #535bf2;*/
   width: 93%;
   height: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5.5%;
+  /*margin: 5px;*/
   overflow: hidden;
 }
 .box_img{
@@ -270,7 +421,7 @@ export default {
   white-space: pre-line;
   word-break: normal;
   overflow: hidden;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: block-axis;
   /*white-space: nowrap;*/
@@ -300,5 +451,14 @@ export default {
   grid-area: 1 / 2 / 2 / 3;
   text-align: right;
   color: rgba(26, 26, 26, 0.54);
+}
+.n-carousel{
+  --n-dot-color: rgba(211, 182, 182, 0.3)!important;
+  --n-dot-color-focus: rgba(211, 182, 182, 0.5)!important;
+  --n-dot-color-active: rgba(211, 182, 182, 1)!important;
+  --n-dot-size: 8px;
+  --n-dot-line-width: 16px;
+  --n-dot-line-width-active: 24px;
+  --n-arrow-color: #7a7a7a !important;
 }
 </style>
