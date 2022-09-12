@@ -2,7 +2,7 @@
 import {NGrid,NGi,NImage,NSpace,NButton,NIcon,NCarousel,NTimeline,NTimelineItem} from 'naive-ui'
 import CategoryOutlined from '@vicons/material/CategoryOutlined'
 import IosLink from '@vicons/ionicons4/IosLink'
-
+import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
 const timelineInfo=[
   {
     header:'2022/9/11 22:49',
@@ -45,9 +45,149 @@ const timelineInfo=[
     }
   },
 ];
+const GuideLinkInfo=[
+  //  电脑诊所
+  {
+    photo:"src/views/home/assets/clinic2.svg",
+    mTitle:"电脑诊所",
+    sTitle:"一个维修硬件的部门",
+    links:()=>{
+      window.location.href="https://clinic-bitnp-info-bit-edu-cn-6wehcsemw54w.ztna.dingtalk.com/lightapp/?corpId=ding5afe027889e9ac43acaaa37764f94726#";
+    },
+    infos:[
+      {
+        titles:"诊所服务预约流程",
+        linkk:()=>{
+          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      },
+      {
+        titles:"可以从i北理或钉钉上预约哦~",
+        linkk:()=>{
+          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      }
+    ]
+  },
+  //  NPlive
+  {
+    photo:"src/views/home/assets/live2.svg",
+    mTitle:"NPlive",
+    sTitle:"校内直播平台",
+    links:()=>{
+      window.location.href="https://live.bitnp.net/";
+    },
+    infos:[
+      {
+        titles:"近期活动之类的",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      },
+      {
+        titles:"近期活动之类的",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      }
+    ]
+  },
+  //  镜像站
+  {
+    photo:"src/views/home/assets/mirror.svg",
+    mTitle:"Mirror",
+    sTitle:"由网协运营的北理镜像站",
+    links:()=>{
+      window.location.href="https://mirror.bit.edu.cn/";
+    },
+    infos:[
+      {
+        titles:"近期活动之类的",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      },
+      {
+        titles:"近期活动之类的",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      }
+    ]
+  },
+  //  map
+  {
+    photo:"src/views/home/assets/map.svg",
+    mTitle:"校园地图",
+    sTitle:"按图索骥，玩转北理",
+    links:()=>{
+      window.location.href="https://map.bitnp.net";
+    },
+    infos:[
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
+    ]
+  },
+  //  wiki
+  {
+    photo:"src/views/home/assets/wiki2.svg",
+    mTitle:"Wiki",
+    sTitle:"多人协作的创作系统",
+    links:()=>{
+      window.location.href="https://wiki.bitnp.net/";
+    },
+    infos:[
+      {
+        titles:"使用引导",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
+    ]
+  },
+  {
+    photo:"src/views/home/assets/md.svg",
+    mTitle:"Codimd",
+    sTitle:"多人协作的创作系统",
+    links:()=>{
+      window.location.href="https://codimd.bitnp.net";
+    },
+    infos:[
+      {
+        titles:"使用引导",
+        linkk:()=>{
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+        }
+      },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
+    ]
+  }
+];
 </script>
 
 <template>
+  <!DOCTYPE html>
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
@@ -209,7 +349,43 @@ const timelineInfo=[
                   </n-timeline>
               </div>
             </div>
-            <div class="box" id="box_ele3"></div>
+            <div class="box" id="box_ele3">
+              <n-carousel
+                dot-type="line"
+                dot-placement="bottom"
+                direction="horizontal"
+                show-arrow="show-arrow"
+                autoplay
+              >
+                <div class="box_inner" v-for="ele1 in GuideLinkInfo">
+                  <div class="box_photo">
+                    <img :src="ele1.photo">
+                  </div>
+                  <div class="box_Gtext">
+                    <div class="box_Gtitle TOa" @click="ele1.links()">
+                      <span style="color: #1a1a1a;">
+                        {{ ele1.mTitle }}
+                      </span>
+                    </div>
+                    <div class="box_GStitle">
+                      <span style="color: rgba(26,26,26,0.75);">
+                        {{ ele1.sTitle }}
+                      </span>
+                    </div>
+                    <div class="box_Ginfos">
+                      <div class="box_Ginfos_ele TOa" v-for="ele2 in ele1.infos" @click="ele2.linkk()">
+                        <n-icon size="20" style="padding-top: 2px;">
+                          <LinkSquare16Filled></LinkSquare16Filled>
+                        </n-icon>
+                        <span>
+                        {{ ele2.titles }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </n-carousel>
+            </div>
           </n-gi>
         </n-grid>
     </div>
@@ -259,12 +435,15 @@ export default {
   cursor: pointer;
 }
 .TOa:hover{
-  color: #4680FFFF;
+  color: #4680FFFF!important;
 }
 .ADJ_center{
   display: flex;
   justify-items: center;
   align-items: center;
+}
+.cursorr{
+  cursor: pointer;
 }
 #sec1_outer{
   width: 100%;
@@ -276,15 +455,16 @@ export default {
   width: 100%;
   height: 100%;
   /*background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));*/
-  background-image: url("src/views/home/assets/bbburst.svg");
-  background-size:100% ;
+  background-image: url("src/views/home/assets/bb3.svg");
+  background-size:120% ;
   background-repeat: no-repeat;
   background-position: center;
 }
 #sec1_bg_in1{
-  backdrop-filter: blur(2px);
+  /*backdrop-filter: blur(6px);*/
   margin: 0 auto;
   /*background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));*/
+
   /*clip-path: polygon(0 0,100% 0,100% 86%,0 100%);*/
 }
 .circle{
@@ -328,8 +508,8 @@ export default {
   place-items: center;
 
   background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 2px solid rgba(239, 238, 238, 0.18);
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
@@ -460,5 +640,33 @@ export default {
   --n-dot-line-width: 16px;
   --n-dot-line-width-active: 24px;
   --n-arrow-color: #7a7a7a !important;
+}
+.box_photo{
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+  /*background: #535bf2;*/
+}
+.box_Gtext{
+  /*margin-top: 5px;*/
+  padding-top: 0;
+}
+.box_Gtitle {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+.box_GStitle{
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.box_Ginfos{
+  margin: 0 auto;
+  width: 80%;
+  text-align:left;
+  color: #1a1a1a;
+}
+.box_Ginfos_ele{
+  border-bottom: 1px solid rgba(0,0,0,0.43);
 }
 </style>
