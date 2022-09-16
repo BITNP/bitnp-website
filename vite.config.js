@@ -11,5 +11,9 @@ export default defineConfig({
       { find: 'views', replacement: '/src/views' },
       { find: 'components', replacement: '/src/components' },
     ]
+  },
+  server:{
+    host:'10.196.162.63',
+    port:5173,
   }
 })
