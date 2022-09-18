@@ -34,13 +34,13 @@ const $router=useRouter();
     <n-layout-header bordered >
       <n-grid cols="48 m:48 l:48" x-gap="5px" item-responsive responsive="screen">
         <!--icon-->
-        <n-gi offset="4" span="4 m:3 l:3">
+        <n-gi offset="4" span="4 s:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/home2')">
+          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->
-        <n-gi offset="0" span="0 m:4 l:3">
+        <n-gi offset="0" span="0 s:5 l:3">
           <n-button text >
             <n-icon :size="propstyle.icons" >
               <News16Regular/>
@@ -49,7 +49,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
         <!--space-->
-        <n-gi offset="0" span="0 m:4 l:3">
+        <n-gi offset="0" span="0 s:5 l:3">
           <n-dropdown trigger="hover" size="large" :options="options1">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -60,7 +60,7 @@ const $router=useRouter();
           </n-dropdown>
         </n-gi>
         <!--meta-->
-        <n-gi offset="0" span="0 m:4 l:3">
+        <n-gi offset="0" span="0 s:5 l:3">
           <n-dropdown trigger="hover" size="large" :options="options2" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
@@ -72,7 +72,7 @@ const $router=useRouter();
           <!--about格-->
         </n-gi>
         <!--about-->
-        <n-gi offset="0" span="0 m:4 l:3">
+        <n-gi offset="0" span="0 s:5 l:3">
           <n-button text @click="$router.push('about-us')">
             <n-icon :size="propstyle.icons">
               <GitlabOutlined/>
@@ -81,7 +81,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
         <!--admin-->
-        <n-gi offset="22" span="0 m:2 l:1">
+        <n-gi offset="22 s:14 l:22" span="0 s:2 l:1">
           <n-button text @click="$router.push('')">
             <n-icon :size="propstyle.icons">
               <ManageAccountsOutlined/>
@@ -89,7 +89,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
         <!--github-->
-        <n-gi offset="0" span="0 m:2 l:1">
+        <n-gi offset="0" span="0 s:2 l:1">
           <n-button text @click="" >
             <n-icon :size="propstyle.icons">
               <Github/>
@@ -97,7 +97,7 @@ const $router=useRouter();
           </n-button>
         </n-gi>
         <!--share-->
-        <n-gi offset="0" span="0 m:2 l:1">
+        <n-gi offset="0" span="0 s:2 l:1">
           <n-button class="clipbtn" :data-clipboard-text="Urlhandle" text>
             <n-icon :size="propstyle.icons">
               <ShareSocialOutline/>
@@ -105,13 +105,13 @@ const $router=useRouter();
           </n-button>
         </n-gi>
         <!--Title for mobile-->
-        <n-gi offset="0" span="15 m:8 l:0">
-            <span style="font-size: 20px; display: inline-block; padding-top: 8px;">
+        <n-gi offset="0" span="15 s:0 l:0">
+            <span style="font-size: 1rem; display: inline-block; padding-top: 0.6rem; ">
               Net Pioneer
             </span>
         </n-gi>
         <!--dropdown for mobile-->
-        <n-gi offset="18 m:25" span="4 m:0 l:0">
+        <n-gi offset="18 m:25" span="4 s:0 l:0">
           <n-dropdown :options="optionsM" @select="handleSelect" size="huge" style="width: 50vw;">
             <n-button text>
               <n-icon :size="propstyle.icons-2">
@@ -294,6 +294,34 @@ export default defineComponent({
 </script>
 
 <style scoped>
+html {
+  font-size : 20px;
+}
+@media only screen and (min-width: 401px){
+  html {
+    font-size: 25px !important;
+  }
+}
+@media only screen and (min-width: 428px){
+  html {
+    font-size: 26.75px !important;
+  }
+}
+@media only screen and (min-width: 481px){
+  html {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (min-width: 569px){
+  html {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (min-width: 641px){
+  html {
+    font-size: 40px !important;
+  }
+}
 .n-layout-header{
   padding-top: 4px;
   padding-bottom: 3px;
