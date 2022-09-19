@@ -1,19 +1,18 @@
 <script setup>
   import { NButton,NDivider,NSpace,NLayout,NLayoutSider,NLayoutContent,NCard,NEllipsis,NH1,NH2,NH3,NH4,NH5,NH6} from 'naive-ui'
-
-
-
 </script>
 
 <template>
     <base target="_blank">
     <!-- 在新标签页中打开链接 -->
 
-    <!-- 右边折叠的侧边栏README -->
+    <!-- 右边折叠的侧边栏提示 -->
     <n-layout has-sider sider-placement="right">
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 5%;" >
+        
         <n-h3>本网站的作用是提供一些学校常用的网址和简单的功能介绍，
-          更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，一个示例：<a href="/#/about-us" target="_blank">合理打广告</a>
+          更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，
+        <br>一个示例：<a href="/#/about-us" target="_blank">合理打广告</a>
         <br> 
         另外，一些网址可能需要使用校内网，但不用担心我们有<a href="https://webvpn.bit.edu.cn" target="_blank">资源控制访问系统</a>，
         即使是校外也仍然可以访问你所需要的网址
@@ -23,14 +22,14 @@
       </n-layout-content>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="120"
-        :width="240"
-        :native-scrollbar="false"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 24px;"
+        content-style="padding: auto;"
         bordered
+        text-align="center"
       >
-        <n-h2>README</n-h2>
+      <h2>提示</h2>
       </n-layout-sider>
     </n-layout>
 
@@ -39,16 +38,18 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="160"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>服务</h2>
       </n-layout-sider>
-      <n-layout-content content-style="padding: 24px;">
+
+      <n-layout-content content-style="padding: 5%">
           <n-card title="校历" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
             <a href="https://jwc.bit.edu.cn/2019gb/jxrl/index.htm">教学日历</a>       
@@ -75,15 +76,17 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="160"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>教学</h2>
       </n-layout-sider>
+
       <n-layout-content content-style="padding: 24px;">
           <n-card title="教务处" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
@@ -129,15 +132,17 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="60"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>教学教研机构</h2>
       </n-layout-sider>
+
       <n-layout-content content-style="padding: 24px;">
           <n-card title="官网" hoverable class="thumbnail">
 
@@ -180,15 +185,17 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="60"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>提供学院概况以及工作情况</h2>
       </n-layout-sider>
+
       <n-layout-content content-style="padding: 24px;">
           <n-card title="徐特立学院" hoverable class="thumbnail">
             <a href="https://xuteli.bit.edu.cn/">学院官网</a>           
@@ -305,15 +312,17 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="60"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>管理机构</h2>
       </n-layout-sider>
+
       <n-layout-content content-style="padding: 24px;">
           <n-card title="党委组织部" hoverable class="thumbnail">
             <a href="https://zzb.bit.edu.cn/">党校及党建工作</a>           
@@ -416,15 +425,18 @@
     <n-layout has-sider>
       <n-layout-sider
         collapse-mode="transform"
-        :collapsed-width="60"
-        :width="180"
+        collapsed-width="0vw"
+        width=15vw
         show-trigger="bar"
-        content-style="padding: 60px;"
+        content-style="padding: 50%;"
         bordered
-        font="60px"
+        font="6em"
+        text-align="center"
       >
       <h2>教学教研辅助机构</h2>
       </n-layout-sider>
+
+
       <n-layout-content content-style="padding: 24px;">
           <n-card title="图书馆" hoverable class="thumbnail">
             <a href="http://lib.bit.edu.cn/">常用的数据库</a>
@@ -470,17 +482,18 @@
 <style scoped>
   .n-card {
   /* 卡片的大小 */
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 15vw;
+  max-height: 20vh;
   }
   .thumbnail 
   {
   /* 控制卡片横向排列 */
 	float:left;
-	width:160px;
-	height:90px;
-	margin:5px;
-  }
+	width:25vw;
+	height:15vh;
+	margin:2%;
+  /* font:30em; ????*/
+ }
   a:link {text-decoration:none;}    /* unvisited link */
   a:visited {text-decoration:none;} /*visited link */
   a:hover {text-decoration:underline;
@@ -492,5 +505,7 @@
     color:rgb(249, 131, 45)
 
   }
-
+.n-layout-sider{
+  margin:auto;
+}
 </style>
