@@ -1,5 +1,6 @@
 <script setup>
-import {NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NGradientText,NGrid,NGi,NImage,NIcon,NButton,NDivider,NConfigProvider} from 'naive-ui'
+import {ref} from 'vue'
+import {NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NGradientText,NGrid,NGi,NImage,NIcon,NButton,NDivider,NConfigProvider,NModal,NCard} from 'naive-ui'
 import ConnectWithoutContactRound from '@vicons/material/ConnectWithoutContactRound'
 import LogoWechat from '@vicons/carbon/LogoWechat'
 import AlternateEmailFilled from '@vicons/material/AlternateEmailFilled'
@@ -12,6 +13,10 @@ import Affiliate from '@vicons/tabler/Affiliate'
 // import Wikis from '@vicons/carbon/Wikis'
 // import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
 // import GuiManagement from '@vicons/carbon/GuiManagement'
+const showWCMod=ref(false);
+function jumpTo(url){
+  window.location.href=url;
+}
 </script>
 
 <template>
@@ -46,10 +51,10 @@ import Affiliate from '@vicons/tabler/Affiliate'
                           <ConnectWithoutContactRound/>
                         </n-icon>
                         <span style="font-size: large">
-                <b>
-                  Contact us
-                </b>
-              </span>
+                        <b>
+                          Contact us
+                        </b>
+                        </span>
                       </div>
                     </n-space>
                     <!--              <n-divider></n-divider>-->
@@ -60,8 +65,8 @@ import Affiliate from '@vicons/tabler/Affiliate'
                             <AlternateEmailFilled/>
                           </n-icon>
                           <span style="font-size: medium">
-                        Mail: xxxxx@bit.edu.cn
-                      </span>
+                            Mail: xxxxx@bit.edu.cn
+                          </span>
                           <n-icon size="18">
                             <IosLink/>
                           </n-icon>
@@ -70,32 +75,49 @@ import Affiliate from '@vicons/tabler/Affiliate'
                     </n-space>
                     <n-space justify="start" >
                       <div style="padding-bottom: 10px;">
-                        <n-button text>
+                        <n-button text @click="showWCMod=true">
                           <n-icon size="18" color="#00D98D">
                             <LogoWechat/>
                           </n-icon>
                           <span style="font-size: medium">
-                Wechat: bitwangxie
-              </span>
+                            Wechat: bitwangxie
+                          </span>
                           <n-icon size="18">
                             <IosLink/>
                           </n-icon>
                         </n-button>
+<!--                        show QRcode-->
+                        <n-modal v-model:show="showWCMod">
+                          <n-card
+                              style="width: 600px"
+                              title="Scan it :)"
+                              :bordered="false"
+                              size="huge"
+                              role="dialog"
+                              aria-modal="true"
+                              class="glassmorphism"
+                          >
+                            <template #header-extra>
+                              微信公众号搜索 “北理工网络开拓者” 或“bitwangxie” 即可关注公众号
+                            </template>
+                            <img src="src/assets/QRWechat.png" style="width: 100%; height: 100%;">
+                          </n-card>
+                        </n-modal>
                       </div>
                     </n-space>
                     <n-space justify="start" >
                       <div style="padding-bottom: 10px;">
-                        <n-button text>
+                        <n-button text @click="jumpTo('https://space.bilibili.com/89756733')">
                           <n-icon size="18" color="#23ADE5">
                             <DeviceTv/>
                           </n-icon>
                           <span style="font-size: medium;">
-                Bilibili: UID89756733
-              </span>
+                            Bilibili: 网络开拓者
+                          </span>
                           <n-icon size="18">
                             <IosLink/>
                           </n-icon>
-                        </n-button>
+                        </n-button >
                       </div>
                     </n-space>
                     <n-space justify="start" >
@@ -105,8 +127,8 @@ import Affiliate from '@vicons/tabler/Affiliate'
                             <Github/>
                           </n-icon>
                           <span style="font-size: medium;">
-                Github: bitnp
-              </span>
+                            Github: bitnp
+                          </span>
                           <n-icon size="18">
                             <IosLink/>
                           </n-icon>
@@ -115,7 +137,6 @@ import Affiliate from '@vicons/tabler/Affiliate'
                     </n-space>
                   </n-space>
                 </n-space>
-
               </n-gi>
               <!--          Right-->
               <n-gi offset="0" span="2 s:0 l:2">
@@ -128,10 +149,10 @@ import Affiliate from '@vicons/tabler/Affiliate'
                           <Affiliate/>
                         </n-icon>
                         <span style="font-size: large">
-                    <b>
-                      Related Links
-                    </b>
-                  </span>
+                          <b>
+                            Related Links
+                          </b>
+                        </span>
                       </div>
                     </n-space>
                     <!--                Col1-->
@@ -139,13 +160,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
 
                       <n-space justify="center">
                         <div style="padding-bottom: 10px;">
-                          <n-button text>
+                          <n-button text @click="jumpTo('https://www.bit.edu.cn/')">
                             <!--                      <n-icon size="18">-->
                             <!--                        <AirplayFilled/>-->
                             <!--                      </n-icon>-->
                             <span style="font-size: medium">
-                      &nbsp; 北京理工大学
-                    </span>
+                              &nbsp; 北京理工大学
+                            </span>
                             <n-icon size="18">
                               <IosLink/>
                             </n-icon>
@@ -154,13 +175,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
                       </n-space>
                       <n-space justify="start" >
                         <div style="padding-bottom: 10px;">
-                          <n-button text>
+                          <n-button text @click="jumpTo('https://login.bit.edu.cn/')">
                             <!--                      <n-icon size="18">-->
                             <!--                        <ReminderMedical/>-->
                             <!--                      </n-icon>-->
                             <span style="font-size: medium">
-                      &nbsp; 乐学
-                    </span>
+                              &nbsp; 乐学
+                            </span>
                             <n-icon size="18">
                               <IosLink/>
                             </n-icon>
@@ -172,13 +193,13 @@ import Affiliate from '@vicons/tabler/Affiliate'
                     <n-space justify="space-between">
                       <n-space justify="center">
                         <div style="padding-bottom: 10px;">
-                          <n-button text>
+                          <n-button text @click="jumpTo('https://bit101.cn/#/')">
                             <!--                      <n-icon size="18">-->
                             <!--                        <AirplayFilled/>-->
                             <!--                      </n-icon>-->
                             <span style="font-size: medium">
-                      &nbsp; BIT101
-                    </span>
+                              &nbsp; BIT101
+                            </span>
                             <n-icon size="18">
                               <IosLink/>
                             </n-icon>
@@ -186,23 +207,9 @@ import Affiliate from '@vicons/tabler/Affiliate'
                         </div>
                       </n-space>
                       <n-space justify="start" >
-                        <!--                    <div style="padding-bottom: 10px;">-->
-                        <!--                      <n-button text>-->
-                        <!--                        &lt;!&ndash;                      <n-icon size="18">&ndash;&gt;-->
-                        <!--                        &lt;!&ndash;                        <ReminderMedical/>&ndash;&gt;-->
-                        <!--                        &lt;!&ndash;                      </n-icon>&ndash;&gt;-->
-                        <!--                        <span style="font-size: medium">-->
-                        <!--                      &nbsp; 乐学-->
-                        <!--                    </span>-->
-                        <!--                        <n-icon size="18">-->
-                        <!--                          <IosLink/>-->
-                        <!--                        </n-icon>-->
-                        <!--                      </n-button>-->
-                        <!--                    </div>-->
                       </n-space>
                     </n-space>
                   </n-space>
-
                 </n-space>
               </n-gi>
             </n-grid>
@@ -233,6 +240,13 @@ const responseTheme={
 </script>
 
 <style scoped>
+.glassmorphism{
+  backdrop-filter: blur(7px) saturate(180%);
+  -webkit-backdrop-filter: blur(7px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
 .fontIngerdient{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

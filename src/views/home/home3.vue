@@ -247,7 +247,7 @@ const GuideLinkInfo=[
               </n-space>
               <div style="height: 4vh;"></div>
               <n-space justify="center">
-                <n-button style="--n-font-size:20px;" size="large" ghost color="#9867c6">
+                <n-button style="--n-font-size:20px;" size="large" ghost color="#9867c6" @click="$router.push('/about-us')">
                   Know More...
                 </n-button>
               </n-space>
