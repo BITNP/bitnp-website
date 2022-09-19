@@ -3,6 +3,29 @@ import {NGrid,NGi,NImage,NSpace,NButton,NIcon,NCarousel,NTimeline,NTimelineItem}
 import CategoryOutlined from '@vicons/material/CategoryOutlined'
 import IosLink from '@vicons/ionicons4/IosLink'
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
+const newsInfo=[
+  {
+  imgHref:'src/assets/example1.gif',
+  mTitle:'活动新闻标标题',
+  time:'2022/10/1',
+  link:'',
+  context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    imgHref:'src/assets/example1.gif',
+    mTitle:'活动新闻标标题',
+    time:'2022/10/1',
+    link:'',
+    context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    imgHref:'src/assets/example1.gif',
+    mTitle:'活动新闻标标题',
+    time:'2022/10/1',
+    link:'',
+    context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
 const timelineInfo=[
   {
     header:'2022/9/11 22:49',
@@ -193,10 +216,6 @@ const GuideLinkInfo=[
       <div id="sec1_bg_in1">
         <img src="src/views/home/assets/bb3.svg" id="bg_img_l" style="">
         <img src="src/views/home/assets/bb3s.svg" id="bg_img_s" style="">
-<!--        <div class="circle" id="circl1"></div>-->
-<!--        <div class="circle" id="circl2"></div>-->
-<!--        <div class="circle" id="circl3"></div>-->
-<!--        <div class="circle" id="circl4"></div>-->
       </div>
     </div>
     <div id="sec1_bd">
@@ -243,83 +262,34 @@ const GuideLinkInfo=[
                       show-arrow="show-arrow"
                       autoplay
                   >
-                    <div class="box_inner">
+                    <div class="box_inner" v-for="ele in newsInfo">
                       <div class="box_img">
-                        <img src="src/assets/example1.gif" style="aspect-ratio: 741 /421; height:100%; ">
+                        <img :src="ele.imgHref" style="object-fit: cover;width:100%; border-radius: 10px; height: auto; object-position: center;">
                       </div>
                       <div class="box_text">
                       <span class="box_tTitle">
-                        活动新闻标标题
+                        {{ ele.mTitle }}
                       </span>
                         <br>
                         <div class="box_tGap">
                           <div class="box_tG_left">
-                            2022/10/1
+                            {{ele.time}}
                           </div>
                           <div class="box_tG_right">
-                            <a>
+                            <a :href="ele.link">
                               Learn more>>>
                             </a>
                           </div>
                         </div>
                         <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="box_inner">
-                      <div class="box_img">
-                        <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
-                      </div>
-                      <div class="box_text">
-                  <span class="box_tTitle">
-                    活动新闻标标标题
-                  </span>
-                        <br>
-                        <div class="box_tGap">
-                          <div class="box_tG_left">
-                            2022/10/1
-                          </div>
-                          <div class="box_tG_right">
-                            <a>
-                              Learn more>>>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="box_inner">
-                      <div class="box_img">
-                        <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
-                      </div>
-                      <div class="box_text">
-                  <span class="box_tTitle">
-                    活动新闻标标标题
-                  </span>
-                        <br>
-                        <div class="box_tGap">
-                          <div class="box_tG_left">
-                            2022/10/1
-                          </div>
-                          <div class="box_tG_right">
-                            <a>
-                              Learn more>>>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          {{ele.context}}
                         </div>
                       </div>
                     </div>
                   </n-carousel>
-
                 </div>
                 <div class="box" id="box_ele2">
-                  <div class="box_inner ADJ_center" style="width: 85%!important;overflow: scroll;">
+                  <div class="box_inner ADJ_center box_G" style="width: 85%!important;">
                     <n-timeline>
                       <n-timeline-item type="success" v-for="ele in timelineInfo">
                         <template #header>
@@ -405,9 +375,12 @@ export default {
   url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @media only screen and (max-width:767px){
+  #sec1_outer{
+    height: 200vh;
+  }
   #sec1_bg_in1{
     width: 100%;
-    height: 65%;
+    height: 35%;
     /*border-radius: 10px;*/
   }
   .left_fill{
@@ -423,42 +396,49 @@ export default {
     display: none;
   }
   .box{
-    width: 45vw;
-    height: 45vh;
+    width: 85vw;
+    height: 49vh;
+    margin-top: 20px;
   }
   #box_ele1{
-    position: fixed;
-    transform: translate(0px,0vh);
+    /*position: fixed;*/
+    /*transform: translate(0px,0vh);*/
     z-index: 3;
   }
   #box_ele2{
-    position: fixed;
-    transform: translate(25vw,0vh);
+    /*position: fixed;*/
+    /*transform: translate(25vw,0vh);*/
     z-index: 2;
   }
   #box_ele3{
-    position: fixed;
-    transform: translate(48vw,0vh);
+    /*position: fixed;*/
+    /*transform: translate(48vw,0vh);*/
     z-index: 1;
   }
   #box_ele1:hover{
 
-    transform: translate(0px,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(0px,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
     -webkit-filter: blur(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
   }
   #box_ele2:hover{
-    transform: translate(25vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(23vw,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
   }
   #box_ele3:hover{
-    transform: translate(48vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(46vw,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
   }
   .box_tTitle{
     font-size: 20px;
   }
+  .box_G{
+    overflow: scroll;
+  }
 }
 @media only screen  and (min-width: 768px) and (max-width: 1280px){
+  #sec1_outer{
+    height: 93vh;
+  }
   #sec1_bg_in1{
     width: 100%;
     height: 65%;
@@ -479,6 +459,7 @@ export default {
   .box{
     width: 40vw;
     height: 42vh;
+    margin-top: 20px;
   }
   #box_ele1{
     position: fixed;
@@ -511,8 +492,14 @@ export default {
   .box_tTitle{
     font-size: 25px;
   }
+  .box_G{
+    overflow: scroll;
+  }
 }
 @media only screen and (min-width:1280px){
+  #sec1_outer{
+    height: 93vh;
+  }
   #sec1_bg_in1{
     width: 100%;
     height: 100%;
@@ -584,7 +571,6 @@ export default {
 }
 #sec1_outer{
   width: 100%;
-  height: 93vh;
   /*background: rgba(61, 50, 50, 0.02);*/
   padding-top: 5px;
   overflow: hidden;
@@ -615,27 +601,6 @@ export default {
   width: 110%;
   height: 110%;
   transform: translateY(-25%) scale(120%);
-}
-.circle{
-  width: 20px;
-  height: 20px;
-  clip-path: circle(40%);
-}
-#circl1{
-  background: #ff8c40;
-  transform: translate(30vw,40vh);
-}
-#circl2{
-  background: #ffc65a;
-  transform: translate(40vw,28vh);
-}
-#circl3{
-  background: #fff657;
-  transform: translate(12vw,23vh);
-}
-#circl4{
-  background: #ffcc99;
-  transform: translate(22vw,26vh);
 }
 #sec1_bd{
   /*background: saddlebrown;*/
@@ -696,9 +661,8 @@ export default {
 }
 .box_img{
   width: 100%;
-  height: 50%;
+  height: auto;
   /*background: #21D4FD;*/
-  border-radius: 10px;
   overflow: hidden;
 }
 .box_text{
@@ -721,7 +685,7 @@ export default {
   white-space: pre-line;
   word-break: normal;
   overflow: hidden;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   display: -webkit-box;
   -webkit-box-orient: block-axis;
   /*white-space: nowrap;*/
