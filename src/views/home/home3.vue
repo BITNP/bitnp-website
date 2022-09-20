@@ -69,6 +69,29 @@ const timelineInfo=[
   },
 ];
 const GuideLinkInfo=[
+  //  bit101
+  {
+    photo:"src/views/home/assets/101.svg",
+    mTitle:"BIT101",
+    sTitle:"开放式的交流平台",
+    links:()=>{
+      window.location.href='https://bit101.cn/#/'
+    },
+    infos:[
+      {
+        titles:"101的简介",
+        linkk:()=>{
+          window.location.href="src/views/home/assets/101shortcut.webp";
+        }
+      },
+      {
+        titles:"101背后的故事",
+        linkk:()=>{
+          window.location.href="https://bit101.cn/#/paper/show/1";
+        }
+      }
+    ]
+  },
   //  电脑诊所
   {
     photo:"src/views/home/assets/clinic2.svg",
@@ -79,15 +102,15 @@ const GuideLinkInfo=[
     },
     infos:[
       {
-        titles:"诊所服务预约流程",
+        titles:"电脑推荐表",
         linkk:()=>{
-          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+          window.location.href="https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ";
         }
       },
       {
         titles:"可以从i北理或钉钉上预约哦~",
         linkk:()=>{
-          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
         }
       }
     ]
@@ -101,18 +124,18 @@ const GuideLinkInfo=[
       window.location.href="https://live.bitnp.net/";
     },
     infos:[
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      }
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
     ]
   },
   //  镜像站
@@ -124,18 +147,18 @@ const GuideLinkInfo=[
       window.location.href="https://mirror.bit.edu.cn/";
     },
     infos:[
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      }
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
     ]
   },
   //  map
@@ -170,12 +193,12 @@ const GuideLinkInfo=[
       window.location.href="https://wiki.bitnp.net/";
     },
     infos:[
-      {
-        titles:"使用引导",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
+      // {
+      //   titles:"使用引导",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
       // {
       //   titles:"近期活动之类的",
       //   linkk:()=>{
@@ -187,17 +210,17 @@ const GuideLinkInfo=[
   {
     photo:"src/views/home/assets/md.svg",
     mTitle:"Codimd",
-    sTitle:"多人协作的创作系统",
+    sTitle:"写作与分享 Markdown 的最佳平台",
     links:()=>{
       window.location.href="https://codimd.bitnp.net";
     },
     infos:[
-      {
-        titles:"使用引导",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
+      // {
+      //   titles:"使用引导",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
       // {
       //   titles:"近期活动之类的",
       //   linkk:()=>{
