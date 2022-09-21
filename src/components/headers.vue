@@ -27,6 +27,10 @@ import {useRoute, useRouter} from "vue-router";
 window.$message=useMessage();
 const $route=useRoute();
 const $router=useRouter();
+
+function jumpTo(url){
+  window.location.href = url;
+}
 </script>
 
 <template>
@@ -36,7 +40,7 @@ const $router=useRouter();
         <!--icon-->
         <n-gi offset="4" span="4 s:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="/src/assets/ico.png"  style="" id="headerIco" @click="$router.push('/')">
+          <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"  style="" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->
@@ -90,7 +94,7 @@ const $router=useRouter();
         </n-gi>
         <!--github-->
         <n-gi offset="0" span="0 s:2 l:1">
-          <n-button text @click="" >
+          <n-button text @click="jumpTo('https://github.com/BITNP')" >
             <n-icon :size="propstyle.icons">
               <Github/>
             </n-icon>

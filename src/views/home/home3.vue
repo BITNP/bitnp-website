@@ -5,73 +5,76 @@ import IosLink from '@vicons/ionicons4/IosLink'
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
 const newsInfo=[
   {
-  imgHref:'src/assets/example1.gif',
-  mTitle:'活动新闻标标题',
-  time:'2022/10/1',
-  link:'',
-  context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news.png',
+  mTitle:'网络开拓者协会招新啦！',
+  time:'2022/09/21',
+  link:'https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg',
+  context: '网络开拓者协会（Net Pioneer Association of BIT），成立于1997年，是目前北京理工大学校内规模最大的校级学生组织之一，同时也是校团委领导的唯一校级IT类学生组织。\n 本着“网络无限，开拓不懈”的精神，网协不断助力校园网络和信息化建设。\n' +
+      '\n' +
+      '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
   },
   {
-    imgHref:'src/assets/example1.gif',
-    mTitle:'活动新闻标标题',
-    time:'2022/10/1',
-    link:'',
-    context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news3.webp',
+    mTitle:'2022笔记本电脑选购指南',
+    time:'2022/08/04',
+    link:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ',
+    context:'  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2022年新生电脑推荐表。除此之外，数字媒体部还结合诊所整理出的推荐表制作了一期面向大一新生的笔记本电脑推荐视频，已由bilibili“网络开拓者”账号发布。',
   },
   {
-    imgHref:'src/assets/example1.gif',
-    mTitle:'活动新闻标标题',
-    time:'2022/10/1',
-    link:'',
-    context:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news2.png',
+    mTitle:'校园网使用指南',
+    time:'2022/09/07',
+    link:'https://mp.weixin.qq.com/s/NoPAY0TcB1hO5YSLfO7YDQ',
+    context:'快来这里get校园网使用方法~~\n 这里教会大家如何给校园网充值、多种设备多种方式多种方式连接校园网（￣︶￣）↗　',
   },
+
 ];
 const timelineInfo=[
   {
-    header:'2022/9/11 22:49',
+    header:'2022/09/07',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/IbNrmcoBqNEIQDuZHs_S1A'
       },
-      Mtitle:"我是你滴标题",
-      Stitle:"发生甚么事了"
+      Mtitle:"网络安全宣传周系列活动",
+      Stitle:"网络安全为人民，网络安全靠人民"
     }
   },
   {
-    header:'2022/9/11 22:50',
+    header:'2022/09/18 19:00',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/36B06GpoZDfDpmF4TU0sIg'
       },
-      Mtitle:"发生甚么事了",
-      Stitle:"我是梁志超的奶奶"
+      Mtitle:"计算机知识科普讲座来啦",
+      Stitle:"更有直播抽奖环节等你来哦~"
     }
   },
   {
-    header:'2022/9/11 22:51',
+    header:'2022/9/25 7:30-12:00',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg'
       },
-      Mtitle:"我是梁志超的奶奶",
-      Stitle:"你们怎么教育的梁志超"
+      Mtitle:"网协迎新外场活动~~",
+      Stitle:"多种小游戏还有奖品即将到来( •̀ ω •́ )✧"
     }
   },
   {
-    header:'2022/9/11 22:49',
+    header:'2022/9/25 晚上',
     body:{
       func:()=>{
         window.location.href='#/'
       },
-      Mtitle:"你们怎么教育的梁志超",
-      Stitle:"他&^&骂我￥%&#"
+      Mtitle:"网协迎新宣讲会",
+      Stitle:"快到群里来~~"
     }
   },
 ];
 const GuideLinkInfo=[
   //  bit101
   {
-    photo:"src/views/home/assets/101.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101.svg",
     mTitle:"BIT101",
     sTitle:"开放式的交流平台",
     links:()=>{
@@ -81,7 +84,7 @@ const GuideLinkInfo=[
       {
         titles:"101的简介",
         linkk:()=>{
-          window.location.href="src/views/home/assets/101shortcut.webp";
+          window.location.href="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101shortcut.webp";
         }
       },
       {
@@ -94,7 +97,7 @@ const GuideLinkInfo=[
   },
   //  电脑诊所
   {
-    photo:"src/views/home/assets/clinic2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/clinic2.svg",
     mTitle:"电脑诊所",
     sTitle:"一个维修硬件的部门",
     links:()=>{
@@ -117,7 +120,7 @@ const GuideLinkInfo=[
   },
   //  NPlive
   {
-    photo:"src/views/home/assets/live2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/live2.svg",
     mTitle:"NPlive",
     sTitle:"校内直播平台",
     links:()=>{
@@ -140,7 +143,7 @@ const GuideLinkInfo=[
   },
   //  镜像站
   {
-    photo:"src/views/home/assets/mirror.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/mirror.svg",
     mTitle:"Mirror",
     sTitle:"由网协运营的北理镜像站",
     links:()=>{
@@ -163,7 +166,7 @@ const GuideLinkInfo=[
   },
   //  map
   {
-    photo:"src/views/home/assets/map.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/map.svg",
     mTitle:"校园地图",
     sTitle:"按图索骥，玩转北理",
     links:()=>{
@@ -186,7 +189,7 @@ const GuideLinkInfo=[
   },
   //  wiki
   {
-    photo:"src/views/home/assets/wiki2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/wiki2.svg",
     mTitle:"Wiki",
     sTitle:"多人协作的创作系统",
     links:()=>{
@@ -208,7 +211,7 @@ const GuideLinkInfo=[
     ]
   },
   {
-    photo:"src/views/home/assets/md.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/md.svg",
     mTitle:"Codimd",
     sTitle:"写作与分享 Markdown 的最佳平台",
     links:()=>{
@@ -237,8 +240,8 @@ const GuideLinkInfo=[
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
-        <img src="src/views/home/assets/bb3.svg" id="bg_img_l" style="">
-        <img src="src/views/home/assets/bb3s.svg" id="bg_img_s" style="">
+        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3.svg" id="bg_img_l" style="">
+        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3s.svg" id="bg_img_s" style="">
       </div>
     </div>
     <div id="sec1_bd">
@@ -340,7 +343,7 @@ const GuideLinkInfo=[
                       dot-placement="bottom"
                       direction="horizontal"
                       show-arrow="show-arrow"
-                      autoplay
+
                   >
                     <div class="box_inner" v-for="ele1 in GuideLinkInfo">
                       <div class="box_photo">
@@ -750,7 +753,7 @@ export default {
 }
 .box_photo{
   width: 90%;
-  height: 60%;
+  height: auto;
   margin: 0 auto;
   /*background: #535bf2;*/
 }

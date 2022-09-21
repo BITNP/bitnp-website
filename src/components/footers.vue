@@ -14,6 +14,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
 // import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
 // import GuiManagement from '@vicons/carbon/GuiManagement'
 const showWCMod=ref(false);
+const showQQRMod=ref(false);
 function jumpTo(url){
   window.location.href=url;
 }
@@ -29,7 +30,7 @@ function jumpTo(url){
               <!--          Left-->
               <n-gi offset="0 s:1 l:1" span="2">
                 <n-space justify="center">
-                  <n-image width="54" src="./src/assets/cover3.png"></n-image>
+                  <n-image width="54" src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/cover3.png"></n-image>
                 </n-space>
                 <n-space justify="center" >
                   <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
@@ -60,17 +61,33 @@ function jumpTo(url){
                     <!--              <n-divider></n-divider>-->
                     <n-space justify="start">
                       <div style="padding-bottom: 10px;">
-                        <n-button text>
+                        <n-button text @click="showQQRMod=true;">
                           <n-icon size="18" color="#EB6969">
                             <AlternateEmailFilled/>
                           </n-icon>
                           <span style="font-size: medium">
-                            Mail: xxxxx@bit.edu.cn
+                            2022迎新QQ群：368626827
                           </span>
                           <n-icon size="18">
                             <IosLink/>
                           </n-icon>
                         </n-button>
+                        <n-modal v-model:show="showQQRMod">
+                          <n-card
+                              style="width: 600px"
+                              title="Scan it :)"
+                              :bordered="false"
+                              size="huge"
+                              role="dialog"
+                              aria-modal="true"
+                              class="glassmorphism"
+                          >
+                            <template #header-extra>
+                              使用手机QQ扫描二维码或搜索群号：368626827
+                            </template>
+                            <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/QRQQ.png" style="width: 100%; height: 100%;">
+                          </n-card>
+                        </n-modal>
                       </div>
                     </n-space>
                     <n-space justify="start" >
@@ -100,7 +117,7 @@ function jumpTo(url){
                             <template #header-extra>
                               微信公众号搜索 “北理工网络开拓者” 或“bitwangxie” 即可关注公众号
                             </template>
-                            <img src="src/assets/QRWechat.png" style="width: 100%; height: 100%;">
+                            <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/QRWechat.png" style="width: 100%; height: 100%;">
                           </n-card>
                         </n-modal>
                       </div>
@@ -122,7 +139,7 @@ function jumpTo(url){
                     </n-space>
                     <n-space justify="start" >
                       <div style="padding-bottom: 10px;">
-                        <n-button text>
+                        <n-button text @click="jumpTo('https://github.com/BITNP')">
                           <n-icon size="18">
                             <Github/>
                           </n-icon>
