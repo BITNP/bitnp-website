@@ -25,12 +25,14 @@ window.addEventListener("scroll", function () {
             document.getElementById("background-decorator")
                 .className = "glass-appearing";
             showRail.value = true;
+            document.getElementById("bitnp-intro1").id = "bitnp-intro2";
             // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
         }
         else {
             document.getElementById("background-decorator")
                 .className = "glass-disappearing";
             showRail.value = false;
+            document.getElementById("bitnp-intro2").id = "bitnp-intro1";
             // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
         }
     }
@@ -39,10 +41,12 @@ window.addEventListener("scroll", function () {
 
 <template>
     <div id="background-container">
+        <!-- <div style="backdrop-filter: blur(1px);"> -->
         <div class="glass" id="background-decorator">
             <div style="margin:0px 100px 0px 100px; padding-top:30%; padding-bottom: 100px;">
 
-                <div class="introduction-container" style="margin-bottom: 90px;">
+                <div class="introduction-container" style="margin-bottom: 90px; padding: 40px; animation-duration: 0.8s"
+                    id="bitnp-intro1">
                     <n-icon size="50">
                         <Neos />
                     </n-icon>
@@ -209,7 +213,6 @@ window.addEventListener("scroll", function () {
                 </div>
 
             </div>
-
         </div>
     </div>
 </template>
@@ -217,6 +220,10 @@ window.addEventListener("scroll", function () {
 <style scoped>
 .introduction-container {
     text-align: start;
+}
+
+#bitnp-intro1 {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .introduction-title {
@@ -239,7 +246,8 @@ window.addEventListener("scroll", function () {
     height: 100%;
     z-index: -2;
 
-    background-image: url(./assets/about-us-background-image.jpg);
+    background-image: url(https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/about-us-background.jpg);
+    /* background-image: url(https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3s.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

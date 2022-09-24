@@ -3,52 +3,101 @@ import {NGrid,NGi,NImage,NSpace,NButton,NIcon,NCarousel,NTimeline,NTimelineItem}
 import CategoryOutlined from '@vicons/material/CategoryOutlined'
 import IosLink from '@vicons/ionicons4/IosLink'
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
+const newsInfo=[
+  {
+  imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news.png',
+  mTitle:'网络开拓者协会招新啦！',
+  time:'2022/09/21',
+  link:'https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg',
+  context: '网络开拓者协会（Net Pioneer Association of BIT），成立于1997年，是目前北京理工大学校内规模最大的校级学生组织之一，同时也是校团委领导的唯一校级IT类学生组织。\n 本着“网络无限，开拓不懈”的精神，网协不断助力校园网络和信息化建设。\n' +
+      '\n' +
+      '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
+  },
+  {
+    imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news3.webp',
+    mTitle:'2022笔记本电脑选购指南',
+    time:'2022/08/04',
+    link:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ',
+    context:'  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2022年新生电脑推荐表。除此之外，数字媒体部还结合诊所整理出的推荐表制作了一期面向大一新生的笔记本电脑推荐视频，已由bilibili“网络开拓者”账号发布。',
+  },
+  {
+    imgHref:'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news2.png',
+    mTitle:'校园网使用指南',
+    time:'2022/09/07',
+    link:'https://mp.weixin.qq.com/s/NoPAY0TcB1hO5YSLfO7YDQ',
+    context:'快来这里get校园网使用方法~~\n 这里教会大家如何给校园网充值、多种设备多种方式多种方式连接校园网（￣︶￣）↗　',
+  },
+
+];
 const timelineInfo=[
   {
-    header:'2022/9/11 22:49',
+    header:'2022/09/07',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/IbNrmcoBqNEIQDuZHs_S1A'
       },
-      Mtitle:"我是你滴标题",
-      Stitle:"发生甚么事了"
+      Mtitle:"网络安全宣传周系列活动",
+      Stitle:"网络安全为人民，网络安全靠人民"
     }
   },
   {
-    header:'2022/9/11 22:50',
+    header:'2022/09/18 19:00',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/36B06GpoZDfDpmF4TU0sIg'
       },
-      Mtitle:"发生甚么事了",
-      Stitle:"我是梁志超的奶奶"
+      Mtitle:"计算机知识科普讲座来啦",
+      Stitle:"更有直播抽奖环节等你来哦~"
     }
   },
   {
-    header:'2022/9/11 22:51',
+    header:'2022/9/25 7:30-12:00',
     body:{
       func:()=>{
-        window.location.href='#/'
+        window.location.href='https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg'
       },
-      Mtitle:"我是梁志超的奶奶",
-      Stitle:"你们怎么教育的梁志超"
+      Mtitle:"网协迎新外场活动~~",
+      Stitle:"多种小游戏还有奖品即将到来( •̀ ω •́ )✧"
     }
   },
   {
-    header:'2022/9/11 22:49',
+    header:'2022/9/25 晚上',
     body:{
       func:()=>{
         window.location.href='#/'
       },
-      Mtitle:"你们怎么教育的梁志超",
-      Stitle:"他&^&骂我￥%&#"
+      Mtitle:"网协迎新宣讲会",
+      Stitle:"快到群里来~~"
     }
   },
 ];
 const GuideLinkInfo=[
+  //  bit101
+  {
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101.svg",
+    mTitle:"BIT101",
+    sTitle:"开放式的交流平台",
+    links:()=>{
+      window.location.href='https://bit101.cn/#/'
+    },
+    infos:[
+      {
+        titles:"101的简介",
+        linkk:()=>{
+          window.location.href="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101shortcut.webp";
+        }
+      },
+      {
+        titles:"101背后的故事",
+        linkk:()=>{
+          window.location.href="https://bit101.cn/#/paper/show/1";
+        }
+      }
+    ]
+  },
   //  电脑诊所
   {
-    photo:"src/views/home/assets/clinic2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/clinic2.svg",
     mTitle:"电脑诊所",
     sTitle:"一个维修硬件的部门",
     links:()=>{
@@ -56,68 +105,68 @@ const GuideLinkInfo=[
     },
     infos:[
       {
-        titles:"诊所服务预约流程",
+        titles:"电脑推荐表",
         linkk:()=>{
-          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+          window.location.href="https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ";
         }
       },
       {
         titles:"可以从i北理或钉钉上预约哦~",
         linkk:()=>{
-          window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
         }
       }
     ]
   },
   //  NPlive
   {
-    photo:"src/views/home/assets/live2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/live2.svg",
     mTitle:"NPlive",
     sTitle:"校内直播平台",
     links:()=>{
       window.location.href="https://live.bitnp.net/";
     },
     infos:[
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      }
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
     ]
   },
   //  镜像站
   {
-    photo:"src/views/home/assets/mirror.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/mirror.svg",
     mTitle:"Mirror",
     sTitle:"由网协运营的北理镜像站",
     links:()=>{
       window.location.href="https://mirror.bit.edu.cn/";
     },
     infos:[
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
-      {
-        titles:"近期活动之类的",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      }
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
     ]
   },
   //  map
   {
-    photo:"src/views/home/assets/map.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/map.svg",
     mTitle:"校园地图",
     sTitle:"按图索骥，玩转北理",
     links:()=>{
@@ -140,19 +189,19 @@ const GuideLinkInfo=[
   },
   //  wiki
   {
-    photo:"src/views/home/assets/wiki2.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/wiki2.svg",
     mTitle:"Wiki",
     sTitle:"多人协作的创作系统",
     links:()=>{
       window.location.href="https://wiki.bitnp.net/";
     },
     infos:[
-      {
-        titles:"使用引导",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
+      // {
+      //   titles:"使用引导",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
       // {
       //   titles:"近期活动之类的",
       //   linkk:()=>{
@@ -162,19 +211,19 @@ const GuideLinkInfo=[
     ]
   },
   {
-    photo:"src/views/home/assets/md.svg",
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/md.svg",
     mTitle:"Codimd",
-    sTitle:"多人协作的创作系统",
+    sTitle:"写作与分享 Markdown 的最佳平台",
     links:()=>{
       window.location.href="https://codimd.bitnp.net";
     },
     infos:[
-      {
-        titles:"使用引导",
-        linkk:()=>{
-          // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-        }
-      },
+      // {
+      //   titles:"使用引导",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
       // {
       //   titles:"近期活动之类的",
       //   linkk:()=>{
@@ -191,12 +240,8 @@ const GuideLinkInfo=[
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
-        <img src="src/views/home/assets/bb3.svg" id="bg_img_l" style="">
-        <img src="src/views/home/assets/bb3s.svg" id="bg_img_s" style="">
-<!--        <div class="circle" id="circl1"></div>-->
-<!--        <div class="circle" id="circl2"></div>-->
-<!--        <div class="circle" id="circl3"></div>-->
-<!--        <div class="circle" id="circl4"></div>-->
+        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3.svg" id="bg_img_l" style="">
+        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3s.svg" id="bg_img_s" style="">
       </div>
     </div>
     <div id="sec1_bd">
@@ -228,7 +273,7 @@ const GuideLinkInfo=[
               </n-space>
               <div style="height: 4vh;"></div>
               <n-space justify="center">
-                <n-button style="--n-font-size:20px;" size="large" ghost color="#9867c6">
+                <n-button style="--n-font-size:20px;" size="large" ghost color="#9867c6" @click="$router.push('/about-us')">
                   Know More...
                 </n-button>
               </n-space>
@@ -243,83 +288,34 @@ const GuideLinkInfo=[
                       show-arrow="show-arrow"
                       autoplay
                   >
-                    <div class="box_inner">
+                    <div class="box_inner" v-for="ele in newsInfo">
                       <div class="box_img">
-                        <img src="src/assets/example1.gif" style="aspect-ratio: 741 /421; height:100%; ">
+                        <img :src="ele.imgHref" style="object-fit: cover;width:100%; border-radius: 10px; height: auto; object-position: center;">
                       </div>
                       <div class="box_text">
                       <span class="box_tTitle">
-                        活动新闻标标题
+                        {{ ele.mTitle }}
                       </span>
                         <br>
                         <div class="box_tGap">
                           <div class="box_tG_left">
-                            2022/10/1
+                            {{ele.time}}
                           </div>
                           <div class="box_tG_right">
-                            <a>
+                            <a :href="ele.link">
                               Learn more>>>
                             </a>
                           </div>
                         </div>
                         <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="box_inner">
-                      <div class="box_img">
-                        <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
-                      </div>
-                      <div class="box_text">
-                  <span class="box_tTitle">
-                    活动新闻标标标题
-                  </span>
-                        <br>
-                        <div class="box_tGap">
-                          <div class="box_tG_left">
-                            2022/10/1
-                          </div>
-                          <div class="box_tG_right">
-                            <a>
-                              Learn more>>>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="box_inner">
-                      <div class="box_img">
-                        <img src="src/assets/example1.gif" style="width: 100%; height: 100%;">
-                      </div>
-                      <div class="box_text">
-                  <span class="box_tTitle">
-                    活动新闻标标标题
-                  </span>
-                        <br>
-                        <div class="box_tGap">
-                          <div class="box_tG_left">
-                            2022/10/1
-                          </div>
-                          <div class="box_tG_right">
-                            <a>
-                              Learn more>>>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="box_tSub">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          {{ele.context}}
                         </div>
                       </div>
                     </div>
                   </n-carousel>
-
                 </div>
                 <div class="box" id="box_ele2">
-                  <div class="box_inner ADJ_center" style="width: 85%!important;overflow: scroll;">
+                  <div class="box_inner ADJ_center box_G" style="width: 85%!important;">
                     <n-timeline>
                       <n-timeline-item type="success" v-for="ele in timelineInfo">
                         <template #header>
@@ -347,7 +343,7 @@ const GuideLinkInfo=[
                       dot-placement="bottom"
                       direction="horizontal"
                       show-arrow="show-arrow"
-                      autoplay
+
                   >
                     <div class="box_inner" v-for="ele1 in GuideLinkInfo">
                       <div class="box_photo">
@@ -405,9 +401,12 @@ export default {
   url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @media only screen and (max-width:767px){
+  #sec1_outer{
+    height: 200vh;
+  }
   #sec1_bg_in1{
     width: 100%;
-    height: 65%;
+    height: 35%;
     /*border-radius: 10px;*/
   }
   .left_fill{
@@ -423,42 +422,49 @@ export default {
     display: none;
   }
   .box{
-    width: 45vw;
-    height: 45vh;
+    width: 85vw;
+    height: 49vh;
+    margin-top: 20px;
   }
   #box_ele1{
-    position: fixed;
-    transform: translate(0px,0vh);
+    /*position: fixed;*/
+    /*transform: translate(0px,0vh);*/
     z-index: 3;
   }
   #box_ele2{
-    position: fixed;
-    transform: translate(25vw,0vh);
+    /*position: fixed;*/
+    /*transform: translate(25vw,0vh);*/
     z-index: 2;
   }
   #box_ele3{
-    position: fixed;
-    transform: translate(48vw,0vh);
+    /*position: fixed;*/
+    /*transform: translate(48vw,0vh);*/
     z-index: 1;
   }
   #box_ele1:hover{
 
-    transform: translate(0px,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(0px,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
     -webkit-filter: blur(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
   }
   #box_ele2:hover{
-    transform: translate(25vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(23vw,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
   }
   #box_ele3:hover{
-    transform: translate(48vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    /*transform: translate(46vw,calc(0vh - 10px)) scale(1.05,1.05)!important;*/
   }
   .box_tTitle{
     font-size: 20px;
   }
+  .box_G{
+    overflow: scroll;
+  }
 }
 @media only screen  and (min-width: 768px) and (max-width: 1280px){
+  #sec1_outer{
+    height: 93vh;
+  }
   #sec1_bg_in1{
     width: 100%;
     height: 65%;
@@ -479,6 +485,7 @@ export default {
   .box{
     width: 40vw;
     height: 42vh;
+    margin-top: 20px;
   }
   #box_ele1{
     position: fixed;
@@ -511,8 +518,14 @@ export default {
   .box_tTitle{
     font-size: 25px;
   }
+  .box_G{
+    overflow: scroll;
+  }
 }
 @media only screen and (min-width:1280px){
+  #sec1_outer{
+    height: 93vh;
+  }
   #sec1_bg_in1{
     width: 100%;
     height: 100%;
@@ -584,7 +597,6 @@ export default {
 }
 #sec1_outer{
   width: 100%;
-  height: 93vh;
   /*background: rgba(61, 50, 50, 0.02);*/
   padding-top: 5px;
   overflow: hidden;
@@ -615,27 +627,6 @@ export default {
   width: 110%;
   height: 110%;
   transform: translateY(-25%) scale(120%);
-}
-.circle{
-  width: 20px;
-  height: 20px;
-  clip-path: circle(40%);
-}
-#circl1{
-  background: #ff8c40;
-  transform: translate(30vw,40vh);
-}
-#circl2{
-  background: #ffc65a;
-  transform: translate(40vw,28vh);
-}
-#circl3{
-  background: #fff657;
-  transform: translate(12vw,23vh);
-}
-#circl4{
-  background: #ffcc99;
-  transform: translate(22vw,26vh);
 }
 #sec1_bd{
   /*background: saddlebrown;*/
@@ -696,9 +687,8 @@ export default {
 }
 .box_img{
   width: 100%;
-  height: 50%;
+  height: auto;
   /*background: #21D4FD;*/
-  border-radius: 10px;
   overflow: hidden;
 }
 .box_text{
@@ -721,7 +711,7 @@ export default {
   white-space: pre-line;
   word-break: normal;
   overflow: hidden;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   display: -webkit-box;
   -webkit-box-orient: block-axis;
   /*white-space: nowrap;*/
@@ -763,7 +753,7 @@ export default {
 }
 .box_photo{
   width: 90%;
-  height: 60%;
+  height: auto;
   margin: 0 auto;
   /*background: #535bf2;*/
 }
