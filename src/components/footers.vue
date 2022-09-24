@@ -45,27 +45,27 @@ function jumpTo(url){
               <!--          Mid-->
               <n-gi offset="0" span="2" >
                 <n-space justify="center">
-                  <n-space vertical>
+                  <n-space vertical style="">
                     <n-space justify="center">
                       <div style="padding-bottom: 10px;">
                         <n-icon size="20" color="#3366FFFF">
                           <ConnectWithoutContactRound/>
                         </n-icon>
                         <span style="font-size: large">
-                        <b>
+                        <b style="text-align: center">
                           Contact us
                         </b>
                         </span>
                       </div>
                     </n-space>
                     <!--              <n-divider></n-divider>-->
-                    <n-space justify="start">
+                    <n-space justify="center">
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="showQQRMod=true;">
                           <n-icon size="18" color="#EB6969">
                             <AlternateEmailFilled/>
                           </n-icon>
-                          <span style="font-size: medium">
+                          <span style="font-size: medium" >
                             2022迎新QQ群：368626827
                           </span>
                           <n-icon size="18">
@@ -90,13 +90,13 @@ function jumpTo(url){
                         </n-modal>
                       </div>
                     </n-space>
-                    <n-space justify="start" >
+                    <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
-                        <n-button text @click="showWCMod=true">
+                        <n-button text @click="showWCMod=true" style="text-align: center;">
                           <n-icon size="18" color="#00D98D">
                             <LogoWechat/>
                           </n-icon>
-                          <span style="font-size: medium">
+                          <span style="font-size: medium; text-align: center;">
                             Wechat: bitwangxie
                           </span>
                           <n-icon size="18">
@@ -122,7 +122,7 @@ function jumpTo(url){
                         </n-modal>
                       </div>
                     </n-space>
-                    <n-space justify="start" >
+                    <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="jumpTo('https://space.bilibili.com/89756733')">
                           <n-icon size="18" color="#23ADE5">
@@ -137,7 +137,7 @@ function jumpTo(url){
                         </n-button >
                       </div>
                     </n-space>
-                    <n-space justify="start" >
+                    <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="jumpTo('https://github.com/BITNP')">
                           <n-icon size="18">

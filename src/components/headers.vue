@@ -15,13 +15,14 @@ import {
   useMessage
 } from 'naive-ui'
   import News16Regular from '@vicons/fluent/News16Regular'
-  import GitlabOutlined from '@vicons/antd/GitlabOutlined'
+  // import GitlabOutlined from '@vicons/antd/GitlabOutlined'
   import CodepenOutlined from '@vicons/antd/CodepenOutlined'
   import Atom from '@vicons/tabler/Atom'
   import Github from '@vicons/fa/Github'
   import ShareSocialOutline from '@vicons/ionicons5/ShareSocialOutline'
   import ManageAccountsOutlined from '@vicons/material/ManageAccountsOutlined'
   import BarsOutlined from '@vicons/antd/BarsOutlined'
+  import ApiApp from '@vicons/tabler/ApiApp'
 import {useRoute, useRouter} from "vue-router";
 
 window.$message=useMessage();
@@ -79,7 +80,7 @@ function jumpTo(url){
         <n-gi offset="0" span="0 s:5 l:3">
           <n-button text @click="$router.push('about-us')">
             <n-icon :size="propstyle.icons">
-              <GitlabOutlined/>
+              <ApiApp/>
             </n-icon>
             <span style="font-size: 17px;">About</span>
           </n-button>
@@ -261,7 +262,7 @@ export default defineComponent({
         {
           label: 'About',
           key: 'about',
-          icon:renderIcon(GitlabOutlined)
+          icon:renderIcon(ApiApp)
         }
       ]
     }

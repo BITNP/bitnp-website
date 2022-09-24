@@ -236,7 +236,7 @@ const GuideLinkInfo=[
 </script>
 
 <template>
-  <!DOCTYPE html>
+<!--  <!DOCTYPE html>-->
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
@@ -402,7 +402,8 @@ export default {
 }
 @media only screen and (max-width:767px){
   #sec1_outer{
-    height: 200vh;
+    height: 93vh;
+    /*overflow-y;*/
   }
   #sec1_bg_in1{
     width: 100%;
@@ -423,7 +424,7 @@ export default {
   }
   .box{
     width: 85vw;
-    height: 49vh;
+    height: 430px;
     margin-top: 20px;
   }
   #box_ele1{
@@ -484,7 +485,8 @@ export default {
   }
   .box{
     width: 40vw;
-    height: 42vh;
+    height: 430px;
+    /*aspect-ratio: 9/16;*/
     margin-top: 20px;
   }
   #box_ele1{
@@ -524,7 +526,8 @@ export default {
 }
 @media only screen and (min-width:1280px){
   #sec1_outer{
-    height: 93vh;
+    height: 92vh;
+    overflow: auto;
   }
   #sec1_bg_in1{
     width: 100%;
@@ -547,7 +550,8 @@ export default {
   }
   .box{
     width: 18vw;
-    height: 45vh;
+    /*aspect-ratio: 14/16;*/
+    height: 430px;
   }
   #box_ele1{
     position: fixed;
@@ -632,7 +636,9 @@ export default {
   /*background: saddlebrown;*/
   width: 100%;
   height: 100%;
+  padding-bottom: 10px;
   transform: translateY(-100%);
+  overflow: auto;
 }
 .mainTitle{
   font-family: sans-serif;
