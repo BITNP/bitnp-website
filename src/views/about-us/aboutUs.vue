@@ -25,14 +25,14 @@ window.addEventListener("scroll", function () {
             document.getElementById("background-decorator")
                 .className = "glass-appearing";
             showRail.value = true;
-            document.getElementById("bitnp-intro1").id = "bitnp-intro2";
+            document.getElementById("bitnp-intro1").style.backgroundColor = "rgba(255, 255, 255, 0)";
             // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
         }
         else {
             document.getElementById("background-decorator")
                 .className = "glass-disappearing";
             showRail.value = false;
-            document.getElementById("bitnp-intro2").id = "bitnp-intro1";
+            document.getElementById("bitnp-intro1").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
             // console.log("background-decorator class property: " + document.getElementById("background-decorator").className);
         }
     }
