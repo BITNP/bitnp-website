@@ -43,7 +43,7 @@ window.addEventListener("scroll", function () {
     <div id="background-container">
         <!-- <div style="backdrop-filter: blur(1px);"> -->
         <div class="glass" id="background-decorator">
-            <div style="margin:0px 100px 0px 100px; padding-top:30%; padding-bottom: 100px;">
+            <div style="margin:0px 30px; padding-top:30%; padding-bottom: 100px;">
 
                 <div class="introduction-container" style="margin-bottom: 90px; padding: 40px; animation-duration: 0.8s"
                     id="bitnp-intro1">
