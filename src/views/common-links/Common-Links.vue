@@ -49,7 +49,7 @@
       <h2>服务</h2>
       </n-layout-sider>
 
-      <n-layout-content content-style="padding: 5%">
+      <n-layout-content content-style="padding: 0%">
           <n-card title="校历" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
             <a href="https://jwc.bit.edu.cn/2019gb/jxrl/index.htm">教学日历</a>       
@@ -87,7 +87,7 @@
       <h2>教学</h2>
       </n-layout-sider>
 
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 0%;">
           <n-card title="教务处" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
             <a href="https://jwc.bit.edu.cn/">本科生培养</a>       
@@ -143,7 +143,7 @@
       <h2>教学教研机构</h2>
       </n-layout-sider>
 
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 0%;">
           <n-card title="官网" hoverable class="thumbnail">
 
             <!-- 悬浮卡片中的内容 -->
@@ -196,7 +196,7 @@
       <h2>提供学院概况以及工作情况</h2>
       </n-layout-sider>
 
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 0%;">
           <n-card title="徐特立学院" hoverable class="thumbnail">
             <a href="https://xuteli.bit.edu.cn/">学院官网</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
@@ -323,7 +323,7 @@
       <h2>管理机构</h2>
       </n-layout-sider>
 
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 0%;">
           <n-card title="党委组织部" hoverable class="thumbnail">
             <a href="https://zzb.bit.edu.cn/">党校及党建工作</a>           
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
@@ -437,7 +437,7 @@
       </n-layout-sider>
 
 
-      <n-layout-content content-style="padding: 24px;">
+      <n-layout-content content-style="padding: 0%;">
           <n-card title="图书馆" hoverable class="thumbnail">
             <a href="http://lib.bit.edu.cn/">常用的数据库</a>
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
@@ -483,7 +483,7 @@
   .n-card {
   /* 卡片的大小 */
   max-width: 15vw;
-  max-height: 20vh;
+  max-height: 15vh;
   }
   .thumbnail 
   {
