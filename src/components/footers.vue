@@ -8,11 +8,6 @@ import DeviceTv from '@vicons/tabler/DeviceTv'
 import IosLink from '@vicons/ionicons4/IosLink'
 import Github from '@vicons/fa/Github'
 import Affiliate from '@vicons/tabler/Affiliate'
-// import AirplayFilled from '@vicons/material/AirplayFilled'
-// import ReminderMedical from '@vicons/carbon/ReminderMedical'
-// import Wikis from '@vicons/carbon/Wikis'
-// import LeafThree20Regular from '@vicons/fluent/LeafThree20Regular'
-// import GuiManagement from '@vicons/carbon/GuiManagement'
 const showWCMod=ref(false);
 const showQQRMod=ref(false);
 function jumpTo(url){
