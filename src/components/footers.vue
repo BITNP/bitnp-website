@@ -224,6 +224,19 @@ function jumpTo(url){
                         </div>
                       </n-space>
                       <n-space justify="start" >
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo(' https://bithesis.bitnp.net')">
+                            <!--                      <n-icon size="18">-->
+                            <!--                        <AirplayFilled/>-->
+                            <!--                      </n-icon>-->
+                            <span style="font-size: medium">
+                              &nbsp;BIThesis
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
                       </n-space>
                     </n-space>
                   </n-space>

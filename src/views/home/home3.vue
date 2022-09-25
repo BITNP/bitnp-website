@@ -164,6 +164,29 @@ const GuideLinkInfo=[
       // }
     ]
   },
+  //  thesis
+  {
+    photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/thesis.svg",
+    mTitle:"BIThesis",
+    sTitle:"非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板及更多",
+    links:()=>{
+      window.location.href="https://bithesis.bitnp.net";
+    },
+    infos:[
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // },
+      // {
+      //   titles:"近期活动之类的",
+      //   linkk:()=>{
+      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
+      //   }
+      // }
+    ]
+  },
   //  map
   {
     photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/map.svg",
@@ -210,6 +233,7 @@ const GuideLinkInfo=[
       // }
     ]
   },
+  //  Codimd
   {
     photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/md.svg",
     mTitle:"Codimd",
