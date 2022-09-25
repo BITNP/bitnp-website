@@ -41,6 +41,7 @@ function jumpTo(url){
               <n-gi offset="0" span="2" >
                 <n-space justify="center">
                   <n-space vertical style="">
+<!--                    title-->
                     <n-space justify="center">
                       <div style="padding-bottom: 10px;">
                         <n-icon size="20" color="#3366FFFF">
@@ -54,6 +55,7 @@ function jumpTo(url){
                       </div>
                     </n-space>
                     <!--              <n-divider></n-divider>-->
+<!--                      qq-->
                     <n-space justify="center">
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="showQQRMod=true;">
@@ -70,7 +72,7 @@ function jumpTo(url){
                         <n-modal v-model:show="showQQRMod">
                           <n-card
                               style="width: 600px"
-                              title="Scan it :)"
+                              title=" "
                               :bordered="false"
                               size="huge"
                               role="dialog"
@@ -85,6 +87,7 @@ function jumpTo(url){
                         </n-modal>
                       </div>
                     </n-space>
+<!--                    wechat-->
                     <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="showWCMod=true" style="text-align: center;">
@@ -102,7 +105,7 @@ function jumpTo(url){
                         <n-modal v-model:show="showWCMod">
                           <n-card
                               style="width: 600px"
-                              title="Scan it :)"
+                              title=" "
                               :bordered="false"
                               size="huge"
                               role="dialog"
@@ -110,13 +113,14 @@ function jumpTo(url){
                               class="glassmorphism"
                           >
                             <template #header-extra>
-                              微信公众号搜索 “北理工网络开拓者” 或“bitwangxie” 即可关注公众号
+                              微信公众号搜索 “NetPioneer” 即可关注公众号
                             </template>
                             <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/QRWechat.png" style="width: 100%; height: 100%;">
                           </n-card>
                         </n-modal>
                       </div>
                     </n-space>
+<!--                    bilibili-->
                     <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="jumpTo('https://space.bilibili.com/89756733')">
@@ -132,6 +136,7 @@ function jumpTo(url){
                         </n-button >
                       </div>
                     </n-space>
+<!--                    github-->
                     <n-space justify="center" >
                       <div style="padding-bottom: 10px;">
                         <n-button text @click="jumpTo('https://github.com/BITNP')">

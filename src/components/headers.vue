@@ -276,9 +276,12 @@ export default defineComponent({
       // },
     handleSelect(key){
       const map ={
-        address:'common-links'
+        address:'common-links',
+        PCcommands:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ'
       }
-      this.$router.push(map["address"]);
+      //pollyfill
+      if (map[key].indexOf('http')!=-1)window.open(map[key]);
+      else this.$router.push(map[key]);
     }
   },
   mounted() {

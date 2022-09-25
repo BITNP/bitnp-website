@@ -290,7 +290,7 @@ const GuideLinkInfo=[
                   >
                     <div class="box_inner" v-for="ele in newsInfo">
                       <div class="box_img">
-                        <img :src="ele.imgHref" style="object-fit: cover;width:100%; border-radius: 10px; height: auto; object-position: center;">
+                        <img :src="ele.imgHref" style="object-fit: cover; width:100%; border-radius: 10px; height: auto%; object-position: center;">
                       </div>
                       <div class="box_text">
                       <span class="box_tTitle">
@@ -694,6 +694,7 @@ export default {
 .box_img{
   width: 100%;
   height: auto;
+  /*height: 42%;*/
   /*background: #21D4FD;*/
   overflow: hidden;
 }
