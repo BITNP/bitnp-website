@@ -30,7 +30,7 @@ const $route=useRoute();
 const $router=useRouter();
 
 function jumpTo(url){
-  window.location.href = url;
+  window.open(url);
 }
 </script>
 

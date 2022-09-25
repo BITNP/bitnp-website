@@ -11,7 +11,7 @@ import Affiliate from '@vicons/tabler/Affiliate'
 const showWCMod=ref(false);
 const showQQRMod=ref(false);
 function jumpTo(url){
-  window.location.href=url;
+  window.open(url);
 }
 </script>
 
