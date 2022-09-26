@@ -277,7 +277,8 @@ export default defineComponent({
     handleSelect(key){
       const map ={
         address:'common-links',
-        PCcommands:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ'
+        PCcommands:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ',
+        about:'about-us'
       }
       //pollyfill
       if (map[key].indexOf('http')!=-1)window.open(map[key]);

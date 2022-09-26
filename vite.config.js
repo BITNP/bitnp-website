@@ -12,8 +12,8 @@ export default defineConfig({
       { find: 'components', replacement: '/src/components' },
     ]
   },
-  server:{
-    host:'10.196.134.108',
-    port:5173,
-  }
+  // server:{
+  //   host:'10.196.134.108',
+  //   port:80,
+  // }
 })

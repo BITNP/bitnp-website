@@ -291,7 +291,7 @@ const GuideLinkInfo=[
                 </span>
               </n-space>
               <n-space justify="center">
-                <span style="font-size: 35px;font-family: Abhaya Libre;">
+                <span style="font-size: 35px; font-family: 'Open Sans script=all rev=2';">
                   Net Pioneer Association of BIT
                 </span>
               </n-space>
@@ -303,7 +303,7 @@ const GuideLinkInfo=[
               </n-space>
             </div>
           </n-gi>
-          <n-gi span="1">
+          <n-gi id="ngrid_R" span="1">
                 <div class="box" id="box_ele1">
                   <n-carousel
                       direction="horizontal"
@@ -416,14 +416,22 @@ export default {
   margin: 0 auto;
 }
 /* abhaya-libre-regular - latin */
+/*@font-face {*/
+/*  font-family: 'Abhaya Libre';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: local(''),*/
+/*  url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff2') format('woff2'), !* Chrome 26+, Opera 23+, Firefox 39+ *!*/
+/*  url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff') format('woff'); !* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *!*/
+/*}*/
 @font-face {
-  font-family: 'Abhaya Libre';
-  font-style: normal;
+  font-family: 'Open Sans script=all rev=2';
+  font-style: italic;
   font-weight: 400;
-  src: local(''),
-  url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('src/assets/fonts/abhaya-libre-v13-latin/abhaya-libre-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  /*font-stretch: 100%;*/
+  src: url(https://fonts.gstatic.googlefonts.cn/l/font?kit=memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqmu1wC67KgoOs1tigPYH0V6YQ-UQF2qi4KK77cO4oTYOucnk78L7C6k8mDsAWRqLJuiezQI2ao2H2NQxFpJirwQiNIYxgemg3ZgrO_5asai-I8veG1gTCvsiHtRgQjCRbjHgHyNjFj606QE7CYnDi3zdFFdcntTSWFR_6K52vquAkcxUiYqvh25k8l0ZdXrQEuyOjb7vbWCmK7lfvuhlxdOP45OLRlDRmZGzf4tqWePziuy9xZ2djgV5QXtR_aNAK8bNokZjnPF9DKhT960rPMpJ4VOAYAVMrqs-1OzxxB84Fv6MePOUTeTO-iBAeFL75BITwZvsNROIgr9NBn9oK5ekT1-8hg26FVnsYtvBAkFiguK3iFdSnv246gmHzVIcpmDSt7XJjLKPDEvb4JtGKCtfU1v5xVNmcKFNv7uxix8wqVvsWtM1dcz4ovLKBZxgvr_IywKmcT_54mZ92LoNGAxkY_c-CQfSrVZko5lZ2W11zvUCITYK9BvKtCobXmMeiodNcJEWLyg9eqWIRtPYZ49QqP2tIPb9swvwShpRDiiLxA-HytsPKHZJdfuvce_eTl4VT_6cVzHVgl5AUzUiCazl1lPlZjIKoUUh-nS8ae5pL7THQsk66CV3o5WJlvngBbdSOYUVi2FMkn32yNI72weaHSoR92dUj-bWM_UvNVzGFuWgjQS0M&skey=743457fe2cc29280&v=v34) format('woff2');
 }
+
 @media only screen and (max-width:767px){
   #sec1_outer{
     height: 93vh;
@@ -447,9 +455,11 @@ export default {
     display: none;
   }
   .box{
-    width: 85vw;
+    /*width: 85vw;*/
+    width: 350px;
     height: 430px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+    margin: 20px auto 0 auto;
   }
   #box_ele1{
     /*position: fixed;*/
@@ -508,38 +518,42 @@ export default {
     display: none;
   }
   .box{
-    width: 40vw;
+    /*width: 40vw;*/
+    width: 330px;
     height: 430px;
     /*aspect-ratio: 9/16;*/
     margin-top: 20px;
   }
+  #ngrid_R{
+    /*margin: 0 auto;*/
+  }
   #box_ele1{
     position: fixed;
-    transform: translate(0px,0vh);
+    transform: translate(0px,0vh) scale(0.995,0.995);
     z-index: 3;
   }
   #box_ele2{
     position: fixed;
-    transform: translate(25vw,0vh);
+    transform: translate(30vw,0vh) scale(0.995,0.995);
     z-index: 2;
   }
   #box_ele3{
     position: fixed;
-    transform: translate(48vw,0vh);
+    transform: translate(calc(90vw - 330px),0vh) scale(0.995,0.995);
     z-index: 1;
   }
   #box_ele1:hover{
 
-    transform: translate(0px,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(0px,calc(0vh - 10px)) scale(1.0,1.0)!important;
     -webkit-filter: blur(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
   }
   #box_ele2:hover{
-    transform: translate(25vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(30vw,calc(0vh - 10px)) scale(1.0,1.0)!important;
   }
   #box_ele3:hover{
-    transform: translate(48vw,calc(0vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(calc(90vw - 340px),calc(0vh - 10px)) scale(1.0,1.0)!important;
   }
   .box_tTitle{
     font-size: 25px;
@@ -573,37 +587,38 @@ export default {
     display: none;
   }
   .box{
-    width: 18vw;
+    /*width: 18vw;*/
+    width: 330px;
     /*aspect-ratio: 14/16;*/
     height: 430px;
   }
   #box_ele1{
     position: fixed;
-    transform: translate(0px,28vh);
+    transform: translate(0px,28vh) scale(0.995,0.995);
     z-index: 3;
   }
   #box_ele2{
     position: fixed;
-    transform: translate(13vw,18vh);
+    transform: translate(13vw,18vh) scale(0.995,0.995);
     z-index: 2;
   }
   #box_ele3{
     position: fixed;
-    transform: translate(26vw,8vh);
+    transform: translate(26vw,8vh) scale(0.995,0.995);
     z-index: 1;
   }
   #box_ele1:hover{
 
-    transform: translate(0px,calc(28vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(0px,calc(28vh - 10px)) scale(1.0,1.0)!important;
     -webkit-filter: blur(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
   }
   #box_ele2:hover{
-    transform: translate(13vw,calc(18vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(13vw,calc(18vh - 10px)) scale(1.0,1.0)!important;
   }
   #box_ele3:hover{
-    transform: translate(26vw,calc(8vh - 10px)) scale(1.05,1.05)!important;
+    transform: translate(26vw,calc(8vh - 10px)) scale(1.0,1.0)!important;
   }
   .box_tTitle{
     font-size: 25px;
@@ -634,7 +649,8 @@ export default {
   height: 100%;
   /*background: linear-gradient(135deg, rgba(90, 195, 245, 0.17) 50%, rgba(207, 236, 121, 0.46));*/
   /*background-position: 0 50%;*/
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 #sec1_bg_in1{
   width: 100%;
@@ -654,7 +670,7 @@ export default {
   margin: 0 auto;
   width: 110%;
   height: 110%;
-  transform: translateY(-25%) scale(120%);
+  transform: translateY(-18%) scale(120%);
 }
 #sec1_bd{
   /*background: saddlebrown;*/
@@ -687,7 +703,6 @@ export default {
   border-radius: 15px;
   -webkit-border-radius: 15px;
   color: rgb(255, 255, 255);
-
   /*background: white;*/
   transition:0.4s cubic-bezier(.17,.67,.83,.67);
   backface-visibility: hidden;
