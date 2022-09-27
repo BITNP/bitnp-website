@@ -118,10 +118,10 @@ const GuideLinkInfo=[
       }
     ]
   },
-  //  NPlive
+  //  NPLive
   {
     photo:"https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/live2.svg",
-    mTitle:"NPlive",
+    mTitle:"NPLive",
     sTitle:"校内直播平台",
     links:()=>{
       window.location.href="https://live.bitnp.net/";

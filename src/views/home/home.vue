@@ -133,7 +133,7 @@ function GuideClick(num){
           <!--          guides-->
           <div id="outer3">
             <n-grid cols="2 m:3 l:6" x-gap="26" y-gap="26" item-responsive responsive="screen">
-              <!--                Nplive-->
+              <!--                NPLive-->
               <n-gi offset="0" span="1">
                 <div class="card-ele guideHover" @click="$emit('click',GuideClick(1))">
                   <n-space vertical align="center">
@@ -143,7 +143,7 @@ function GuideClick(num){
                         <img src="/src/views/home/assets/live2.svg">
                       </n-icon>
                     </div>
-                    <span style="font-size: 22px;" >NPlive</span>
+                    <span style="font-size: 22px;" >NPLive</span>
                     <span style="color: #1a1a1a">我们的校内直播平台</span>
                   </n-space>
                 </div>
