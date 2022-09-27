@@ -269,7 +269,7 @@ const GuideLinkInfo=[
       </div>
     </div>
     <div id="sec1_bd">
-      <div style="width: 90%;margin: 0 auto;">
+      <div style="width: 90%;transform: translateX(5%);">
         <n-grid style="height:100%;" cols="1 s:1 l:2" x-gap="0" y-gap="15" item-responsive responsive="screen">
           <n-gi span="1">
             <div class="left_fill"></div>

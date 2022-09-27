@@ -38,7 +38,7 @@ function jumpTo(url){
                 </n-space>
               </n-gi>
               <!--          Mid-->
-              <n-gi offset="0" span="2" >
+              <n-gi offset="0" span="2" style="margin-top: 10px;">
                 <n-space justify="center">
                   <n-space vertical style="">
 <!--                    title-->
@@ -278,7 +278,7 @@ function jumpTo(url){
             <div id="ffoot">
             <span>
               <n-gradient-text gradient="linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)">
-                Copyright © 1997-2022 Net Pioneer Association of BIT All Rights Reserved.
+                Copyright © 1997-2022 <br id="ffot_br"> Net Pioneer Association of BIT All Rights Reserved.
               </n-gradient-text>
             </span>
             </div>
@@ -300,6 +300,11 @@ const responseTheme={
 </script>
 
 <style scoped>
+@media not (max-width:767px){
+  #ffot_br{
+    display: none;
+  }
+}
 .glassmorphism{
   backdrop-filter: blur(7px) saturate(180%);
   -webkit-backdrop-filter: blur(7px) saturate(180%);
@@ -315,18 +320,18 @@ const responseTheme={
   background: transparent;
 }
 #ffoot{
-  /*width: 100vw;*/
+  width: 100vw;
   /*padding: 10px;*/
   padding-left: 0;
   padding-right: 0;
   padding-top: 15px;
   padding-bottom: 18px;
-  font-size: 1vw;
-  white-space: normal;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 15px;
+  /*white-space: normal;*/
+  /*word-break: break-all;*/
+  /*word-wrap: break-word;*/
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
 }
 #footName1{
   font-size:large;

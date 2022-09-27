@@ -41,7 +41,7 @@ function jumpTo(url){
         <!--icon-->
         <n-gi offset="4" span="4 s:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"  style="" id="headerIco" @click="$router.push('/')">
+          <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"  style="width: 20px;" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->
