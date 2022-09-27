@@ -25,7 +25,7 @@ function jumpTo(url){
               <!--          Left-->
               <n-gi offset="0 s:1 l:1" span="2">
                 <n-space justify="center">
-                  <n-image width="54" src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"></n-image>
+                  <n-image width="40" src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"></n-image>
                 </n-space>
                 <n-space justify="center" >
                   <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
