@@ -25,7 +25,7 @@ function jumpTo(url){
               <!--          Left-->
               <n-gi offset="0 s:1 l:1" span="2">
                 <n-space justify="center">
-                  <n-image width="54" src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/cover3.png"></n-image>
+                  <n-image width="54" src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"></n-image>
                 </n-space>
                 <n-space justify="center" >
                   <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
@@ -238,6 +238,36 @@ function jumpTo(url){
                           </n-button>
                         </div>
                       </n-space>
+                    </n-space>
+                    <!--                Col3-->
+                    <n-space justify="space-between">
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://git.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; 网协Gitlab
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
+<!--                      <n-space justify="start" >-->
+<!--                        <div style="padding-bottom: 10px;">-->
+<!--                          <n-button text @click="jumpTo(' https://bithesis.bitnp.net')">-->
+<!--                            &lt;!&ndash;                      <n-icon size="18">&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <AirplayFilled/>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                      </n-icon>&ndash;&gt;-->
+<!--                            <span style="font-size: medium">-->
+<!--                              &nbsp;BIThesis-->
+<!--                            </span>-->
+<!--                            <n-icon size="18">-->
+<!--                              <IosLink/>-->
+<!--                            </n-icon>-->
+<!--                          </n-button>-->
+<!--                        </div>-->
+<!--                      </n-space>-->
                     </n-space>
                   </n-space>
                 </n-space>

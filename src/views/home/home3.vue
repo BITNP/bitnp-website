@@ -439,7 +439,7 @@ export default {
   }
   #sec1_bg_in1{
     width: 100%;
-    height: 35%;
+    height: 55%;
     /*border-radius: 10px;*/
   }
   .left_fill{
