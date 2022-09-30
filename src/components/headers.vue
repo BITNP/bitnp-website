@@ -41,7 +41,7 @@ function jumpTo(url){
         <!--icon-->
         <n-gi offset="4" span="4 s:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"  style="width: 20px;" id="headerIco" @click="$router.push('/')">
+          <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"  style="width: 28px;" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->
@@ -77,8 +77,8 @@ function jumpTo(url){
           <!--about格-->
         </n-gi>
         <!--about-->
-        <n-gi offset="0" span="0 s:5 l:3">
-          <n-button text @click="$router.push('about-us')">
+        <n-gi offset="0" span="0 s:5 l:3">u
+          <n-button text @click="$router.psh('about-us')">
             <n-icon :size="propstyle.icons">
               <ApiApp/>
             </n-icon>
@@ -350,7 +350,7 @@ html {
 }
 #headerIco{
   padding-top: 0.6rem;
-  width:  1.1rem;
+  /*width:  1.1rem;*/
 }
 #headerIco:hover{
   cursor: pointer;
