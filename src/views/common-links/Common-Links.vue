@@ -10,13 +10,16 @@
     <n-layout has-sider sider-placement="right">
       <n-layout-content content-style="padding: 5%;" >
         
-        <n-h3>本网站的作用是提供一些学校常用的网址和简单的功能介绍，
+        <n-h3>本网页的作用是提供一些学校常用的网址和简单的功能介绍，
           更详细全面的功能请亲自打开网站后找到“关于我们”或“组织介绍”，
         <br>一个示例：<a href="/#/about-us" target="_blank">合理打广告</a>
         <br> 
         另外，一些网址可能需要使用校内网，但不用担心我们有<a href="https://webvpn.bit.edu.cn" target="_blank">资源控制访问系统</a>，
         即使是校外也仍然可以访问你所需要的网址
+        <br>（在此请注意，webvpn需要使用校外网才能访问）
         <br>
+        由于某些不可抗力，如果您在使用过程中发现有不能访问or已被弃用or值得收藏的网页，都可以直接联系网协相关人员进行更新。
+        <br>感谢您对网协主页的支持与贡献！
 
         </n-h3>
       </n-layout-content>
@@ -52,7 +55,7 @@
       <n-layout-content content-style="padding: 0%">
           <n-card title="校历" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
-            <a href="https://jwc.bit.edu.cn/2019gb/jxrl/index.htm">教学日历</a>       
+            <a href="https://jwb.bit.edu.cn/jxrl/bnjxrlst/index.htm">教学日历</a>       
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                提供各个学期的上课及放假安排
               </n-ellipsis>
@@ -63,10 +66,10 @@
                即网站版的i北理,可在此下载i北理,并且基本提供i北理的所有服务
               </n-ellipsis>
           </n-card>
-          <n-card title="学指" hoverable class="thumbnail">
-            <a href="http://xyzd.info.bit.edu.cn/">学业指导</a>
+          <n-card title="本科生招生" hoverable class="thumbnail">
+            <a href="https://admission.bit.edu.cn/">招生网</a>
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
-               中心，可提供一对一辅导
+               涉及本科生的招生与录取工作
               </n-ellipsis>
           </n-card>
       </n-layout-content>
@@ -88,9 +91,9 @@
       </n-layout-sider>
 
       <n-layout-content content-style="padding: 0%;">
-          <n-card title="教务处" hoverable class="thumbnail">
+          <n-card title="教务部" hoverable class="thumbnail">
             <!-- 悬浮卡片中的内容 -->
-            <a href="https://jwc.bit.edu.cn/">本科生培养</a>       
+            <a href="https://jwb.bit.edu.cn/">本科生培养</a>       
               <n-ellipsis expand-trigger="click" line-clamp="1" :tooltip="false">
                专业设置规划，可以在此查询到各个专业的培养方案及教学通知
               </n-ellipsis>
