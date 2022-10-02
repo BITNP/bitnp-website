@@ -173,18 +173,18 @@ const GuideLinkInfo=[
       window.location.href="https://bithesis.bitnp.net";
     },
     infos:[
-      // {
-      //   titles:"近期活动之类的",
-      //   linkk:()=>{
-      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-      //   }
-      // },
-      // {
-      //   titles:"近期活动之类的",
-      //   linkk:()=>{
-      //     // window.location.href="https://www.naiveui.com/zh-CN/light/components/statistic";
-      //   }
-      // }
+      {
+        titles:"代码仓库",
+        linkk:()=>{
+          window.location.href="https://github.com/BITNP/BIThesis";
+        }
+      },
+      {
+        titles:"最新模板下载",
+        linkk:()=>{
+          window.location.href="https://github.com/BITNP/BIThesis/releases/latest";
+        }
+      }
     ]
   },
   //  map
