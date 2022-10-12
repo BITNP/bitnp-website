@@ -77,8 +77,8 @@ function jumpTo(url){
           <!--about格-->
         </n-gi>
         <!--about-->
-        <n-gi offset="0" span="0 s:5 l:3">u
-          <n-button text @click="$router.psh('about-us')">
+        <n-gi offset="0" span="0 s:5 l:3">
+          <n-button text @click="$router.push('about-us')">
             <n-icon :size="propstyle.icons">
               <ApiApp/>
             </n-icon>
