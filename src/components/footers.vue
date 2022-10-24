@@ -305,6 +305,21 @@ function jumpTo(url){
                         </div>
                       </n-space>
                     </n-space>
+                    <!--                Row 5-->
+                    <n-space justify="space-between">
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://paste.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; 剪贴板
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
+                    </n-space>
                   </n-space>
                 </n-space>
               </n-gi>
