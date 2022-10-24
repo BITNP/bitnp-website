@@ -172,7 +172,7 @@ function jumpTo(url){
                         </span>
                       </div>
                     </n-space>
-                    <!--                Col1-->
+                    <!--                Row 1-->
                     <n-space justify="space-between">
 
                       <n-space justify="center">
@@ -206,7 +206,7 @@ function jumpTo(url){
                         </div>
                       </n-space>
                     </n-space>
-                    <!--                Col2-->
+                    <!--                Row 2-->
                     <n-space justify="space-between">
                       <n-space justify="center">
                         <div style="padding-bottom: 10px;">
@@ -239,13 +239,13 @@ function jumpTo(url){
                         </div>
                       </n-space>
                     </n-space>
-                    <!--                Col3-->
+                    <!--                Row 3-->
                     <n-space justify="space-between">
                       <n-space justify="center">
                         <div style="padding-bottom: 10px;">
                           <n-button text @click="jumpTo('https://git.bitnp.net')">
                             <span style="font-size: medium">
-                              &nbsp; 网协Gitlab
+                              &nbsp; 网协GitLab
                             </span>
                             <n-icon size="18">
                               <IosLink/>
@@ -253,21 +253,57 @@ function jumpTo(url){
                           </n-button>
                         </div>
                       </n-space>
-<!--                      <n-space justify="start" >-->
-<!--                        <div style="padding-bottom: 10px;">-->
-<!--                          <n-button text @click="jumpTo(' https://bithesis.bitnp.net')">-->
-<!--                            &lt;!&ndash;                      <n-icon size="18">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                        <AirplayFilled/>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                      </n-icon>&ndash;&gt;-->
-<!--                            <span style="font-size: medium">-->
-<!--                              &nbsp;BIThesis-->
-<!--                            </span>-->
-<!--                            <n-icon size="18">-->
-<!--                              <IosLink/>-->
-<!--                            </n-icon>-->
-<!--                          </n-button>-->
-<!--                        </div>-->
-<!--                      </n-space>-->
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://codimd.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; Markdown平台
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
+                    </n-space>
+                    <!--                Row 4-->
+                    <n-space justify="space-between">
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://blog.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; 博客
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://send.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; NPLive
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
+                      <n-space justify="center">
+                        <div style="padding-bottom: 10px;">
+                          <n-button text @click="jumpTo('https://live.bitnp.net')">
+                            <span style="font-size: medium">
+                              &nbsp; Send
+                            </span>
+                            <n-icon size="18">
+                              <IosLink/>
+                            </n-icon>
+                          </n-button>
+                        </div>
+                      </n-space>
                     </n-space>
                   </n-space>
                 </n-space>
