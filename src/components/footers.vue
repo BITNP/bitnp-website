@@ -63,7 +63,7 @@ function jumpTo(url){
                             <AlternateEmailFilled/>
                           </n-icon>
                           <span style="font-size: medium" >
-                            2022迎新QQ群：368626827
+                            2023迎新QQ群：137869936
                           </span>
                           <n-icon size="18">
                             <IosLink/>
@@ -80,7 +80,7 @@ function jumpTo(url){
                               class="glassmorphism"
                           >
                             <template #header-extra>
-                              使用手机QQ扫描二维码或搜索群号：368626827
+                              使用手机QQ扫描二维码或搜索群号：137869936
                             </template>
                             <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/QRQQ.png" style="width: 100%; height: 100%;">
                           </n-card>
