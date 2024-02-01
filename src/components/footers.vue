@@ -278,7 +278,7 @@ function jumpTo(url){
             <div id="ffoot">
             <span>
               <n-gradient-text gradient="linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)">
-                Copyright © 1997-2022 <br id="ffot_br"> Net Pioneer Association of BIT All Rights Reserved.
+                Copyright &copy; 1997&ndash;2024 <br id="ffot_br"> Net Pioneer Association of BIT All Rights Reserved.
               </n-gradient-text>
             </span>
             </div>
