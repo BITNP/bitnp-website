@@ -277,7 +277,7 @@ export default defineComponent({
     handleSelect(key){
       const map ={
         address:'common-links',
-        PCcommands:'https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ',
+        PCcommands:'https://docs.qq.com/aio/p/scmzu718dzus0zl',
         about:'about-us'
       }
       //pollyfill
