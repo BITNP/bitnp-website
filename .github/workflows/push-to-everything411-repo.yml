@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: master
       - name: Push
         uses: wangchucheng/git-repo-sync@v0.1.0
         with:
