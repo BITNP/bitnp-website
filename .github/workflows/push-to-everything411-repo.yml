@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: master
+          token: ${{ secrets.E411_GITHUB_TOKEN }}
       - name: Push
         uses: wangchucheng/git-repo-sync@v0.1.0
         with:
