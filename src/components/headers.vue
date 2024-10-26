@@ -186,11 +186,11 @@ export default defineComponent({
 
       ],
       options2:[
-        // {
-        //   label: '网协GitHub',
-        //   key:'github',
-        //   icon:renderIcon(BrandGithub)
-        // },
+        {
+          label: '网协GitHub',
+          key:'github',
+          icon:renderIcon(BrandGithub)
+        },
         {
           label: '学校常用网址',
           key: 'address',
@@ -242,11 +242,11 @@ export default defineComponent({
           key: 'meta',
           icon:renderIcon(Atom),
           children: [
-            // {
-            //   label: '网协GitHub',
-            //   key:'github',
-            //   icon:renderIcon(BrandGithub)
-            // },
+            {
+              label: '网协GitHub',
+              key:'github',
+              icon:renderIcon(BrandGithub)
+            },
             {
               label: '学校常用网址',
               key: 'address',
@@ -276,6 +276,10 @@ export default defineComponent({
       // },
     handleSelect(key){
       const map ={
+        news:'https://status.bitnp.net',
+        github:'https://github.com/BITNP',
+        blogs:'https://cheesy-shrimp.bitnp.net',
+        activities:'https://www.bitnp.net',
         address:'common-links',
         PCcommands:'https://docs.qq.com/aio/p/scmzu718dzus0zl',
         about:'about-us'
