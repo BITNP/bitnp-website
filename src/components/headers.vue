@@ -46,7 +46,7 @@ function jumpTo(url){
         </n-gi>
         <!--news-->
         <n-gi offset="0" span="0 s:5 l:3">
-          <n-button text >
+          <n-button text @click="jumpTo('https://status.bitnp.net')">
             <n-icon :size="propstyle.icons" >
               <News16Regular/>
             </n-icon>
@@ -55,7 +55,7 @@ function jumpTo(url){
         </n-gi>
         <!--space-->
         <n-gi offset="0" span="0 s:5 l:3">
-          <n-dropdown trigger="hover" size="large" :options="options1">
+          <n-dropdown trigger="hover" size="large" :options="options1" @select="handleSelect">
             <n-button text >
               <n-icon :size="propstyle.icons" >
                 <CodepenOutlined/>
@@ -174,16 +174,20 @@ export default defineComponent({
       },
       options1:[
         {
-          label: '近期活动',
+          label: '组织部芝士虾',
           key: 'activities',
           icon:renderIcon(CalendarLtr16Regular)
         },
         {
-          label: "NP知识库",
+          label: "BITNP Blog",
           key: 'blogs',
           icon:renderIcon(DnsServices)
         },
-
+        {
+          label: "BITNP知识库",
+          key: 'wiki',
+          icon:renderIcon(DnsServices)
+        },
       ],
       options2:[
         {
@@ -202,18 +206,7 @@ export default defineComponent({
           icon:renderIcon(DevicesPc)
         },
       ],
-      options3:[
-        {
-          label:"关于我们",
-          key:"Aboutus",
-          icon:renderIcon(PlanetOutline)
-        },
-        {
-          label: "加入我们",
-          key: "joinus",
-          icon:renderIcon(MdContacts)
-        }
-      ],
+      // 移动端下拉菜单，因此和上方会有重复
       optionsM:[
         {
           label:'News',
@@ -226,13 +219,18 @@ export default defineComponent({
           icon:renderIcon(CodepenOutlined),
           children:[
             {
-              label: '近期活动',
+              label: '组织部芝士虾',
               key: 'activities',
               icon:renderIcon(CalendarLtr16Regular)
             },
             {
-              label: "NP知识库",
+              label: "BITNP Blog",
               key: 'blogs',
+              icon:renderIcon(DnsServices)
+            },
+            {
+              label: "BITNP知识库",
+              key: 'wiki',
               icon:renderIcon(DnsServices)
             },
           ]
@@ -278,8 +276,9 @@ export default defineComponent({
       const map ={
         news:'https://status.bitnp.net',
         github:'https://github.com/BITNP',
-        blogs:'https://cheesy-shrimp.bitnp.net',
-        activities:'https://www.bitnp.net',
+        activities:'https://cheesy-shrimp.bitnp.net',
+        blogs:'https://blog.bitnp.net',
+        wiki:'https://wiki.bitnp.net',
         address:'common-links',
         PCcommands:'https://docs.qq.com/aio/p/scmzu718dzus0zl',
         about:'about-us'
