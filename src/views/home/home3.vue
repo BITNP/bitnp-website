@@ -16,7 +16,7 @@ const newsInfo = [
   {
     imgHref: 'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news3.webp',
     mTitle: '2024 新生电脑选购指南',
-    time: '2022/08/04',
+    time: '2024/10/25',
     link: 'https://docs.qq.com/aio/p/scmzu718dzus0zl',
     context: '  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2024年新生电脑推荐表。除此之外，数字媒体部还结合诊所整理出的推荐表制作了一期面向大一新生的笔记本电脑推荐视频，已由bilibili“网络开拓者”账号发布。',
   },
