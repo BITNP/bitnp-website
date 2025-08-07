@@ -280,7 +280,7 @@ export default defineComponent({
         blogs:'https://blog.bitnp.net',
         wiki:'https://wiki.bitnp.net',
         address:'common-links',
-        PCcommands:'https://docs.qq.com/aio/p/scmzu718dzus0zl',
+        PCcommands:'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
         about:'about-us'
       }
       //pollyfill
