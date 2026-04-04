@@ -26,7 +26,7 @@ function jumpTo(url) {
             <n-gi offset="0 s:1 l:1" span="2">
               <n-space justify="center">
                 <n-image width="40"
-                  src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/ico.png"></n-image>
+                  src="src/assets/ico.png"></n-image>
               </n-space>
               <n-space justify="center">
                 <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
@@ -267,7 +267,7 @@ function jumpTo(url) {
           <div id="ffoot">
             <span>
               <n-gradient-text gradient="linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)">
-                Copyright &copy; 1997&ndash;2025 <br id="ffot_br"> Net Pioneer Association of BIT All Rights Reserved. Contact us: webmaster AT bitnp.net
+                Copyright &copy; 1997&ndash;2026 <br id="ffot_br"> Net Pioneer Association of BIT All Rights Reserved. Contact us: webmaster AT bitnp.net
               </n-gradient-text>
             </span>
           </div>
