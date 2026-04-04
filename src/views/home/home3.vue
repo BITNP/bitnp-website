@@ -5,23 +5,23 @@ import IosLink from '@vicons/ionicons4/IosLink';
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
 const newsInfo = [
   {
-    imgHref: 'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news.png',
+    imgHref: '/src/views/home/assets/temp_news4.jpg',
     mTitle: '网络开拓者协会招新啦！',
-    time: '2022/09/21',
-    link: 'https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg',
+    time: '2025/09/07',
+    link: 'https://mp.weixin.qq.com/s/9LAW1iIm6Up4TbmsDdkyTQ',
     context: '网络开拓者协会（Net Pioneer Association of BIT），成立于1997年，是目前北京理工大学校内规模最大的校级学生组织之一，同时也是校团委领导的唯一校级IT类学生组织。\n 本着“网络无限，开拓不懈”的精神，网协不断助力校园网络和信息化建设。\n' +
       '\n' +
       '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
   },
   {
-    imgHref: 'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news3.webp',
+    imgHref: '/src/views/home/assets/temp_news5.png',
     mTitle: '2025 新生电脑选购指南',
     time: '2025/10/25',
     link: 'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
     context: '  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2025年新生电脑推荐表。',
   },
   {
-    imgHref: 'https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/temp_news2.png',
+    imgHref: '/src/views/home/assets/temp_news2.png',
     mTitle: '校园网使用指南',
     time: '2022/09/07',
     link: 'https://mp.weixin.qq.com/s/NoPAY0TcB1hO5YSLfO7YDQ',
@@ -74,7 +74,7 @@ const timelineInfo = [
 const GuideLinkInfo = [
   //  bit101
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101.svg",
+    photo: "/src/views/home/assets/101.svg",
     mTitle: "BIT101",
     sTitle: "开放式的交流平台",
     links: () => {
@@ -84,7 +84,7 @@ const GuideLinkInfo = [
       {
         titles: "101的简介",
         linkk: () => {
-          window.location.href = "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/101shortcut.webp";
+          window.location.href = "/src/views/home/assets/101shortcut.webp";
         }
       },
       {
@@ -97,7 +97,7 @@ const GuideLinkInfo = [
   },
   //  电脑诊所
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/clinic2.svg",
+    photo: "/src/views/home/assets/clinic2.svg",
     mTitle: "电脑诊所",
     sTitle: "一个维修硬件的部门",
     links: () => {
@@ -107,7 +107,7 @@ const GuideLinkInfo = [
       {
         titles: "电脑推荐表",
         linkk: () => {
-          window.location.href = "https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ";
+          window.location.href = "https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5";
         }
       },
       {
@@ -120,7 +120,7 @@ const GuideLinkInfo = [
   },
   //  NPLive
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/live2.svg",
+    photo: "/src/views/home/assets/live2.svg",
     mTitle: "NPLive",
     sTitle: "校内直播平台",
     links: () => {
@@ -143,7 +143,7 @@ const GuideLinkInfo = [
   },
   //  镜像站
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/mirror.svg",
+    photo: "/src/views/home/assets/mirror.svg",
     mTitle: "Mirror",
     sTitle: "由网协运营的北理镜像站",
     links: () => {
@@ -166,7 +166,7 @@ const GuideLinkInfo = [
   },
   //  thesis
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/thesis.svg",
+    photo: "/src/views/home/assets/thesis.svg",
     mTitle: "BIThesis",
     sTitle: "非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板及更多",
     links: () => {
@@ -189,7 +189,7 @@ const GuideLinkInfo = [
   },
   //  map
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/map.svg",
+    photo: "/src/views/home/assets/map.svg",
     mTitle: "校园地图",
     sTitle: "按图索骥，玩转北理",
     links: () => {
@@ -212,7 +212,7 @@ const GuideLinkInfo = [
   },
   //  wiki
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/wiki2.svg",
+    photo: "/src/views/home/assets/wiki2.svg",
     mTitle: "Wiki",
     sTitle: "多人协作的创作系统",
     links: () => {
@@ -235,7 +235,7 @@ const GuideLinkInfo = [
   },
   //  Codimd
   {
-    photo: "https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/md.svg",
+    photo: "/src/views/home/assets/md.svg",
     mTitle: "Codimd",
     sTitle: "写作与分享 Markdown 的最佳平台",
     links: () => {
@@ -264,8 +264,8 @@ const GuideLinkInfo = [
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
-        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3.svg" id="bg_img_l" style="">
-        <img src="https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3s.svg" id="bg_img_s" style="">
+        <img src="src/views/home/assets/bb3.svg" id="bg_img_l" style="">
+        <img src="src/views/home/assets/" id="bg_img_s" style="">
       </div>
     </div>
     <div id="sec1_bd">

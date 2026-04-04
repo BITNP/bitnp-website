@@ -246,7 +246,7 @@ window.addEventListener("scroll", function () {
     height: 100%;
     z-index: -2;
 
-    background-image: url(https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/about-us-background.jpg);
+    background-image: url('@/views/about-us/assets/about-us-background.jpg');
     /* background-image: url(https://bitnp-website-1258614279.cos.ap-beijing.myqcloud.com/static/bb3s.svg); */
     background-repeat: no-repeat;
     background-size: cover;
