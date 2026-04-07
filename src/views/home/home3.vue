@@ -4,9 +4,9 @@ import CategoryOutlined from '@vicons/material/CategoryOutlined';
 import IosLink from '@vicons/ionicons4/IosLink';
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
 
-import tempNewsImg from './assets/temp_news.png';
+import joinUs from './assets/temp_news4.jpg';
 import tempNews2Img from './assets/temp_news2.png';
-import tempNews3Img from './assets/temp_news3.webp';
+import pcRecommend from './assets/temp_news5.png';
 import shortcut101Img from './assets/101shortcut.webp';
 
 import guide101Icon from './assets/101.svg';
@@ -23,7 +23,7 @@ import bb3s from './assets/bb3s.svg';
 
 const newsInfo = [
   {
-    imgHref: tempNewsImg,
+    imgHref: joinUs,
     mTitle: '网络开拓者协会招新啦！',
     time: '2025/09/07',
     link: 'https://mp.weixin.qq.com/s/9LAW1iIm6Up4TbmsDdkyTQ',
@@ -32,7 +32,7 @@ const newsInfo = [
       '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
   },
   {
-    imgHref: tempNews3Img,
+    imgHref: pcRecommend,
     mTitle: '2025 新生电脑选购指南',
     time: '2025/10/25',
     link: 'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
