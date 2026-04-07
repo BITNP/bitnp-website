@@ -25,8 +25,8 @@ const newsInfo = [
   {
     imgHref: tempNewsImg,
     mTitle: '网络开拓者协会招新啦！',
-    time: '2022/09/21',
-    link: 'https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg',
+    time: '2025/09/07',
+    link: 'https://mp.weixin.qq.com/s/9LAW1iIm6Up4TbmsDdkyTQ',
     context: '网络开拓者协会（Net Pioneer Association of BIT），成立于1997年，是目前北京理工大学校内规模最大的校级学生组织之一，同时也是校团委领导的唯一校级IT类学生组织。\n 本着“网络无限，开拓不懈”的精神，网协不断助力校园网络和信息化建设。\n' +
       '\n' +
       '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
@@ -125,7 +125,7 @@ const GuideLinkInfo = [
       {
         titles: "电脑推荐表",
         linkk: () => {
-          window.location.href = "https://mp.weixin.qq.com/s/wzz_1dOj8bbnlYbj89stZQ";
+          window.location.href = "https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5";
         }
       },
       {
