@@ -25,6 +25,8 @@ import {
   import ApiApp from '@vicons/tabler/ApiApp'
 import {useRoute, useRouter} from "vue-router";
 
+import ico from '../assets/ico.png';
+
 window.$message=useMessage();
 const $route=useRoute();
 const $router=useRouter();
@@ -41,7 +43,7 @@ function jumpTo(url){
         <!--icon-->
         <n-gi offset="4" span="4 s:3 l:3">
           <!--          <n-image @click="$router.push('/')" width="54" src="./src/assets/ico.png"></n-image>-->
-          <img src="@/assets/ico.png"  style="width: 28px;" id="headerIco" @click="$router.push('/')">
+          <img :src="ico"  style="width: 28px;" id="headerIco" @click="$router.push('/')">
           <!--          BitNP-->
         </n-gi>
         <!--news-->

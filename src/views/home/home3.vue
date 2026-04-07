@@ -3,9 +3,27 @@ import { NGrid, NGi, NImage, NSpace, NButton, NIcon, NCarousel, NTimeline, NTime
 import CategoryOutlined from '@vicons/material/CategoryOutlined';
 import IosLink from '@vicons/ionicons4/IosLink';
 import LinkSquare16Filled from "@vicons/fluent/LinkSquare16Filled";
+
+import tempNewsImg from './assets/temp_news.png';
+import tempNews2Img from './assets/temp_news2.png';
+import tempNews3Img from './assets/temp_news3.webp';
+import shortcut101Img from './assets/101shortcut.webp';
+
+import guide101Icon from './assets/101.svg';
+import clinicIcon from './assets/clinic2.svg';
+import liveIcon from './assets/live2.svg';
+import mirrorIcon from './assets/mirror.svg';
+import thesisIcon from './assets/thesis.svg';
+import mapIcon from './assets/map.svg';
+import wikiIcon from './assets/wiki2.svg';
+import codimdIcon from './assets/md.svg';
+
+import bb3 from './assets/bb3.svg';
+import bb3s from './assets/bb3s.svg';
+
 const newsInfo = [
   {
-    imgHref: '/src/views/home/assets/temp_news4.jpg',
+    imgHref: tempNewsImg,
     mTitle: '网络开拓者协会招新啦！',
     time: '2025/09/07',
     link: 'https://mp.weixin.qq.com/s/9LAW1iIm6Up4TbmsDdkyTQ',
@@ -14,14 +32,14 @@ const newsInfo = [
       '目前，网协对内开展应用开发、网络维护、计算机维护等教学，对外为校内师生提供校园网络咨询、计算机故障排查等服务；同时运营有NPLive直播平台、国防知识竞赛答题系统等校内平台，并积极参与学校的各大活动。',
   },
   {
-    imgHref: '/src/views/home/assets/temp_news5.png',
+    imgHref: tempNews3Img,
     mTitle: '2025 新生电脑选购指南',
     time: '2025/10/25',
     link: 'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
     context: '  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2025年新生电脑推荐表。',
   },
   {
-    imgHref: '/src/views/home/assets/temp_news2.png',
+    imgHref: tempNews2Img,
     mTitle: '校园网使用指南',
     time: '2022/09/07',
     link: 'https://mp.weixin.qq.com/s/NoPAY0TcB1hO5YSLfO7YDQ',
@@ -74,7 +92,7 @@ const timelineInfo = [
 const GuideLinkInfo = [
   //  bit101
   {
-    photo: "/src/views/home/assets/101.svg",
+    photo: guide101Icon,
     mTitle: "BIT101",
     sTitle: "开放式的交流平台",
     links: () => {
@@ -84,7 +102,7 @@ const GuideLinkInfo = [
       {
         titles: "101的简介",
         linkk: () => {
-          window.location.href = "/src/views/home/assets/101shortcut.webp";
+          window.location.href = shortcut101Img;
         }
       },
       {
@@ -97,7 +115,7 @@ const GuideLinkInfo = [
   },
   //  电脑诊所
   {
-    photo: "/src/views/home/assets/clinic2.svg",
+    photo: clinicIcon,
     mTitle: "电脑诊所",
     sTitle: "一个维修硬件的部门",
     links: () => {
@@ -120,7 +138,7 @@ const GuideLinkInfo = [
   },
   //  NPLive
   {
-    photo: "/src/views/home/assets/live2.svg",
+    photo: liveIcon,
     mTitle: "NPLive",
     sTitle: "校内直播平台",
     links: () => {
@@ -143,7 +161,7 @@ const GuideLinkInfo = [
   },
   //  镜像站
   {
-    photo: "/src/views/home/assets/mirror.svg",
+    photo: mirrorIcon,
     mTitle: "Mirror",
     sTitle: "由网协运营的北理镜像站",
     links: () => {
@@ -166,7 +184,7 @@ const GuideLinkInfo = [
   },
   //  thesis
   {
-    photo: "/src/views/home/assets/thesis.svg",
+    photo: thesisIcon,
     mTitle: "BIThesis",
     sTitle: "非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板及更多",
     links: () => {
@@ -189,7 +207,7 @@ const GuideLinkInfo = [
   },
   //  map
   {
-    photo: "/src/views/home/assets/map.svg",
+    photo: mapIcon,
     mTitle: "校园地图",
     sTitle: "按图索骥，玩转北理",
     links: () => {
@@ -212,7 +230,7 @@ const GuideLinkInfo = [
   },
   //  wiki
   {
-    photo: "/src/views/home/assets/wiki2.svg",
+    photo: wikiIcon,
     mTitle: "Wiki",
     sTitle: "多人协作的创作系统",
     links: () => {
@@ -235,7 +253,7 @@ const GuideLinkInfo = [
   },
   //  Codimd
   {
-    photo: "/src/views/home/assets/md.svg",
+    photo: codimdIcon,
     mTitle: "Codimd",
     sTitle: "写作与分享 Markdown 的最佳平台",
     links: () => {
@@ -264,8 +282,8 @@ const GuideLinkInfo = [
   <div id="sec1_outer">
     <div id="sec1_bg">
       <div id="sec1_bg_in1">
-        <img src="src/views/home/assets/bb3.svg" id="bg_img_l" style="">
-        <img src="src/views/home/assets/" id="bg_img_s" style="">
+        <img :src="bb3" id="bg_img_l" style="">
+        <img :src="bb3s" id="bg_img_s" style="">
       </div>
     </div>
     <div id="sec1_bd">

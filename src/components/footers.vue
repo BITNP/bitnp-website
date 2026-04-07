@@ -8,6 +8,8 @@ import DeviceTv from '@vicons/tabler/DeviceTv';
 import IosLink from '@vicons/ionicons4/IosLink';
 import Github from '@vicons/fa/Github';
 import Affiliate from '@vicons/tabler/Affiliate';
+
+import ico from '../assets/ico.png';
 const showWCMod = ref(false);
 const showQQRMod = ref(false);
 function jumpTo(url) {
@@ -26,7 +28,7 @@ function jumpTo(url) {
             <n-gi offset="0 s:1 l:1" span="2">
               <n-space justify="center">
                 <n-image width="40"
-                  src="src/assets/ico.png"></n-image>
+                  :src="ico"></n-image>
               </n-space>
               <n-space justify="center">
                 <span id="footName1"><b>北京理工大学网络开拓者协会</b></span>
