@@ -190,6 +190,11 @@ export default defineComponent({
           key: 'wiki',
           icon:renderIcon(DnsServices)
         },
+        {
+          label: "数媒娘主页",
+          key: 'berrychan',
+          icon:renderIcon(DnsServices)
+        },
       ],
       options2:[
         {
@@ -283,7 +288,8 @@ export default defineComponent({
         wiki:'https://wiki.bitnp.net',
         address:'common-links',
         PCcommands:'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
-        about:'about-us'
+        about:'about-us',
+        berrychan:'https://hjl12345.github.io/'
       }
       //pollyfill
       if (map[key].indexOf('http')!=-1)window.open(map[key]);
