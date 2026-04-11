@@ -1,23 +1,54 @@
-# BITNP 新网站主页
+# bitnp-website-ng
 
-## 开发者文档见本仓库doc/docs.md
+This template should help get you started developing with Vue 3 in Vite.
 
-## Vue
+## Recommended IDE Setup
 
-- vue
-- vue-router
-- vuex
-- vite
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## 依赖库
+## Recommended Browser Setup
 
-- naive ui 2.32.1
-- vfonts 0.0.3
-- vicons 此处建议添加网站给出的8种图标库 从[xicons](https://www.xicons.org/#/)获取。
-- axios 0.27.2
-clipboard.js 2.0.11  
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## 对象存储采用腾讯云cos形式
+## Type Support for `.vue` Imports in TS
 
-- 可参阅 [cos文档](https://cloud.tencent.com/document/product/436).
-- 静态的放在/static文件夹中
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+pnpm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+pnpm dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+pnpm build
+```
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+pnpm test:unit
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+pnpm lint
+```
