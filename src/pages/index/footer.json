@@ -1,0 +1,29 @@
+{
+  "introduction": {
+    "title": "北京理工大学网络开拓者协会",
+    "subtitle": "BIT Net Pioneer Association",
+    "body": "网络无限 · 开拓不懈"
+  },
+  "join": {
+    "title": "Join Us",
+    "body": "如果你热爱技术与校园服务，欢迎了解并加入网络开拓者协会。",
+    "actionLabel": "联系网协",
+    "actionHref": "mailto:support@bitnp.example"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "contacts": [
+      {
+        "label": "微信公众号: NetPioneer"
+      },
+      {
+        "label": "GitHub: BITNP",
+        "href": "https://github.com/BITNP"
+      },
+      {
+        "label": "Bilibili: 网络开拓者",
+        "href": "https://space.bilibili.com/89756733"
+      }
+    ]
+  }
+}

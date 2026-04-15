@@ -1,0 +1,25 @@
+{
+  "ariaLabel": "Homepage links",
+  "items": [
+    {
+      "label": "Blog",
+      "href": "https://blog.bitnp.net"
+    },
+    {
+      "label": "Status",
+      "href": "https://status.bitnp.net"
+    },
+    {
+      "label": "Wiki",
+      "href": "https://wiki.bitnp.net"
+    },
+    {
+      "label": "网协芝士虾",
+      "href": "https://cheesy-shrimp.bitnp.net/"
+    },
+    {
+      "label": "Gitlab",
+      "href": "https://git.bitnp.net"
+    }
+  ]
+}

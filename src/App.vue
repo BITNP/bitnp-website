@@ -1,72 +1,45 @@
-<script setup>
-
-import {NButton,NLayout,NLayoutContent,NLayoutFooter,NLayoutHeader,NSpace,NConfigProvider,NMessageProvider,NScrollbar,NBackTop,NAffix} from 'naive-ui';
-import {useRouter,useRoute} from 'vue-router'
-import headers from './components/headers.vue'
-import footers from './components/footers.vue'
-
-const router=useRouter();
-const route =useRoute();
+<script setup lang="ts">
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-
-<!--<n-config-provider :theme="themecheck" >-->
-  <n-message-provider>
-      <n-back-top :right="100" :visibility-height="100"></n-back-top>
-      <n-layout >
-        <n-config-provider :theme-overrides="GlobTheme">
-          <headers ></headers>
-        </n-config-provider>
-        <n-layout-content>
-          <router-view></router-view>
-          <n-theme-editor></n-theme-editor>
-        </n-layout-content>
-        <n-layout-footer>
-          <n-config-provider :theme-overrides="GlobTheme">
-          <footers></footers>
-          </n-config-provider>
-        </n-layout-footer>
-      </n-layout>
-  </n-message-provider>
-<!--</n-config-provider>-->
+  <RouterView />
 </template>
 
-<script>
-import {defineComponent} from "vue";
-import {darkTheme, NThemeEditor,useMessage} from 'naive-ui'
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: min(100dvh, 100vh);
+  width: min(100dvw, 100vw);
+  font-family: "Inter", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-weight: 600;
 
-const GlobTheme={
-  "Button": {
-    "textColorHover": "#4680FFFF",
-    "textColorPressed": "#1C81CFFF",
-    "textColorTextHover": "#4680FFFF",
-    "textColorFocus": "#4680FFFF",
-    "textColorTextFocus": "#4680FFFF",
-    "textColorTextPressed": "#1C81CFFF"
-  }
-};
+  text-autospace: normal;
+}
 
-export default defineComponent({
-  setup(){
+:root {
+  --bg: rgb(255, 253, 241);
+  --bg-rgb: 255, 253, 241;
+  --accent: rgb(255, 150, 68);
+  --accent-rgb: 255, 150, 68;
 
-    return{
-      darkTheme
-    }
-  },
-  computed:{
-    // themecheck(){
-    //   // console.log('themecheck')
-    //   return (this.$store.state.theme)?darkTheme:null
-    // }
-  },
-  components:{
-    NThemeEditor
-  }
-})
+  --text: #222222;
+  --text-rgb: 34, 34, 34;
+  --text-strong: rgb(86, 47, 0);
+  --text-muted: rgba(var(--text-rgb), 0.62);
+  --text-accent: var(--accent);
 
-</script>
+  --white-rgb: 255, 255, 255;
+  --neutral-rgb: 200, 200, 200;
 
-<style scoped>
+  --border: rgba(var(--neutral-rgb), 0.5);
+  --hero-shift: 0px;
+  --hero-glow: 0;
+  --ring: rgba(var(--bg-rgb), 0.95);
 
+  --surface: rgba(var(--white-rgb), 0.88);
+  --surface-accent: rgba(var(--accent-rgb), 0.1);
+}
 </style>

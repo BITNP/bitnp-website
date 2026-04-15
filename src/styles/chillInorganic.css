@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Chill Inorganic";
+  font-weight: 700;
+  font-stretch: 100%;
+  src: url("./ChillInorganic_Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Chill Inorganic";
+  font-weight: 400;
+  font-stretch: 120%;
+  src: url("./ChillInorganic_WideRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Chill Inorganic";
+  font-weight: 700;
+  font-stretch: 120%;
+  src: url("./ChillInorganic_WideMedium.woff2") format("woff2");
+}
