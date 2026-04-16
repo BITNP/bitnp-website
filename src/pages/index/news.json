@@ -1,0 +1,55 @@
+{
+  "sectionId": "news",
+  "ariaLabel": "新闻文章",
+  "kicker": "Latest News",
+  "title": "最新动态",
+  "feedUrl": "https://blog.bitnp.net/rss.xml",
+  "pageSize": 3,
+  "openLabel": "阅读原文",
+  "retryLabel": "重试",
+  "emptyLabel": "暂时没有可展示的文章。",
+  "items": [
+    {
+      "title": "网络开拓者协会招新啦！",
+      "link": "https://mp.weixin.qq.com/s/9LAW1iIm6Up4TbmsDdkyTQ",
+      "date": "2025-09-07T00:00:00+08:00",
+      "summary": "网络开拓者协会（Net Pioneer Association of BIT）成立于1997年，是北京理工大学校内规模最大的校级学生组织之一，也是校团委领导的唯一校级IT类学生组织。网协对内开展应用开发、网络维护、计算机维护教学，对外提供校园网络咨询与故障排查，并运营 NPLive 等平台。"
+    },
+    {
+      "title": "2025 新生电脑选购指南",
+      "link": "https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5",
+      "date": "2025-10-25T00:00:00+08:00",
+      "summary": "诊所小伙伴通过多渠道调研和整理，完成了 2025 年新生电脑推荐表，帮助大家更高效选购合适设备。"
+    },
+    {
+      "title": "校园网使用指南",
+      "link": "https://mp.weixin.qq.com/s/NoPAY0TcB1hO5YSLfO7YDQ",
+      "date": "2022-09-07T00:00:00+08:00",
+      "summary": "这里教会大家如何给校园网充值，并通过多种设备、多种方式连接校园网，快速完成入网配置。"
+    },
+    {
+      "title": "网络安全宣传周系列活动",
+      "link": "https://mp.weixin.qq.com/s/IbNrmcoBqNEIQDuZHs_S1A",
+      "date": "2022-09-07T12:00:00+08:00",
+      "summary": "网络安全为人民，网络安全靠人民。"
+    },
+    {
+      "title": "计算机知识科普讲座来啦",
+      "link": "https://mp.weixin.qq.com/s/36B06GpoZDfDpmF4TU0sIg",
+      "date": "2022-09-18T19:00:00+08:00",
+      "summary": "更有直播抽奖环节等你来哦~"
+    },
+    {
+      "title": "网协迎新外场活动~~",
+      "link": "https://mp.weixin.qq.com/s/GjDWeFZPbO20N_z_go2jeg",
+      "date": "2022-09-25T07:30:00+08:00",
+      "summary": "多种小游戏还有奖品即将到来( •̀ ω •́ )✧"
+    },
+    {
+      "title": "网协迎新宣讲会",
+      "link": "#/",
+      "date": "2022-09-25T20:00:00+08:00",
+      "summary": "快到群里来~~"
+    }
+  ]
+}

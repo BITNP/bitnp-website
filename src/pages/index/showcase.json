@@ -1,0 +1,62 @@
+{
+  "sectionId": "showcase",
+  "ariaLabel": "重要服务展示",
+  "kicker": "Key Services",
+  "title": "核心服务",
+  "cards": [
+    {
+      "id": "clinic",
+      "title": "电脑诊所",
+      "description": "志愿提供电脑硬件维修、软件维护，推荐电脑选购，在校园内提供专业的技术支持。\n\n如需电脑义诊服务请在i北理-电脑义诊预约。",
+      "links": [
+        {
+          "label": "查看电脑推荐表",
+          "href": "https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5"
+        }
+      ],
+      "decorateImage": "/src/assets/clinic.svg",
+      "size": "big"
+    },
+    {
+      "id": "mirror-site",
+      "title": "Mirror",
+      "description": "由网协运营的北理镜像站，在校内提供免流量的开源软件镜像服务。",
+      "links": [
+        {
+          "label": "Open Mirror",
+          "href": "https://mirror.bitnp.net"
+        }
+      ],
+      "size": "small"
+    },
+    {
+      "id": "nplive",
+      "title": "NPLive",
+      "description": "校内直播平台，提供校内各类活动的实时直播服务。",
+      "links": [
+        {
+          "label": "Watch Live",
+          "href": "https://live.bitnp.net"
+        }
+      ],
+      "size": "small"
+    },
+    {
+      "id": "bithesis",
+      "title": "BIThesis",
+      "description": "校内LaTeX模板集合，包含本科、研究生毕业设计模板及更多。",
+      "links": [
+        {
+          "label": "下载",
+          "href": "https://github.com/BITNP/BIThesis/releases/latest"
+        },
+        {
+          "label": "文档",
+          "href": "https://bithesis.bitnp.net/"
+        }
+      ],
+      "decorateImage": "/src/assets/thesis.svg",
+      "size": "big"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ const props = defineProps<{
 const textOffsets: ReadonlyArray<number> = [-4, -3, -2, -1, 0, 1, 2, 3, 4];
 const maxSpreadRatio: number = 0.6;
 const maxSpreadLimitPx: number = 560;
-const minStrokeAlphaPercent: number = 0;
+const minStrokeAlphaPercent: number = 1;
 const maxStrokeAlphaPercent: number = 20;
 
 const containerRef = ref<HTMLElement | null>(null);
@@ -197,9 +197,8 @@ onBeforeUnmount(() => {
 <style lang="css" scoped>
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 20vh;
-  padding: 1em;
   overflow: hidden;
 
   background: var(--bg);
@@ -216,7 +215,7 @@ onBeforeUnmount(() => {
   transform: translate3d(-50%, -50%, 0) translate3d(var(--x), 0, 0);
   will-change: transform;
 
-  font-size: 8em;
+  font-size: min(15vw, 8em);
   font-weight: bold;
 
   font-family: "Mozilla Headline", "Inter", system-ui;
@@ -230,8 +229,11 @@ onBeforeUnmount(() => {
 
 .stroke {
   color: var(--bg);
-  text-shadow: var(--stroke-color) 2px 0 0, var(--stroke-color) -2px 0 0, var(--stroke-color) 0 2px 0,
-    var(--stroke-color) 0 -2px 0 ;
+  text-shadow:
+    var(--stroke-color) 2px 0 0,
+    var(--stroke-color) -2px 0 0,
+    var(--stroke-color) 0 2px 0,
+    var(--stroke-color) 0 -2px 0;
 }
 
 .sr-only {

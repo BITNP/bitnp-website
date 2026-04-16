@@ -7,8 +7,9 @@
   "join": {
     "title": "Join Us",
     "body": "如果你热爱技术与校园服务，欢迎了解并加入网络开拓者协会。",
-    "actionLabel": "联系网协",
-    "actionHref": "mailto:support@bitnp.example"
+    "actionLabel": "加入我们",
+    "actionHref": "mailto:support@bitnp.example",
+    "disabled": true
   },
   "contact": {
     "title": "Contact Us",

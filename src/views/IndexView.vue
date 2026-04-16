@@ -21,6 +21,8 @@
       </div>
 
       <IndexIntroView />
+      <IndexShowcaseView />
+      <IndexNewsView />
       <TextScroll text="NetPioneer" />
       <IndexFooterView />
     </main>
@@ -34,6 +36,8 @@ import FloatingNavBar from "@/components/FloatingNavBar.vue";
 import indexPageNavContent from "@/pages/index/nav.json";
 import IndexFooterView from "@/views/IndexFooterView.vue";
 import IndexIntroView from "@/views/IndexIntroView.vue";
+import IndexNewsView from "@/views/IndexNewsView.vue";
+import IndexShowcaseView from "@/views/IndexShowcaseView.vue";
 import IndexSloganView from "@/views/IndexSloganView.vue";
 import TextScroll from "@/components/TextScroll.vue";
 

@@ -24,9 +24,18 @@
       <div class="card join">
         <h2>{{ joinUs.title }}</h2>
         <p>{{ joinUs.body }}</p>
-        <a :href="joinUs.actionHref" class="card-action">
+        <a
+          v-if="!joinUs.disabled"
+          :href="joinUs.actionHref"
+          class="card-action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ joinUs.actionLabel }}
         </a>
+        <span v-else class="card-action is-disabled" aria-disabled="true">
+          {{ joinUs.actionLabel }}
+        </span>
       </div>
     </div>
   </footer>
@@ -38,9 +47,17 @@ import logoImage from "@/assets/BITNP Logo.svg";
 import { Icon } from "@vicons/utils";
 import { LinkOutlined } from "@vicons/material";
 
+interface FooterJoin {
+  title: string;
+  body: string;
+  actionLabel: string;
+  actionHref: string;
+  disabled: boolean;
+}
+
 const introduction = indexPageFooterContent.introduction;
 const contactUs = indexPageFooterContent.contact;
-const joinUs = indexPageFooterContent.join;
+const joinUs: FooterJoin = indexPageFooterContent.join;
 </script>
 
 <style scoped>
@@ -48,8 +65,7 @@ const joinUs = indexPageFooterContent.join;
   position: relative;
   z-index: 1;
 
-  margin-top: 12px;
-  padding: 28px 0 44px;
+  padding: 3rem 24px;
 
   border-top: 1px solid rgba(var(--white-rgb), 0.38);
   background: rgba(var(--white-rgb), 0.08);
@@ -189,6 +205,15 @@ const joinUs = indexPageFooterContent.join;
   cursor: pointer;
 }
 
+.card-action.is-disabled {
+  border-color: rgba(var(--text-rgb), 0.24);
+
+  color: var(--text-muted);
+  background: rgba(var(--text-rgb), 0.08);
+
+  cursor: not-allowed;
+}
+
 .card-action:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
@@ -223,6 +248,11 @@ const joinUs = indexPageFooterContent.join;
   .card-action:hover {
     background: transparent;
     color: var(--text);
+  }
+
+  .card-action.is-disabled:hover {
+    color: var(--text-muted);
+    background: rgba(var(--text-rgb), 0.08);
   }
 }
 

@@ -4,8 +4,8 @@
 
 ### Code style
 
-- Always annotate type using TypeScript, no `Any` allowed. 
-- Create new type or interface for complex types when it is possible to be reused. 
+- Always annotate type using TypeScript, no `Any` allowed.
+- Create new type or interface for complex types when it is possible to be reused.
 - Use Chinese when writing comments.
 - Consider write properiate comments when there is complex conditions, deep recursions, levels of loops, etc.
 - Prettify CSS, group related attributes, seperate groups with an empty line
@@ -13,19 +13,20 @@
 ### Development Workflow
 
 1. When user asks to do a blur task, investigate the code base, create a specific task list file TODO.md, for user to review.
-2. Only when user explictly approves the plan should the actual code modifications be started. 
+2. Only when user explictly approves the plan should the actual code modifications be started.
 3. Always lint and format the code after finishing editing.
 
 ### Code Organizing Rules
 
-- For a scene, create `.vue` under `src/views`. 
-- For a reusable code snippet, create a component under `src/components`. 
+- For a scene, create `.vue` under `src/views`.
+- For a reusable code snippet, create a component under `src/components`.
 - For data structure, logics and stores, create `.ts` under `src/store` using Pinia.
 
 ### Vue.js Notices
 
-- Always use composition setup API. 
-- Use NaiveUI for styling system and some universal components. 
+- Always use composition setup API.
+- Use NaiveUI for styling system and some universal components.
+- Use CSS color variables in App.vue only.
 
 ## Repository Infomation
 
