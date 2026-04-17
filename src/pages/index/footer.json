@@ -2,13 +2,15 @@
   "introduction": {
     "title": "北京理工大学网络开拓者协会",
     "subtitle": "BIT Net Pioneer Association",
-    "body": "网络无限 · 开拓不懈"
+    "body": "网络无限 · 开拓不懈",
+    "copyright": "Copyright © 1997-2026 BIT Net Pioneer Association. All rights reserved."
   },
   "join": {
     "title": "Join Us",
     "body": "如果你热爱技术与校园服务，欢迎了解并加入网络开拓者协会。",
     "actionLabel": "加入我们",
-    "actionHref": "mailto:support@bitnp.example",
+    "disabledActionLabel": "敬请期待",
+    "actionHref": "mailto:support@bitnp.net",
     "disabled": true
   },
   "contact": {
@@ -24,6 +26,10 @@
       {
         "label": "Bilibili: 网络开拓者",
         "href": "https://space.bilibili.com/89756733"
+      },
+      {
+        "label": "邮箱: webmaster@bitnp.net",
+        "href": "mailto:webmaster@bitnp.net"
       }
     ]
   }

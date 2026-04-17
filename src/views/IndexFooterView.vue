@@ -6,6 +6,7 @@
         <strong>{{ introduction.title }}</strong>
         <p>{{ introduction.subtitle }}</p>
         <p>{{ introduction.body }}</p>
+        <p class="copyright">{{ introduction.copyright }}</p>
       </div>
       <div class="card links">
         <h2>{{ contactUs.title }}</h2>
@@ -34,7 +35,7 @@
           {{ joinUs.actionLabel }}
         </a>
         <span v-else class="card-action is-disabled" aria-disabled="true">
-          {{ joinUs.actionLabel }}
+          {{ joinUs.disabledActionLabel }}
         </span>
       </div>
     </div>
@@ -53,6 +54,7 @@ interface FooterJoin {
   actionLabel: string;
   actionHref: string;
   disabled: boolean;
+  disabledActionLabel: string;
 }
 
 const introduction = indexPageFooterContent.introduction;
@@ -127,6 +129,13 @@ const joinUs: FooterJoin = indexPageFooterContent.join;
 
 .card.introduction p + p {
   margin-top: 2px;
+}
+
+.card.introduction .copyright {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .links ul {
