@@ -33,10 +33,10 @@ const newsInfo = [
   },
   {
     imgHref: pcRecommend,
-    mTitle: '2025 新生电脑选购指南',
-    time: '2025/10/25',
-    link: 'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
-    context: '  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2025年新生电脑推荐表。',
+    mTitle: '2026 新生电脑选购指南',
+    time: '2026/07/09',
+    link: 'https://docs.qq.com/aio/DTnZTRFRSUnpmWWZX',
+    context: '  这个暑假，诊所的小伙伴们通过各渠道的查询筛选和整理，制作出了2026年新生电脑推荐表。',
   },
   {
     imgHref: tempNews2Img,

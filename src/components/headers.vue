@@ -204,7 +204,7 @@ export default defineComponent({
         },
         {
           label: '电脑推荐表',
-          key: 'PCcommands',
+          key: 'laptopRecommendation',
           icon:renderIcon(DevicesPc)
         },
       ],
@@ -254,7 +254,7 @@ export default defineComponent({
             },
             {
               label: '电脑推荐表',
-              key: 'PCcommands',
+              key: 'laptopRecommendation',
               icon:renderIcon(DevicesPc)
             },
           ]
@@ -282,7 +282,7 @@ export default defineComponent({
         blogs:'https://blog.bitnp.net',
         wiki:'https://wiki.bitnp.net',
         address:'common-links',
-        PCcommands:'https://docs.qq.com/aio/DZm5ZRmJzd2ZpVkx5',
+        laptopRecommendation:'https://docs.qq.com/aio/DTnZTRFRSUnpmWWZX',
         about:'about-us'
       }
       //pollyfill
